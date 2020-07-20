@@ -642,7 +642,8 @@ m3dt:StructuralDescriptor rdf:type owl:Class ;
 
 
 ###  http://www.opengis.net/ont/geosparql#Coverage
-<http://www.opengis.net/ont/geosparql#Coverage> rdf:type owl:Class .
+<http://www.opengis.net/ont/geosparql#Coverage> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> .
 
 
 ###  http://www.opengis.net/ont/geosparql#GridCoverage
@@ -683,6 +684,10 @@ m3dt:StructuralDescriptor rdf:type owl:Class ;
 ###  http://www.opengis.net/ont/geosparql#ReferencableGridCoverage
 <http://www.opengis.net/ont/geosparql#ReferencableGridCoverage> rdf:type owl:Class ;
                                                                 rdfs:subClassOf <http://www.opengis.net/ont/geosparql#GridCoverage> .
+
+
+###  http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/prov#Entity
