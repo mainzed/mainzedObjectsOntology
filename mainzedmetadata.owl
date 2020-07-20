@@ -288,7 +288,8 @@ m3df:Clean rdf:type owl:Class ;
 
 
 ###  http://objects.mainzed.org/function/ont#ProcessingFunction
-m3df:ProcessingFunction rdf:type owl:Class .
+m3df:ProcessingFunction rdf:type owl:Class ;
+                        rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
 
 
 ###  http://objects.mainzed.org/metadata/ont#BorderFaces
@@ -688,6 +689,14 @@ m3dt:StructuralDescriptor rdf:type owl:Class ;
 
 ###  http://www.opengis.net/ont/geosparql#SpatialObject
 <http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Activity
+<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Agent
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
 
 
 ###  http://www.w3.org/ns/prov#Entity
