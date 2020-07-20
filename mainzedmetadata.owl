@@ -20,65 +20,259 @@
 #    Object Properties
 #################################################################
 
+###  http://objects.mainzed.org/metadata/ont#borderFaces
+:borderFaces rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :facesProperties ;
+             rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+             rdfs:range :BorderFaces .
+
+
+###  http://objects.mainzed.org/metadata/ont#borderVertices
+:borderVertices rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :vertexProperties ;
+                rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                rdfs:range :BorderVertices .
+
+
+###  http://objects.mainzed.org/metadata/ont#bridgeBorderFaces
+:bridgeBorderFaces rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :facesProperties ;
+                   rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                   rdfs:range :BridgeBorderFaces .
+
+
+###  http://objects.mainzed.org/metadata/ont#chunkProperties
+:chunkProperties rdf:type owl:ObjectProperty .
+
+
+###  http://objects.mainzed.org/metadata/ont#circleCenterVertices
+:circleCenterVertices rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :vertexProperties ;
+                      rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                      rdfs:range :CircleCenterVertices .
+
+
+###  http://objects.mainzed.org/metadata/ont#facesProperties
+:facesProperties rdf:type owl:ObjectProperty .
+
+
+###  http://objects.mainzed.org/metadata/ont#finiteFunctionValueVertices
+:finiteFunctionValueVertices rdf:type owl:ObjectProperty ;
+                             rdfs:subPropertyOf :vertexProperties ;
+                             rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                             rdfs:range :FiniteFunctionValueVertices .
+
+
 ###  http://objects.mainzed.org/metadata/ont#invertedFaces
 :invertedFaces rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :facesProperties ;
                rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
                rdfs:range :InvertedFaces .
 
 
+###  http://objects.mainzed.org/metadata/ont#isolatedVertices
+:isolatedVertices rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :vertexProperties ;
+                  rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                  rdfs:range :IsolatedVertices .
+
+
+###  http://objects.mainzed.org/metadata/ont#localFunctionMaxValueVertices
+:localFunctionMaxValueVertices rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :vertexProperties ;
+                               rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                               rdfs:range :LocalFunctionMaxValueVertices .
+
+
+###  http://objects.mainzed.org/metadata/ont#localFunctionMinValueVertices
+:localFunctionMinValueVertices rdf:type owl:ObjectProperty ;
+                               rdfs:subPropertyOf :vertexProperties ;
+                               rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                               rdfs:range :LocalFunctionMinValueVertices .
+
+
 ###  http://objects.mainzed.org/metadata/ont#manifoldFaces
 :manifoldFaces rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :facesProperties ;
                rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
                rdfs:range :ManifoldFaces .
 
 
+###  http://objects.mainzed.org/metadata/ont#manuallyAddedVertices
+:manuallyAddedVertices rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :vertexProperties ;
+                       rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                       rdfs:range :ManuallyAddedVertices .
+
+
+###  http://objects.mainzed.org/metadata/ont#nanVertices
+:nanVertices rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :vertexProperties ;
+             rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+             rdfs:range :NaNVertices .
+
+
 ###  http://objects.mainzed.org/metadata/ont#nonManifoldFaces
 :nonManifoldFaces rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :facesProperties ;
                   rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
                   rdfs:range :NonManifoldFaces .
 
 
+###  http://objects.mainzed.org/metadata/ont#nonManifoldVertices
+:nonManifoldVertices rdf:type owl:ObjectProperty ;
+                     rdfs:subPropertyOf :vertexProperties ;
+                     rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                     rdfs:range :NonManifoldVertices .
+
+
+###  http://objects.mainzed.org/metadata/ont#normalLengthVertices
+:normalLengthVertices rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :vertexProperties ;
+                      rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                      rdfs:range :NormalLengthVertices .
+
+
+###  http://objects.mainzed.org/metadata/ont#numberOfChunks
+:numberOfChunks rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :chunkProperties ;
+                rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                rdfs:range :NumberOfChunks .
+
+
 ###  http://objects.mainzed.org/metadata/ont#selectedFaces
 :selectedFaces rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :facesProperties ;
                rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
                rdfs:range :SelectedFaces .
 
 
+###  http://objects.mainzed.org/metadata/ont#selectedVertices
+:selectedVertices rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :vertexProperties ;
+                  rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                  rdfs:range :SelectedVertices .
+
+
+###  http://objects.mainzed.org/metadata/ont#singularVertices
+:singularVertices rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :vertexProperties ;
+                  rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                  rdfs:range :SingularVertices .
+
+
 ###  http://objects.mainzed.org/metadata/ont#soloFaces
 :soloFaces rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :facesProperties ;
            rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
            rdfs:range :SoloFaces .
 
 
 ###  http://objects.mainzed.org/metadata/ont#stickyFaces
 :stickyFaces rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :facesProperties ;
              rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
              rdfs:range :StickyFaces .
 
 
+###  http://objects.mainzed.org/metadata/ont#syntheticVertexFaces
+:syntheticVertexFaces rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :facesProperties ;
+                      rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                      rdfs:range :SyntheticVertexFaces .
+
+
+###  http://objects.mainzed.org/metadata/ont#syntheticVertices
+:syntheticVertices rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :vertexProperties ;
+                   rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                   rdfs:range :SyntheticVertices .
+
+
 ###  http://objects.mainzed.org/metadata/ont#threeBorderVertexFaces
 :threeBorderVertexFaces rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :facesProperties ;
                         rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
                         rdfs:range :ThreeBorderVertexFaces .
 
 
 ###  http://objects.mainzed.org/metadata/ont#totalNumberOfFaces
 :totalNumberOfFaces rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :facesProperties ;
                     rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
                     rdfs:range :TotalNumberOfFaces .
 
 
 ###  http://objects.mainzed.org/metadata/ont#totalNumberOfVertices
 :totalNumberOfVertices rdf:type owl:ObjectProperty ;
+                       rdfs:subPropertyOf :vertexProperties ;
                        rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
                        rdfs:range :TotalNumberOfVertices ;
                        <http://www.w3.org/2004/02/skos/core#definition> "total number of vertices of the 3d object" .
 
 
+###  http://objects.mainzed.org/metadata/ont#vertexProperties
+:vertexProperties rdf:type owl:ObjectProperty .
+
+
+###  http://objects.mainzed.org/metadata/ont#verticesOnInvertedEdge
+:verticesOnInvertedEdge rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :vertexProperties ;
+                        rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                        rdfs:range :VerticesOnInvertedEdge .
+
+
+###  http://objects.mainzed.org/metadata/ont#verticesPartOfZeroAreaFace
+:verticesPartOfZeroAreaFace rdf:type owl:ObjectProperty ;
+                            rdfs:subPropertyOf :vertexProperties ;
+                            rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
+                            rdfs:range :VerticesPartOfZeroAreaFace .
+
+
 ###  http://objects.mainzed.org/metadata/ont#zeroAreaFaces
 :zeroAreaFaces rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf :facesProperties ;
                rdfs:domain <http://objects.mainzed.org/metadata/ont#3DObject> ;
                rdfs:range :ZeroAreaFaces .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://objects.mainzed.org/metadata/ont#value
+:value rdf:type owl:DatatypeProperty ;
+       rdfs:domain :BorderFaces ,
+                   :BorderFacesBridgeTriConnection ,
+                   :BorderVertices ,
+                   :BridgeBorderFaces ,
+                   :CircleCenterVertices ,
+                   :DanglingBorderFaces ,
+                   :FiniteFunctionValueVertices ,
+                   :InvertedFaces ,
+                   :IsolatedVertices ,
+                   :LocalFunctionMaxValueVertices ,
+                   :LocalFunctionMinValueVertices ,
+                   :ManifoldFaces ,
+                   :ManuallyAddedVertices ,
+                   :NaNVertices ,
+                   :NonManifoldFaces ,
+                   :NonManifoldVertices ,
+                   :NormalLengthVertices ,
+                   :SelectedFaces ,
+                   :SelectedVertices ,
+                   :SingularVertices ,
+                   :SoloFaces ,
+                   :StickyFaces ,
+                   :SyntheticVertexFaces ,
+                   :SyntheticVertices ,
+                   :ThreeBorderVertexFaces ,
+                   :TotalNumberOfFaces ,
+                   :TotalNumberOfVertices ,
+                   :VerticesOnInvertedEdge ,
+                   :VerticesPartOfZeroAreaFace ,
+                   :ZeroAreaFaces ;
+       <http://www.w3.org/2004/02/skos/core#definition> "Number of occurances of the given observation"@en .
 
 
 #################################################################
@@ -103,6 +297,11 @@
 ###  http://objects.mainzed.org/metadata/ont#BridgeBorderFaces
 :BridgeBorderFaces rdf:type owl:Class ;
                    rdfs:subClassOf :FacesMeasures .
+
+
+###  http://objects.mainzed.org/metadata/ont#ChunkMeasures
+:ChunkMeasures rdf:type owl:Class ;
+               rdfs:subClassOf :Measurement .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CircleCenterVertices
@@ -156,7 +355,9 @@
 
 
 ###  http://objects.mainzed.org/metadata/ont#Measurement
-:Measurement rdf:type owl:Class .
+:Measurement rdf:type owl:Class ;
+             rdfs:label "Measurement"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "A measurement of a property of a 3DObject"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#NaNVertices
@@ -177,6 +378,11 @@
 ###  http://objects.mainzed.org/metadata/ont#NormalLengthVertices
 :NormalLengthVertices rdf:type owl:Class ;
                       rdfs:subClassOf :VertexMeasures .
+
+
+###  http://objects.mainzed.org/metadata/ont#NumberOfChunks
+:NumberOfChunks rdf:type owl:Class ;
+                rdfs:subClassOf :ChunkMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SelectedFaces
@@ -253,6 +459,10 @@
 
 ###  http://objects.mainzed.org/metadata/ont#3DObject
 <http://objects.mainzed.org/metadata/ont#3DObject> rdf:type owl:Class .
+
+
+###  http://www.w3.org/ns/prov#Entity
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
