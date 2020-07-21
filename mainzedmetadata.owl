@@ -309,6 +309,26 @@ m3df:ProcessingFunction rdf:type owl:Class ;
                         rdfs:label "Processing Function"@en .
 
 
+###  http://objects.mainzed.org/function/ont#RemoveFacesZeroArea
+m3df:RemoveFacesZeroArea rdf:type owl:Class ;
+                         rdfs:subClassOf m3df:RemoveFunction .
+
+
+###  http://objects.mainzed.org/function/ont#RemoveFunction
+m3df:RemoveFunction rdf:type owl:Class ;
+                    rdfs:subClassOf m3df:ModificationFunction .
+
+
+###  http://objects.mainzed.org/function/ont#SplitFunction
+m3df:SplitFunction rdf:type owl:Class ;
+                   rdfs:subClassOf m3df:ModificationFunction .
+
+
+###  http://objects.mainzed.org/function/ont#TransformationFunction
+m3df:TransformationFunction rdf:type owl:Class ;
+                            rdfs:subClassOf m3df:ModificationFunction .
+
+
 ###  http://objects.mainzed.org/metadata/ont#BorderFaces
 m3d:BorderFaces rdf:type owl:Class ;
                 rdfs:subClassOf m3d:FacesMeasures ;
@@ -442,6 +462,11 @@ m3d:RangeType rdf:type owl:Class .
 
 ###  http://objects.mainzed.org/metadata/ont#ReferencableGridDomain
 m3d:ReferencableGridDomain rdf:type owl:Class .
+
+
+###  http://objects.mainzed.org/metadata/ont#RemoveFacesBorderErosion
+m3d:RemoveFacesBorderErosion rdf:type owl:Class ;
+                             rdfs:subClassOf m3df:RemoveFunction .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ScreenshotExportFunction
