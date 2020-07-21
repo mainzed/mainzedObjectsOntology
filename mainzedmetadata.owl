@@ -284,8 +284,23 @@ m3d:value rdf:type owl:DatatypeProperty ;
 
 ###  http://objects.mainzed.org/function/ont#Clean
 m3df:Clean rdf:type owl:Class ;
-           rdfs:subClassOf m3df:ProcessingFunction ;
+           rdfs:subClassOf m3df:ExportFunction ;
            rdfs:label "Clean"@en .
+
+
+###  http://objects.mainzed.org/function/ont#ExportFunction
+m3df:ExportFunction rdf:type owl:Class ;
+                    rdfs:subClassOf m3df:ProcessingFunction .
+
+
+###  http://objects.mainzed.org/function/ont#MeasurementFunction
+m3df:MeasurementFunction rdf:type owl:Class ;
+                         rdfs:subClassOf m3df:ProcessingFunction .
+
+
+###  http://objects.mainzed.org/function/ont#ModificationFunction
+m3df:ModificationFunction rdf:type owl:Class ;
+                          rdfs:subClassOf m3df:ProcessingFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#ProcessingFunction
@@ -427,6 +442,11 @@ m3d:RangeType rdf:type owl:Class .
 
 ###  http://objects.mainzed.org/metadata/ont#ReferencableGridDomain
 m3d:ReferencableGridDomain rdf:type owl:Class .
+
+
+###  http://objects.mainzed.org/metadata/ont#ScreenshotExportFunction
+m3d:ScreenshotExportFunction rdf:type owl:Class ;
+                             rdfs:subClassOf m3df:ExportFunction .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SelectedFaces
