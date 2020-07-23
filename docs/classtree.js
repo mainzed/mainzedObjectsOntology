@@ -1,6 +1,11 @@
-function generateClassTree(titleatt,superatt){
+function generateClassTree(titleatt,superatt,classOrProp){
 	classTree={"plugins": ["search", "types","sort","state","wholerow"],"search": {"case_sensitive": false,"show_only_matches": true}, "core": { "data" :[]}}
-	classTree["core"]["data"].push({ "id" : "http://www.w3.org/2002/07/owl#Thing", "parent":"#", "text" : "owl:Thing" })
+    if(classOrProp){
+	    classTree["core"]["data"].push({ "id" : "http://www.w3.org/2002/07/owl#Thing", "icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/Classes.gif", "parent":"#", "text" : "owl:Thing" })
+    }else{
+    classTree["core"]["data"].push({ "id" : "http://www.w3.org/2002/07/owl#Thing", "icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/OWLObjectProperty.gif", "parent":"#", "text" : "owl:Thing" })
+    }
+    }
 	var counter=0;
 	//console.log($('#ontview').contents())
 	//console.log($('#ontview').contents().find('.type-c'))
@@ -38,7 +43,12 @@ function generateClassTree(titleatt,superatt){
 		
 		////console.log(superclasslist[0])
 		//var topush={ "id" : id,parent:
-		classTree["core"]["data"].push({ "id" : id, "parent":parentcls, "text" : id.substring(id.lastIndexOf('#')+1) })
+		if(classOrProp){
+	        classTree["core"]["data"].push({ "id" : id, "parent":parentcls,"icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/Classes.gif", "text" : id.substring(id.lastIndexOf('#')+1) })
+        }else{
+            classTree["core"]["data"].push({ "id" : id, "parent":parentcls,"icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/OWLObjectProperty.gif", "text" : id.substring(id.lastIndexOf('#')+1) })
+        }
+		
 		//console.log(classTree["core"]["data"])
 		}
 		}
