@@ -16,7 +16,10 @@ function generateClassTree(titleatt,superatt,classOrProp){
 		////console.log(id)
 		var parentcls="";
 		////console.log("Superclasses")
-		if(!(id.startsWith("4")) && $(this).parent().parent().children('dl').length>0 
+		if(!(id.startsWith("4")) 
+			&& $(this).parent().length>0 
+		    && $(this).parent().parent().length>0 
+		    && $(this).parent().parent().children('dl').length>0 
             && $(this).parent().parent().children('dl').children('dt:contains("'+superatt+'")').length>0
             && $(this).parent().parent().children('dl').children('dt:contains("'+superatt+'")').next().length>0
             && $(this).parent().parent().children('dl').children('dt:contains("'+superatt+'")').next().children("a").length>0
@@ -30,7 +33,11 @@ function generateClassTree(titleatt,superatt,classOrProp){
 				//console.log($(this).attr("href"));
 			}
 		});
-			}else if($(this).parent().parent().children('div').children('dl').length>0 
+			}else if(
+			    $(this).parent().length>0 
+			    && $(this).parent().parent().length>0 
+			    && $(this).parent().parent().children('div').length>0 
+			    && $(this).parent().parent().children('div').children('dl').length>0 
                 && $(this).parent().parent().children('div').children('dl').children('dt:contains("'+superatt+'")').length>0
                 && $(this).parent().parent().children('div').children('dl').children('dt:contains("'+superatt+'")').next().length>0
                 && $(this).parent().parent().children('div').children('dl').children('dt:contains("'+superatt+'")').next().children("a").length>0
