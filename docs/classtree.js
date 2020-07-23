@@ -35,7 +35,7 @@ function generateClassTree(titleatt,superatt,classOrProp){
 			}
 		});
 			}
-
+        if(typeof id !== 'undefined' && typeof parentcls !== 'undefined'){
 		if(parentcls==""){
 			parentcls="#"
 		}
@@ -55,6 +55,7 @@ function generateClassTree(titleatt,superatt,classOrProp){
         }
 		
 		//console.log(classTree["core"]["data"])
+		}
 		}
 		}
 		counter++;
