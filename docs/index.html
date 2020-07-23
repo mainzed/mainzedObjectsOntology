@@ -68,7 +68,7 @@ function genclassTree(){
         $('#jstree_demo_div2').hide();
         $('#jstree_demo_div3').hide();
         $('#jstree_demo_div4').show();
-        document.getElementById('search-input2').onkeyup = null;
+        $( "#search-input2").unbind( "keyup" );
         $("#search-input2").keyup(function () {
             var searchString = $(this).val();
             $('#jstree_demo_div4').jstree('search', searchString);
@@ -78,7 +78,7 @@ function genclassTree(){
         $('#jstree_demo_div2').hide();
         $('#jstree_demo_div3').show();
         $('#jstree_demo_div4').hide();
-        document.getElementById('search-input2').onkeyup = null;
+        $( "#search-input2").unbind( "keyup" );
         $("#search-input2").keyup(function () {
             var searchString = $(this).val();
             $('#jstree_demo_div3').jstree('search', searchString);
@@ -88,7 +88,7 @@ function genclassTree(){
         $('#jstree_demo_div2').show();
         $('#jstree_demo_div3').hide();
         $('#jstree_demo_div4').hide();
-        document.getElementById('search-input2').onkeyup = null;
+        $( "#search-input2").unbind( "keyup" );
         $("#search-input2").keyup(function () {
             var searchString = $(this).val();
             $('#jstree_demo_div2').jstree('search', searchString);
@@ -97,7 +97,7 @@ function genclassTree(){
     $('#classes').click(function() {
         $('#classes').show();
         $('#individuals').hide();
-        document.getElementById('search-input').onkeyup = null;
+        $( "#search-input").unbind( "keyup" );
         $("#search-input").keyup(function () {
             var searchString = $(this).val();
             $('#jstree_demo_div').jstree('search', searchString);
@@ -106,7 +106,7 @@ function genclassTree(){
     $('#individuals').click(function() {
         $('#classes').hide();
         $('#individuals').show();
-        document.getElementById('search-input').onkeyup = null;
+        $( "#search-input").unbind( "keyup" );
         $("#search-input").keyup(function () {
             var searchString = $(this).val();
             $('#jstree_demo_div1').jstree('search', searchString);
