@@ -11,7 +11,7 @@ function generateClassTree(titleatt,superatt,classOrProp){
 	//console.log($('#ontview').contents().find(' h3 > sup[title="class"]'))
 	$('#ontview').contents().find(' h3 > sup[title="'+titleatt+'"]').each(function() {
 		////console.log($(this))
-		if(counter>0){
+		if(counter>0 && $(this).parent().length>0 && $(this).parent().parent().length>0){
 		var id=$(this).parent().parent().attr("id");
 		////console.log(id)
 		var parentcls="";
@@ -29,7 +29,12 @@ function generateClassTree(titleatt,superatt,classOrProp){
 			$(this).parent().parent().children('dl').children('dt:contains("'+superatt+'")').next().children("a").each(function(){
 			console.log($(this))
 			if(!($(this).attr("href").startsWith("4"))){
-				parentcls=$(this).attr("href").substring($(this).attr("href").indexOf('#')+1)
+                if($(this).attr("href").includes('#')){
+			          parentcls=$(this).attr("href").substring($(this).attr("href").indexOf('#')+1)
+		        }else{
+			          parentcls=$(this).attr("href").substring($(this).attr("href").indexOf('/')+1)
+		        }
+				//parentcls=$(this).attr("href").substring($(this).attr("href").indexOf('#')+1)
 				//console.log($(this).attr("href"));
 			}
 		});
@@ -45,7 +50,12 @@ function generateClassTree(titleatt,superatt,classOrProp){
 					$(this).parent().parent().children('div').children('dl').children('dt:contains("'+superatt+'")').next().children("a").each(function(){
                             console.log($(this))
                     if(!($(this).attr("href").startsWith("4"))){
-                        parentcls=$(this).attr("href").substring($(this).attr("href").indexOf('#')+1)
+                        if($(this).attr("href").includes('#')){
+			                parentcls=$(this).attr("href").substring($(this).attr("href").indexOf('#')+1)
+		                }else{
+			                parentcls=$(this).attr("href").substring($(this).attr("href").indexOf('/')+1)
+		                }
+                        //parentcls=$(this).attr("href").substring($(this).attr("href").indexOf('#')+1)
                         //console.log($(this).attr("href"));
 			}
 		});
