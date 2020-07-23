@@ -8,7 +8,7 @@ pages:
   script:
   - cd docs
   - mkdir html
-  - java -jar docs_widoco.jar -ontFile ../mainzedmetadata.owl -outFolder html/ -rewriteAll -webVowl -confFile config/mainzedmetadata.properties
+  - java -jar docs_widoco.jar -ontFile ../mainzedmetadata.owl -outFolder html/ -rewriteAll -uniteSections -webVowl -confFile config/mainzedmetadata.properties
   - mv index.html html/
   - mv classtree.js html/
   - mv html ../public 
