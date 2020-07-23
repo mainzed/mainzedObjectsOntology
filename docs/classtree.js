@@ -5,7 +5,6 @@ function generateClassTree(titleatt,superatt,classOrProp){
     }else{
     classTree["core"]["data"].push({ "id" : "http://www.w3.org/2002/07/owl#Thing", "icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/OWLObjectProperty.gif", "parent":"#", "text" : "owl:Thing" })
     }
-    }
 	var counter=0;
 	//console.log($('#ontview').contents())
 	//console.log($('#ontview').contents().find('.type-c'))
