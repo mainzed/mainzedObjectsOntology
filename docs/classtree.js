@@ -8,7 +8,7 @@ function generateClassTree(titleatt,superatt,classOrProp){
 	var counter=0;
 	//console.log($('#ontview').contents())
 	//console.log($('#ontview').contents().find('.type-c'))
-	//console.log($('#ontview').contents().find(' h3 > sup[title="class"]'))
+	console.log($('#ontview').contents().find(' h3 > sup[title="'+titleatt+'"]'))
 	$('#ontview').contents().find(' h3 > sup[title="'+titleatt+'"]').each(function() {
 		////console.log($(this))
 		if(counter>0 && $(this).parent().length>0 && $(this).parent().parent().length>0){
