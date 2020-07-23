@@ -288,9 +288,27 @@ m3df:Clean rdf:type owl:Class ;
            rdfs:label "Clean"@en .
 
 
+###  http://objects.mainzed.org/function/ont#DistanceToLine
+m3df:DistanceToLine rdf:type owl:Class ;
+                    rdfs:subClassOf m3df:MeasurementFunction ;
+                    rdfs:label "Distance To Line" .
+
+
+###  http://objects.mainzed.org/function/ont#DistanceToPlane
+m3df:DistanceToPlane rdf:type owl:Class ;
+                     rdfs:subClassOf m3df:MeasurementFunction ;
+                     rdfs:label "Distance To Plane" .
+
+
 ###  http://objects.mainzed.org/function/ont#ExportFunction
 m3df:ExportFunction rdf:type owl:Class ;
                     rdfs:subClassOf m3df:ProcessingFunction .
+
+
+###  http://objects.mainzed.org/function/ont#InvertFaceOrientation
+m3df:InvertFaceOrientation rdf:type owl:Class ;
+                           rdfs:subClassOf m3df:TransformationFunction ;
+                           rdfs:label "Invert Face Orientation" .
 
 
 ###  http://objects.mainzed.org/function/ont#MeasurementFunction
@@ -309,14 +327,52 @@ m3df:ProcessingFunction rdf:type owl:Class ;
                         rdfs:label "Processing Function"@en .
 
 
+###  http://objects.mainzed.org/function/ont#RemoveAllPolylines
+m3df:RemoveAllPolylines rdf:type owl:Class ;
+                        rdfs:subClassOf m3df:RemoveFunction ;
+                        rdfs:label "Remove All Polylines" .
+
+
 ###  http://objects.mainzed.org/function/ont#RemoveFacesZeroArea
 m3df:RemoveFacesZeroArea rdf:type owl:Class ;
                          rdfs:subClassOf m3df:RemoveFunction .
 
 
+###  http://objects.mainzed.org/function/ont#RemoveFilledHoles
+m3df:RemoveFilledHoles rdf:type owl:Class ;
+                       rdfs:subClassOf m3df:RemoveFunction ;
+                       rdfs:label "Remove Filled Holes" .
+
+
 ###  http://objects.mainzed.org/function/ont#RemoveFunction
 m3df:RemoveFunction rdf:type owl:Class ;
                     rdfs:subClassOf m3df:ModificationFunction .
+
+
+###  http://objects.mainzed.org/function/ont#RemoveSelMFaces
+m3df:RemoveSelMFaces rdf:type owl:Class ;
+                     rdfs:subClassOf m3df:RemoveFunction .
+
+
+###  http://objects.mainzed.org/function/ont#RemoveSelMVerts
+m3df:RemoveSelMVerts rdf:type owl:Class ;
+                     rdfs:subClassOf m3df:RemoveFunction .
+
+
+###  http://objects.mainzed.org/function/ont#RemoveUncleanSmall
+m3df:RemoveUncleanSmall rdf:type owl:Class ;
+                        rdfs:subClassOf m3df:RemoveFunction ;
+                        rdfs:label "Remove Unclean/Small" .
+
+
+###  http://objects.mainzed.org/function/ont#SplitByIsoValue
+m3df:SplitByIsoValue rdf:type owl:Class ;
+                     rdfs:subClassOf m3df:SplitFunction .
+
+
+###  http://objects.mainzed.org/function/ont#SplitByPlane
+m3df:SplitByPlane rdf:type owl:Class ;
+                  rdfs:subClassOf m3df:SplitFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#SplitFunction
@@ -327,6 +383,26 @@ m3df:SplitFunction rdf:type owl:Class ;
 ###  http://objects.mainzed.org/function/ont#TransformationFunction
 m3df:TransformationFunction rdf:type owl:Class ;
                             rdfs:subClassOf m3df:ModificationFunction .
+
+
+###  http://objects.mainzed.org/metadata/ont#Agisoft
+m3d:Agisoft rdf:type owl:Class ;
+            rdfs:subClassOf m3d:Measurement .
+
+
+###  http://objects.mainzed.org/metadata/ont#AlignmentAccuracy
+m3d:AlignmentAccuracy rdf:type owl:Class ;
+                      rdfs:subClassOf m3d:Agisoft .
+
+
+###  http://objects.mainzed.org/metadata/ont#Atos
+m3d:Atos rdf:type owl:Class ;
+         rdfs:subClassOf m3d:Measurement .
+
+
+###  http://objects.mainzed.org/metadata/ont#BlendingMode
+m3d:BlendingMode rdf:type owl:Class ;
+                 rdfs:subClassOf m3d:Agisoft .
 
 
 ###  http://objects.mainzed.org/metadata/ont#BorderFaces
@@ -352,6 +428,11 @@ m3d:BridgeBorderFaces rdf:type owl:Class ;
                       rdfs:label "Bridge Border Faces"@en .
 
 
+###  http://objects.mainzed.org/metadata/ont#CameraTemperature
+m3d:CameraTemperature rdf:type owl:Class ;
+                      rdfs:subClassOf m3d:Atos .
+
+
 ###  http://objects.mainzed.org/metadata/ont#ChunkMeasures
 m3d:ChunkMeasures rdf:type owl:Class ;
                   rdfs:subClassOf m3d:Measurement .
@@ -367,6 +448,11 @@ m3d:CircleCenterVertices rdf:type owl:Class ;
 m3d:DanglingBorderFaces rdf:type owl:Class ;
                         rdfs:subClassOf m3d:FacesMeasures ;
                         rdfs:label "Dangling Border Faces"@en .
+
+
+###  http://objects.mainzed.org/metadata/ont#ExpansionCoefficient
+m3d:ExpansionCoefficient rdf:type owl:Class ;
+                         rdfs:subClassOf m3d:Atos .
 
 
 ###  http://objects.mainzed.org/metadata/ont#FacesMeasures
@@ -450,10 +536,35 @@ m3d:NormalLengthVertices rdf:type owl:Class ;
                          rdfs:label "Normal Length Vertices"@en .
 
 
+###  http://objects.mainzed.org/metadata/ont#NumberOfCameras
+m3d:NumberOfCameras rdf:type owl:Class ;
+                    rdfs:subClassOf m3d:Atos .
+
+
 ###  http://objects.mainzed.org/metadata/ont#NumberOfChunks
 m3d:NumberOfChunks rdf:type owl:Class ;
                    rdfs:subClassOf m3d:ChunkMeasures ;
                    rdfs:label "Number Of Chunks"@en .
+
+
+###  http://objects.mainzed.org/metadata/ont#NumberOfReferencePoints
+m3d:NumberOfReferencePoints rdf:type owl:Class ;
+                            rdfs:subClassOf m3d:Atos .
+
+
+###  http://objects.mainzed.org/metadata/ont#NumberOfScales
+m3d:NumberOfScales rdf:type owl:Class ;
+                   rdfs:subClassOf m3d:Atos .
+
+
+###  http://objects.mainzed.org/metadata/ont#NumberOfShutterTimes
+m3d:NumberOfShutterTimes rdf:type owl:Class ;
+                         rdfs:subClassOf m3d:Atos .
+
+
+###  http://objects.mainzed.org/metadata/ont#NumberOfTransformationPoints
+m3d:NumberOfTransformationPoints rdf:type owl:Class ;
+                                 rdfs:subClassOf m3d:Atos .
 
 
 ###  http://objects.mainzed.org/metadata/ont#RangeType
@@ -572,7 +683,8 @@ m3dt:B-Rep rdf:type owl:Class ;
 
 ###  http://objects.mainzed.org/type/ont#CentreLineGraph
 m3dt:CentreLineGraph rdf:type owl:Class ;
-                     rdfs:subClassOf m3dt:StructuralDescriptor .
+                     rdfs:subClassOf m3dt:StructuralDescriptor ;
+                     rdfs:label "Centre Line Graph" .
 
 
 ###  http://objects.mainzed.org/type/ont#ContourSet
@@ -716,6 +828,7 @@ m3dt:Rasterdata rdf:type owl:Class ;
 
 ###  http://objects.mainzed.org/type/ont#ShapeRepresentation
 m3dt:ShapeRepresentation rdf:type owl:Class ;
+                         rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
                          rdfs:label "Shape Representation"@en .
 
 
@@ -786,7 +899,8 @@ m3dt:StructuralDescriptor rdf:type owl:Class ;
 
 
 ###  http://www.opengis.net/ont/geosparql#SpatialObject
-<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class .
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class ;
+                                                     rdfs:subClassOf m3dt:ShapeRepresentation .
 
 
 ###  http://www.w3.org/ns/prov#Activity
@@ -799,6 +913,60 @@ m3dt:StructuralDescriptor rdf:type owl:Class ;
 
 ###  http://www.w3.org/ns/prov#Entity
 <http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://objects.mainzed.org/metadata/ont#AverageBlending
+m3d:AverageBlending rdf:type owl:NamedIndividual ,
+                             m3d:BlendingMode .
+
+
+###  http://objects.mainzed.org/metadata/ont#DisabledBlending
+m3d:DisabledBlending rdf:type owl:NamedIndividual ,
+                              m3d:BlendingMode .
+
+
+###  http://objects.mainzed.org/metadata/ont#HighAccuracy
+m3d:HighAccuracy rdf:type owl:NamedIndividual ,
+                          m3d:AlignmentAccuracy .
+
+
+###  http://objects.mainzed.org/metadata/ont#HighestAccuracy
+m3d:HighestAccuracy rdf:type owl:NamedIndividual ,
+                             m3d:AlignmentAccuracy .
+
+
+###  http://objects.mainzed.org/metadata/ont#LowAccuracy
+m3d:LowAccuracy rdf:type owl:NamedIndividual ,
+                         m3d:AlignmentAccuracy .
+
+
+###  http://objects.mainzed.org/metadata/ont#LowestAccuracy
+m3d:LowestAccuracy rdf:type owl:NamedIndividual ,
+                            m3d:AlignmentAccuracy .
+
+
+###  http://objects.mainzed.org/metadata/ont#MaxBlending
+m3d:MaxBlending rdf:type owl:NamedIndividual ,
+                         m3d:BlendingMode .
+
+
+###  http://objects.mainzed.org/metadata/ont#MediumAccuracy
+m3d:MediumAccuracy rdf:type owl:NamedIndividual ,
+                            m3d:AlignmentAccuracy .
+
+
+###  http://objects.mainzed.org/metadata/ont#MinBlending
+m3d:MinBlending rdf:type owl:NamedIndividual ,
+                         m3d:BlendingMode .
+
+
+###  http://objects.mainzed.org/metadata/ont#MosaicBlending
+m3d:MosaicBlending rdf:type owl:NamedIndividual ,
+                            m3d:BlendingMode .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
