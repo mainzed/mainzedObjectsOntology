@@ -60,8 +60,8 @@ function generateClassTree(titleatt,superatt,classOrProp){
 			}
 		});
 			}
-        if(typeof(id) !== 'undefined'){
-		if(parentcls=="" || typeof(parentcls)!=='undefined'){
+        if(typeof id !== 'undefined'){
+		if(typeof parentcls !== 'undefined' || parentcls==""){
 			parentcls="#"
 		}
 		
