@@ -482,7 +482,7 @@ m3d:DanglingBorderFaces rdf:type owl:Class ;
 
 ###  http://objects.mainzed.org/metadata/ont#DigitalElevationModel
 m3d:DigitalElevationModel rdf:type owl:Class ;
-                          rdfs:subClassOf <http://objects.mainzed.org/type/ont#2DRaster> .
+                          rdfs:subClassOf m3dt:2DRaster .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ExpansionCoefficient
