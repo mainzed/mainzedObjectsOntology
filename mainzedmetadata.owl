@@ -661,8 +661,7 @@ m3d:RangeType rdf:type owl:Class .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ReferencableGridDomain
-m3d:ReferencableGridDomain rdf:type owl:Class ;
-                           rdfs:subClassOf m3d:GridDomain .
+m3d:ReferencableGridDomain rdf:type owl:Class .
 
 
 ###  http://objects.mainzed.org/metadata/ont#RemoveFacesBorderErosion
