@@ -1,20 +1,21 @@
 function generateClassTree(titleatt,superatt,classOrProp){
 	classTree={"plugins": ["search", "types","sort","state","wholerow"],"search": {"case_sensitive": false,"show_only_matches": true}, "core": { "data" :[]}}
+    parentmap={}
     if(titleatt=="class"){
 	    classTree["core"]["data"].push({ "id" : "http://www.w3.org/2002/07/owl#Thing", "icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/Classes.gif", "parent":"#", "text" : "owl:Thing" })
     }else if(titleatt=="data property"){
 		classTree["core"]["data"].push({ "id" : "http://www.w3.org/2002/07/owl#Thing", "icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/OWLDatatypeProperty.gif", "parent":"#", "text" : "owl:Thing" })
     }else if(titleatt=="named individual"){
-			classTree["core"]["data"].push({ "id" : id, "parent":parentcls,"icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/OWLIndividual.gif", "text" : textt })
+		//classTree["core"]["data"].push({ "id" : id, "parent":"#", "icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/OWLIndividual.gif", "text" : textt })
 	}else{
 		classTree["core"]["data"].push({ "id" : "http://www.w3.org/2002/07/owl#Thing", "icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/OWLObjectProperty.gif", "parent":"#", "text" : "owl:Thing" })
 	}
 	var counter=0;
 	//console.log($('#ontview').contents())
 	//console.log($('#ontview').contents().find('.type-c'))
-	//console.log($('#ontview').contents().find(' h3 > sup[title="class"]'))
+	//console.log($('#ontview').contents().find(' h3 > sup[title="'+titleatt+'"]'))
 	$('#ontview').contents().find(' h3 > sup[title="'+titleatt+'"]').each(function() {
-		////console.log($(this))
+		console.log($(this))
 		if(counter>0){
 		var id=$(this).parent().parent().attr("id");
 		////console.log(id)
@@ -27,7 +28,7 @@ function generateClassTree(titleatt,superatt,classOrProp){
 			//console.log($(this))
 			if(!($(this).attr("href").startsWith("4"))){
 				parentcls=$(this).attr("href").substring($(this).attr("href").indexOf('#')+1)
-				////console.log($(this).attr("href"));
+				//console.log($(this).attr("href"));
 			}
 		});
 			}else{
@@ -35,7 +36,7 @@ function generateClassTree(titleatt,superatt,classOrProp){
 			//console.log($(this))
 			if(!($(this).attr("href").startsWith("4"))){
 				parentcls=$(this).attr("href").substring($(this).attr("href").indexOf('#')+1)
-				////console.log($(this).attr("href"));
+				//console.log($(this).attr("href"));
 			}
 		});
 			}
@@ -57,6 +58,15 @@ function generateClassTree(titleatt,superatt,classOrProp){
         }else if(titleatt=="data property"){
 			classTree["core"]["data"].push({ "id" : id, "parent":parentcls,"icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/OWLDatatypeProperty.gif", "text" : textt })
 		}else if(titleatt=="named individual"){
+		     if(!(parentcls in parentmap)){
+				if(parentcls.includes('#')){
+					var textt2=parentcls.substring(parentcls.lastIndexOf('#')+1)
+				}else{
+					var textt2=parentcls.substring(parentcls.lastIndexOf('/')+1)
+				}
+		        classTree["core"]["data"].push({ "id" : parentcls, "parent":"#","icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/Classes.gif", "text" : textt2 })
+		        parentmap[parentcls]=true
+		    }
 			classTree["core"]["data"].push({ "id" : id, "parent":parentcls,"icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/OWLIndividual.gif", "text" : textt })
 		}else{
             classTree["core"]["data"].push({ "id" : id, "parent":parentcls,"icon" : "https://raw.githubusercontent.com/protegeproject/protege/master/protege-editor-owl/src/main/resources/OWLObjectProperty.gif", "text" : textt })
