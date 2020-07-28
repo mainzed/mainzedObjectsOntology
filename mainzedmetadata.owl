@@ -482,7 +482,7 @@ m3d:DanglingBorderFaces rdf:type owl:Class ;
 
 ###  http://objects.mainzed.org/metadata/ont#DigitalElevationModel
 m3d:DigitalElevationModel rdf:type owl:Class ;
-                          rdfs:subClassOf m3dt:2DRaster .
+                          rdfs:subClassOf <http://objects.mainzed.org/type/ont#2DRaster> .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ExpansionCoefficient
@@ -1008,15 +1008,21 @@ m3dt:StructuralDescriptor rdf:type owl:Class ;
 
 
 ###  http://www.w3.org/ns/prov#Activity
-<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class .
+<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class ;
+                                     rdfs:subClassOf owl:Thing ;
+                                     rdfs:label "Activity" .
 
 
 ###  http://www.w3.org/ns/prov#Agent
-<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class .
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
+                                  rdfs:subClassOf owl:Thing ;
+                                  rdfs:label "Agent" .
 
 
 ###  http://www.w3.org/ns/prov#Entity
-<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class .
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class ;
+                                   rdfs:subClassOf owl:Thing ;
+                                   rdfs:label "Entity" .
 
 
 #################################################################
