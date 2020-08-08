@@ -243,8 +243,53 @@ m3d:zeroAreaFaces rdf:type owl:ObjectProperty ;
 #    Data properties
 #################################################################
 
+###  http://objects.mainzed.org/metadata/ont#calibrationProperty
+m3d:calibrationProperty rdf:type owl:DatatypeProperty .
+
+
 ###  http://objects.mainzed.org/metadata/ont#cameraCalibration
 m3d:cameraCalibration rdf:type owl:DatatypeProperty .
+
+
+###  http://objects.mainzed.org/metadata/ont#cameraCalibrationDate
+m3d:cameraCalibrationDate rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf m3d:calibrationProperty ;
+                          rdfs:range xsd:dateTime .
+
+
+###  http://objects.mainzed.org/metadata/ont#numberOfCameras
+m3d:numberOfCameras rdf:type owl:DatatypeProperty ;
+                    rdfs:range xsd:integer .
+
+
+###  http://objects.mainzed.org/metadata/ont#numberOfPhaseSteps
+m3d:numberOfPhaseSteps rdf:type owl:DatatypeProperty ;
+                       rdfs:range xsd:integer .
+
+
+###  http://objects.mainzed.org/metadata/ont#numberOfReferencePoints
+m3d:numberOfReferencePoints rdf:type owl:DatatypeProperty ;
+                            rdfs:range xsd:integer .
+
+
+###  http://objects.mainzed.org/metadata/ont#numberOfScales
+m3d:numberOfScales rdf:type owl:DatatypeProperty ;
+                   rdfs:range xsd:integer .
+
+
+###  http://objects.mainzed.org/metadata/ont#numberOfShutterTimes
+m3d:numberOfShutterTimes rdf:type owl:DatatypeProperty ;
+                         rdfs:range xsd:integer .
+
+
+###  http://objects.mainzed.org/metadata/ont#numberOfTransformationPoints
+m3d:numberOfTransformationPoints rdf:type owl:DatatypeProperty ;
+                                 rdfs:range xsd:integer .
+
+
+###  http://objects.mainzed.org/metadata/ont#numberOfVertices
+m3d:numberOfVertices rdf:type owl:DatatypeProperty ;
+                     rdfs:range xsd:integer .
 
 
 ###  http://objects.mainzed.org/metadata/ont#value
@@ -411,11 +456,6 @@ m3d:AlignmentAccuracy rdf:type owl:Class ;
                       rdfs:subClassOf m3d:Agisoft .
 
 
-###  http://objects.mainzed.org/metadata/ont#Atos
-m3d:Atos rdf:type owl:Class ;
-         rdfs:subClassOf m3d:Measurement .
-
-
 ###  http://objects.mainzed.org/metadata/ont#Atos1
 m3d:Atos1 rdf:type owl:Class ;
           rdfs:subClassOf m3d:StructuredLight3DScanner .
@@ -580,6 +620,11 @@ m3d:FocalLength rdf:type owl:Class ;
                            "focal length"@en .
 
 
+###  http://objects.mainzed.org/metadata/ont#FrameCalibrationTemperature
+m3d:FrameCalibrationTemperature rdf:type owl:Class ;
+                                rdfs:subClassOf m3d:CameraCalibrationMeasures .
+
+
 ###  http://objects.mainzed.org/metadata/ont#GridDomain
 m3d:GridDomain rdf:type owl:Class .
 
@@ -695,6 +740,11 @@ m3d:MeasurementDeviation rdf:type owl:Class ;
                                     "measurement deviation"@en .
 
 
+###  http://objects.mainzed.org/metadata/ont#MeasurementTemperature
+m3d:MeasurementTemperature rdf:type owl:Class ;
+                           rdfs:subClassOf m3d:CameraMeasures .
+
+
 ###  http://objects.mainzed.org/metadata/ont#MeshProcessingActivity
 m3d:MeshProcessingActivity rdf:type owl:Class ;
                            rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> .
@@ -736,51 +786,11 @@ m3d:NormalLengthVertices rdf:type owl:Class ;
                          rdfs:label "Normal Length Vertices"@en .
 
 
-###  http://objects.mainzed.org/metadata/ont#NumberOfCameras
-m3d:NumberOfCameras rdf:type owl:Class ;
-                    rdfs:subClassOf m3d:CameraMeasures ;
-                    rdfs:label "Anzahl der Kameras"@de ,
-                               "number of cameras"@en .
-
-
 ###  http://objects.mainzed.org/metadata/ont#NumberOfChunks
 m3d:NumberOfChunks rdf:type owl:Class ;
                    rdfs:subClassOf m3d:ChunkMeasures ;
                    rdfs:label "Anzahl der Chunks"@de ,
                               "Number Of Chunks"@en .
-
-
-###  http://objects.mainzed.org/metadata/ont#NumberOfReferencePoints
-m3d:NumberOfReferencePoints rdf:type owl:Class ;
-                            rdfs:subClassOf m3d:CameraMeasures ;
-                            rdfs:label "Anzahl der Referenzpunkte"@de ,
-                                       "Number of reference points"@en .
-
-
-###  http://objects.mainzed.org/metadata/ont#NumberOfScales
-m3d:NumberOfScales rdf:type owl:Class ;
-                   rdfs:subClassOf m3d:Atos ;
-                   rdfs:label "number of scales"@en .
-
-
-###  http://objects.mainzed.org/metadata/ont#NumberOfShutterTimes
-m3d:NumberOfShutterTimes rdf:type owl:Class ;
-                         rdfs:subClassOf m3d:CameraMeasures ;
-                         rdfs:label "Anzahl der Belichtungen"@de ,
-                                    "Number of shutter times"@en .
-
-
-###  http://objects.mainzed.org/metadata/ont#NumberOfTransformationPoints
-m3d:NumberOfTransformationPoints rdf:type owl:Class ;
-                                 rdfs:subClassOf m3d:Atos ;
-                                 rdfs:label "number of transformation points"@en .
-
-
-###  http://objects.mainzed.org/metadata/ont#PhaseSteps
-m3d:PhaseSteps rdf:type owl:Class ;
-               rdfs:subClassOf m3d:CameraMeasures ;
-               rdfs:label "Phasensteps"@de ,
-                          "phase steps"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#PointCloud
@@ -962,6 +972,11 @@ m3d:TransformationMode rdf:type owl:Class ;
                                                        )
                                            ] ;
                        rdfs:subClassOf m3d:CameraMeasures .
+
+
+###  http://objects.mainzed.org/metadata/ont#TriangulationAngle
+m3d:TriangulationAngle rdf:type owl:Class ;
+                       rdfs:subClassOf m3d:CameraCalibrationMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#VertexMeasures
