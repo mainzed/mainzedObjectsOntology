@@ -331,27 +331,74 @@ m3d:value rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
+###  http://objects.mainzed.org/agent/ont#Archeologist
+<http://objects.mainzed.org/agent/ont#Archeologist> rdf:type owl:Class ;
+                                                    owl:equivalentClass <http://www.wikidata.org/entity/Q3621491> ;
+                                                    rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  http://objects.mainzed.org/agent/ont#Engineer
+<http://objects.mainzed.org/agent/ont#Engineer> rdf:type owl:Class ;
+                                                rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
+
+
+###  http://objects.mainzed.org/agent/ont#Geodesist
+<http://objects.mainzed.org/agent/ont#Geodesist> rdf:type owl:Class ;
+                                                 owl:equivalentClass <http://www.wikidata.org/entity/Q11699606> ;
+                                                 rdfs:subClassOf <http://objects.mainzed.org/agent/ont#Engineer> .
+
+
+###  http://objects.mainzed.org/function/ont#AffineInvariantDetection
+m3df:AffineInvariantDetection rdf:type owl:Class ;
+                              rdfs:subClassOf m3df:FeatureDetectionAlgorithm .
+
+
+###  http://objects.mainzed.org/function/ont#Algorithm
+m3df:Algorithm rdf:type owl:Class ;
+               rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
+
+
+###  http://objects.mainzed.org/function/ont#BlobDetection
+m3df:BlobDetection rdf:type owl:Class ;
+                   rdfs:subClassOf m3df:FeatureDetectionAlgorithm .
+
+
 ###  http://objects.mainzed.org/function/ont#Clean
 m3df:Clean rdf:type owl:Class ;
            rdfs:subClassOf m3df:ExportFunction ;
            rdfs:label "Clean"@en .
 
 
+###  http://objects.mainzed.org/function/ont#CornerDetection
+m3df:CornerDetection rdf:type owl:Class ;
+                     rdfs:subClassOf m3df:FeatureDetectionAlgorithm .
+
+
 ###  http://objects.mainzed.org/function/ont#DistanceToLine
 m3df:DistanceToLine rdf:type owl:Class ;
-                    rdfs:subClassOf m3df:MeasurementFunction ;
+                    rdfs:subClassOf m3df:MeasurementAlgorithm ;
                     rdfs:label "Distance To Line" .
 
 
 ###  http://objects.mainzed.org/function/ont#DistanceToPlane
 m3df:DistanceToPlane rdf:type owl:Class ;
-                     rdfs:subClassOf m3df:MeasurementFunction ;
+                     rdfs:subClassOf m3df:MeasurementAlgorithm ;
                      rdfs:label "Distance To Plane" .
+
+
+###  http://objects.mainzed.org/function/ont#EdgeDetection
+m3df:EdgeDetection rdf:type owl:Class ;
+                   rdfs:subClassOf m3df:FeatureDetectionAlgorithm .
 
 
 ###  http://objects.mainzed.org/function/ont#ExportFunction
 m3df:ExportFunction rdf:type owl:Class ;
                     rdfs:subClassOf m3df:ProcessingFunction .
+
+
+###  http://objects.mainzed.org/function/ont#FeatureDetectionAlgorithm
+m3df:FeatureDetectionAlgorithm rdf:type owl:Class ;
+                               rdfs:subClassOf m3df:Algorithm .
 
 
 ###  http://objects.mainzed.org/function/ont#InvertFaceOrientation
@@ -360,9 +407,9 @@ m3df:InvertFaceOrientation rdf:type owl:Class ;
                            rdfs:label "Invert Face Orientation" .
 
 
-###  http://objects.mainzed.org/function/ont#MeasurementFunction
-m3df:MeasurementFunction rdf:type owl:Class ;
-                         rdfs:subClassOf m3df:ProcessingFunction .
+###  http://objects.mainzed.org/function/ont#MeasurementAlgorithm
+m3df:MeasurementAlgorithm rdf:type owl:Class ;
+                          rdfs:subClassOf m3df:Algorithm .
 
 
 ###  http://objects.mainzed.org/function/ont#ModificationFunction
@@ -372,7 +419,7 @@ m3df:ModificationFunction rdf:type owl:Class ;
 
 ###  http://objects.mainzed.org/function/ont#ProcessingFunction
 m3df:ProcessingFunction rdf:type owl:Class ;
-                        rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> ;
+                        rdfs:subClassOf m3df:Algorithm ;
                         rdfs:label "Processing Function"@en .
 
 
@@ -412,6 +459,11 @@ m3df:RemoveSelMVerts rdf:type owl:Class ;
 m3df:RemoveUncleanSmall rdf:type owl:Class ;
                         rdfs:subClassOf m3df:RemoveFunction ;
                         rdfs:label "Remove Unclean/Small" .
+
+
+###  http://objects.mainzed.org/function/ont#ScreenshotExportFunction
+m3df:ScreenshotExportFunction rdf:type owl:Class ;
+                              rdfs:subClassOf m3df:ExportFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#SplitByIsoValue
@@ -458,7 +510,7 @@ m3d:AlignmentAccuracy rdf:type owl:Class ;
 
 ###  http://objects.mainzed.org/metadata/ont#Atos1
 m3d:Atos1 rdf:type owl:Class ;
-          rdfs:subClassOf m3d:StructuredLight3DScanner .
+          rdfs:subClassOf m3dt:StructuredLight3DScanner .
 
 
 ###  http://objects.mainzed.org/metadata/ont#BlendingMode
@@ -487,16 +539,6 @@ m3d:BorderVertices rdf:type owl:Class ;
 m3d:BridgeBorderFaces rdf:type owl:Class ;
                       rdfs:subClassOf m3d:FacesMeasures ;
                       rdfs:label "Bridge Border Faces"@en .
-
-
-###  http://objects.mainzed.org/metadata/ont#CalibrationObject
-m3d:CalibrationObject rdf:type owl:Class ;
-                      rdfs:subClassOf m3d:Tool .
-
-
-###  http://objects.mainzed.org/metadata/ont#Camera
-m3d:Camera rdf:type owl:Class ;
-           rdfs:subClassOf m3d:Tool .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CameraAngle
@@ -793,6 +835,11 @@ m3d:NumberOfChunks rdf:type owl:Class ;
                               "Number Of Chunks"@en .
 
 
+###  http://objects.mainzed.org/metadata/ont#PhaseScanner
+m3d:PhaseScanner rdf:type owl:Class ;
+                 rdfs:subClassOf m3dt:LaserScanner .
+
+
 ###  http://objects.mainzed.org/metadata/ont#PointCloud
 m3d:PointCloud rdf:type owl:Class ;
                rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
@@ -832,7 +879,7 @@ m3d:ReferencePointSize rdf:type owl:Class ;
 
 ###  http://objects.mainzed.org/metadata/ont#ReferenceTemperature
 m3d:ReferenceTemperature rdf:type owl:Class ;
-                         rdfs:subClassOf m3d:Camera .
+                         rdfs:subClassOf m3dt:Camera .
 
 
 ###  http://objects.mainzed.org/metadata/ont#RemoveFacesBorderErosion
@@ -840,19 +887,14 @@ m3d:RemoveFacesBorderErosion rdf:type owl:Class ;
                              rdfs:subClassOf m3df:RemoveFunction .
 
 
+###  http://objects.mainzed.org/metadata/ont#RidgeDetection
+m3d:RidgeDetection rdf:type owl:Class ;
+                   rdfs:subClassOf m3df:FeatureDetectionAlgorithm .
+
+
 ###  http://objects.mainzed.org/metadata/ont#RotationAccuracy
 m3d:RotationAccuracy rdf:type owl:Class ;
                      rdfs:subClassOf m3d:CameraMeasures .
-
-
-###  http://objects.mainzed.org/metadata/ont#Scanner
-m3d:Scanner rdf:type owl:Class ;
-            rdfs:subClassOf m3d:Tool .
-
-
-###  http://objects.mainzed.org/metadata/ont#ScreenshotExportFunction
-m3d:ScreenshotExportFunction rdf:type owl:Class ;
-                             rdfs:subClassOf m3df:ExportFunction .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SelectedFaces
@@ -917,11 +959,6 @@ m3d:StickyFaces rdf:type owl:Class ;
                 rdfs:label "Sticky Faces"@en .
 
 
-###  http://objects.mainzed.org/metadata/ont#StructuredLight3DScanner
-m3d:StructuredLight3DScanner rdf:type owl:Class ;
-                             rdfs:subClassOf m3d:Scanner .
-
-
 ###  http://objects.mainzed.org/metadata/ont#SyntheticVertexFaces
 m3d:SyntheticVertexFaces rdf:type owl:Class ;
                          rdfs:subClassOf m3d:FacesMeasures ;
@@ -944,10 +981,6 @@ m3d:TangentialDistortionCoefficient rdf:type owl:Class ;
 m3d:ThreeBorderVertexFaces rdf:type owl:Class ;
                            rdfs:subClassOf m3d:FacesMeasures ;
                            rdfs:label "Three-Border Vertex Faces"@en .
-
-
-###  http://objects.mainzed.org/metadata/ont#Tool
-m3d:Tool rdf:type owl:Class .
 
 
 ###  http://objects.mainzed.org/metadata/ont#TotalNumberOfFaces
@@ -998,16 +1031,44 @@ m3d:VerticesPartOfZeroAreaFace rdf:type owl:Class ;
                                rdfs:label "Vertices Part Of ZeroArea Face"@en .
 
 
+###  http://objects.mainzed.org/metadata/ont#Wikidata
+m3d:Wikidata rdf:type owl:Class .
+
+
 ###  http://objects.mainzed.org/metadata/ont#ZeroAreaFaces
 m3d:ZeroAreaFaces rdf:type owl:Class ;
                   rdfs:subClassOf m3d:FacesMeasures ;
                   rdfs:label "ZeroArea Faces"@en .
 
 
+###  http://objects.mainzed.org/type/ont#CalibrationTool
+m3dt:CalibrationTool rdf:type owl:Class ;
+                     rdfs:subClassOf m3dt:Tool .
+
+
+###  http://objects.mainzed.org/type/ont#Camera
+m3dt:Camera rdf:type owl:Class ;
+            owl:equivalentClass <http://www.wikidata.org/entity/Q15328> ;
+            rdfs:subClassOf m3dt:Tool .
+
+
+###  http://objects.mainzed.org/type/ont#DSLR
+m3dt:DSLR rdf:type owl:Class ;
+          owl:equivalentClass <http://www.wikidata.org/entity/Q196353> ;
+          rdfs:subClassOf m3dt:Camera ;
+          rdfs:label "digital single-lens reflex camera" .
+
+
 ###  http://objects.mainzed.org/type/ont#GeometricalRepresentation
 m3dt:GeometricalRepresentation rdf:type owl:Class ;
                                rdfs:subClassOf m3dt:ShapeRepresentation ;
                                rdfs:label "Geometrical Representation"@en .
+
+
+###  http://objects.mainzed.org/type/ont#LaserScanner
+m3dt:LaserScanner rdf:type owl:Class ;
+                  owl:equivalentClass <http://www.wikidata.org/entity/Q1361664> ;
+                  rdfs:subClassOf m3dt:Scanner .
 
 
 ###  http://objects.mainzed.org/type/ont#Mesh
@@ -1030,10 +1091,30 @@ m3dt:Rasterdata rdf:type owl:Class ;
                            "Rasterdaten"@de .
 
 
+###  http://objects.mainzed.org/type/ont#Scanner
+m3dt:Scanner rdf:type owl:Class ;
+             owl:equivalentClass <http://www.wikidata.org/entity/Q82744> ;
+             rdfs:subClassOf m3dt:Tool .
+
+
 ###  http://objects.mainzed.org/type/ont#ShapeRepresentation
 m3dt:ShapeRepresentation rdf:type owl:Class ;
                          rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
                          rdfs:label "Shape Representation"@en .
+
+
+###  http://objects.mainzed.org/type/ont#StructuredLight3DScanner
+m3dt:StructuredLight3DScanner rdf:type owl:Class ;
+                              rdfs:subClassOf m3dt:Scanner .
+
+
+###  http://objects.mainzed.org/type/ont#Tool
+m3dt:Tool rdf:type owl:Class .
+
+
+###  http://objects.mainzed.org/type/ont#TriangulationScanner
+m3dt:TriangulationScanner rdf:type owl:Class ;
+                          rdfs:subClassOf m3dt:Scanner .
 
 
 ###  http://objects.mainzed.org/type/ont#2DRaster
@@ -1119,9 +1200,114 @@ m3dt:ShapeRepresentation rdf:type owl:Class ;
                                    rdfs:label "Entity" .
 
 
+###  http://www.wikidata.org/entity/Q11699606
+<http://www.wikidata.org/entity/Q11699606> rdf:type owl:Class ;
+                                           rdfs:subClassOf m3d:Wikidata .
+
+
+###  http://www.wikidata.org/entity/Q1361664
+<http://www.wikidata.org/entity/Q1361664> rdf:type owl:Class ;
+                                          rdfs:subClassOf m3d:Wikidata .
+
+
+###  http://www.wikidata.org/entity/Q15328
+<http://www.wikidata.org/entity/Q15328> rdf:type owl:Class ;
+                                        rdfs:subClassOf m3d:Wikidata .
+
+
+###  http://www.wikidata.org/entity/Q196353
+<http://www.wikidata.org/entity/Q196353> rdf:type owl:Class ;
+                                         rdfs:subClassOf m3d:Wikidata .
+
+
+###  http://www.wikidata.org/entity/Q3621491
+<http://www.wikidata.org/entity/Q3621491> rdf:type owl:Class ;
+                                          rdfs:subClassOf m3d:Wikidata .
+
+
+###  http://www.wikidata.org/entity/Q82744
+<http://www.wikidata.org/entity/Q82744> rdf:type owl:Class ;
+                                        rdfs:subClassOf m3d:Wikidata .
+
+
+###  http://xmlns.com/foaf/0.1/Person
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+                                   rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
+
+
 #################################################################
 #    Individuals
 #################################################################
+
+###  http://objects.mainzed.org/function/ont#AffineShapeAdaptation
+m3df:AffineShapeAdaptation rdf:type owl:NamedIndividual ,
+                                    m3df:AffineInvariantDetection ;
+                           owl:sameAs <http://www.wikidata.org/entity/Q4688950> .
+
+
+###  http://objects.mainzed.org/function/ont#CannyEdgeDetection
+m3df:CannyEdgeDetection rdf:type owl:NamedIndividual ,
+                                 m3df:EdgeDetection ;
+                        owl:sameAs <http://www.wikidata.org/entity/Q597183> .
+
+
+###  http://objects.mainzed.org/function/ont#DericheEdgeDetection
+m3df:DericheEdgeDetection rdf:type owl:NamedIndividual ,
+                                   m3df:EdgeDetection ;
+                          owl:sameAs <http://www.wikidata.org/entity/Q5262565> .
+
+
+###  http://objects.mainzed.org/function/ont#DifferenceOfGaussianBlobDetection
+m3df:DifferenceOfGaussianBlobDetection rdf:type owl:NamedIndividual ,
+                                                m3df:BlobDetection .
+
+
+###  http://objects.mainzed.org/function/ont#DifferentialEdgeDetection
+m3df:DifferentialEdgeDetection rdf:type owl:NamedIndividual ,
+                                        m3df:EdgeDetection .
+
+
+###  http://objects.mainzed.org/function/ont#HarrisCornerDetection
+m3df:HarrisCornerDetection rdf:type owl:NamedIndividual ,
+                                    m3df:CornerDetection .
+
+
+###  http://objects.mainzed.org/function/ont#HessianFeatureStrengthCornerDetection
+m3df:HessianFeatureStrengthCornerDetection rdf:type owl:NamedIndividual ,
+                                                    m3df:CornerDetection .
+
+
+###  http://objects.mainzed.org/function/ont#HoughTransformation
+m3df:HoughTransformation rdf:type owl:NamedIndividual ,
+                                  m3df:EdgeDetection ;
+                         owl:sameAs <http://www.wikidata.org/entity/Q195076> .
+
+
+###  http://objects.mainzed.org/function/ont#MaximallyStableExtremalRegionsBlobDetection
+m3df:MaximallyStableExtremalRegionsBlobDetection rdf:type owl:NamedIndividual ,
+                                                          m3df:BlobDetection .
+
+
+###  http://objects.mainzed.org/function/ont#ShiTomasiCornerDetection
+m3df:ShiTomasiCornerDetection rdf:type owl:NamedIndividual ,
+                                       m3df:CornerDetection .
+
+
+###  http://objects.mainzed.org/function/ont#SobelEdgeDetection
+m3df:SobelEdgeDetection rdf:type owl:NamedIndividual ,
+                                 m3df:EdgeDetection ;
+                        owl:sameAs <http://www.wikidata.org/entity/Q1757673> .
+
+
+###  http://objects.mainzed.org/metadata/function/ont#DeterminantOfHessianBlobDetection
+<http://objects.mainzed.org/metadata/function/ont#DeterminantOfHessianBlobDetection> rdf:type owl:NamedIndividual ,
+                                                                                              m3df:BlobDetection .
+
+
+###  http://objects.mainzed.org/metadata/function/ont#LaPlacianOfGaussianBlobDetection
+<http://objects.mainzed.org/metadata/function/ont#LaPlacianOfGaussianBlobDetection> rdf:type owl:NamedIndividual ,
+                                                                                             m3df:BlobDetection .
+
 
 ###  http://objects.mainzed.org/metadata/ont#AverageBlending
 m3d:AverageBlending rdf:type owl:NamedIndividual ,
@@ -1148,6 +1334,18 @@ m3d:Extrapolated rdf:type owl:NamedIndividual ,
                           m3d:Interpolation .
 
 
+###  http://objects.mainzed.org/metadata/ont#HarrisAffine
+m3d:HarrisAffine rdf:type owl:NamedIndividual ,
+                          m3df:AffineInvariantDetection ;
+                 owl:sameAs <http://www.wikidata.org/entity/Q17021115> .
+
+
+###  http://objects.mainzed.org/metadata/ont#HessianAffine
+m3d:HessianAffine rdf:type owl:NamedIndividual ,
+                           m3df:AffineInvariantDetection ;
+                  owl:sameAs <http://www.wikidata.org/entity/Q5746227> .
+
+
 ###  http://objects.mainzed.org/metadata/ont#HighAccuracy
 m3d:HighAccuracy rdf:type owl:NamedIndividual ,
                           m3d:AlignmentAccuracy .
@@ -1156,6 +1354,11 @@ m3d:HighAccuracy rdf:type owl:NamedIndividual ,
 ###  http://objects.mainzed.org/metadata/ont#HighestAccuracy
 m3d:HighestAccuracy rdf:type owl:NamedIndividual ,
                              m3d:AlignmentAccuracy .
+
+
+###  http://objects.mainzed.org/metadata/ont#LevelCurveCurvatureCornerDetection
+m3d:LevelCurveCurvatureCornerDetection rdf:type owl:NamedIndividual ,
+                                                m3df:CornerDetection .
 
 
 ###  http://objects.mainzed.org/metadata/ont#LowAccuracy
@@ -1188,6 +1391,18 @@ m3d:MosaicBlending rdf:type owl:NamedIndividual ,
                             m3d:BlendingMode .
 
 
+###  http://objects.mainzed.org/metadata/ont#PrewittEdgeDetection
+m3d:PrewittEdgeDetection rdf:type owl:NamedIndividual ,
+                                  m3df:EdgeDetection ;
+                         owl:sameAs <http://www.wikidata.org/entity/Q451898> .
+
+
+###  http://objects.mainzed.org/metadata/ont#RobertsCrossDetection
+m3d:RobertsCrossDetection rdf:type owl:NamedIndividual ,
+                                   m3df:EdgeDetection ;
+                          owl:sameAs <http://www.wikidata.org/entity/Q1753515> .
+
+
 ###  http://objects.mainzed.org/metadata/ont#environment_instable
 m3d:environment_instable rdf:type owl:NamedIndividual ,
                                   m3d:LightFactorCalibrationEnvironment .
@@ -1206,6 +1421,42 @@ m3d:transformationmode_automatic rdf:type owl:NamedIndividual ,
 ###  http://objects.mainzed.org/metadata/ont#transformationmode_manual
 m3d:transformationmode_manual rdf:type owl:NamedIndividual ,
                                        m3d:TransformationMode .
+
+
+###  http://www.wikidata.org/entity/Q17021115
+<http://www.wikidata.org/entity/Q17021115> rdf:type owl:NamedIndividual .
+
+
+###  http://www.wikidata.org/entity/Q1753515
+<http://www.wikidata.org/entity/Q1753515> rdf:type owl:NamedIndividual .
+
+
+###  http://www.wikidata.org/entity/Q1757673
+<http://www.wikidata.org/entity/Q1757673> rdf:type owl:NamedIndividual .
+
+
+###  http://www.wikidata.org/entity/Q195076
+<http://www.wikidata.org/entity/Q195076> rdf:type owl:NamedIndividual .
+
+
+###  http://www.wikidata.org/entity/Q451898
+<http://www.wikidata.org/entity/Q451898> rdf:type owl:NamedIndividual .
+
+
+###  http://www.wikidata.org/entity/Q4688950
+<http://www.wikidata.org/entity/Q4688950> rdf:type owl:NamedIndividual .
+
+
+###  http://www.wikidata.org/entity/Q5262565
+<http://www.wikidata.org/entity/Q5262565> rdf:type owl:NamedIndividual .
+
+
+###  http://www.wikidata.org/entity/Q5746227
+<http://www.wikidata.org/entity/Q5746227> rdf:type owl:NamedIndividual .
+
+
+###  http://www.wikidata.org/entity/Q597183
+<http://www.wikidata.org/entity/Q597183> rdf:type owl:NamedIndividual .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
