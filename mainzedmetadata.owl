@@ -7,6 +7,8 @@
 @prefix m3df: <http://objects.mainzed.org/function/ont#> .
 @prefix m3dt: <http://objects.mainzed.org/type/ont#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+
 @base <http://objects.mainzed.org/metadata/ont#> .
 
 <http://objects.mainzed.org/metadata/ont#> rdf:type owl:Ontology .
@@ -332,339 +334,353 @@ m3d:value rdf:type owl:DatatypeProperty ;
 #################################################################
 
 ###  http://objects.mainzed.org/agent/ont#Archeologist
-<http://objects.mainzed.org/agent/ont#Archeologist> rdf:type owl:Class ;
+<http://objects.mainzed.org/agent/ont#Archeologist> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                     owl:equivalentClass <http://www.wikidata.org/entity/Q3621491> ;
                                                     rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
 
 
 ###  http://objects.mainzed.org/agent/ont#Engineer
-<http://objects.mainzed.org/agent/ont#Engineer> rdf:type owl:Class ;
+<http://objects.mainzed.org/agent/ont#Engineer> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                 rdfs:subClassOf <http://xmlns.com/foaf/0.1/Person> .
 
 
 ###  http://objects.mainzed.org/agent/ont#Geodesist
-<http://objects.mainzed.org/agent/ont#Geodesist> rdf:type owl:Class ;
+<http://objects.mainzed.org/agent/ont#Geodesist> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                  owl:equivalentClass <http://www.wikidata.org/entity/Q11699606> ;
                                                  rdfs:subClassOf <http://objects.mainzed.org/agent/ont#Engineer> .
 
 
 ###  http://objects.mainzed.org/function/ont#AffineInvariantDetection
-m3df:AffineInvariantDetection rdf:type owl:Class ;
+m3df:AffineInvariantDetection rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                               rdfs:subClassOf m3df:FeatureDetectionAlgorithm .
 
 
 ###  http://objects.mainzed.org/function/ont#Algorithm
-m3df:Algorithm rdf:type owl:Class ;
+m3df:Algorithm rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
 
 
 ###  http://objects.mainzed.org/function/ont#BlobDetection
-m3df:BlobDetection rdf:type owl:Class ;
+m3df:BlobDetection rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                    rdfs:subClassOf m3df:FeatureDetectionAlgorithm .
 
 
 ###  http://objects.mainzed.org/function/ont#Clean
-m3df:Clean rdf:type owl:Class ;
+m3df:Clean rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
            rdfs:subClassOf m3df:ExportFunction ;
            rdfs:label "Clean"@en .
 
 
 ###  http://objects.mainzed.org/function/ont#CornerDetection
-m3df:CornerDetection rdf:type owl:Class ;
+m3df:CornerDetection rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3df:FeatureDetectionAlgorithm .
 
 
 ###  http://objects.mainzed.org/function/ont#DistanceToLine
-m3df:DistanceToLine rdf:type owl:Class ;
+m3df:DistanceToLine rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                     rdfs:subClassOf m3df:MeasurementAlgorithm ;
                     rdfs:label "Distance To Line" .
 
 
 ###  http://objects.mainzed.org/function/ont#DistanceToPlane
-m3df:DistanceToPlane rdf:type owl:Class ;
+m3df:DistanceToPlane rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3df:MeasurementAlgorithm ;
                      rdfs:label "Distance To Plane" .
 
 
 ###  http://objects.mainzed.org/function/ont#EdgeDetection
-m3df:EdgeDetection rdf:type owl:Class ;
+m3df:EdgeDetection rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                    rdfs:subClassOf m3df:FeatureDetectionAlgorithm .
 
 
 ###  http://objects.mainzed.org/function/ont#ExportFunction
-m3df:ExportFunction rdf:type owl:Class ;
+m3df:ExportFunction rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                     rdfs:subClassOf m3df:ProcessingFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#FeatureDetectionAlgorithm
-m3df:FeatureDetectionAlgorithm rdf:type owl:Class ;
+m3df:FeatureDetectionAlgorithm rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                rdfs:subClassOf m3df:Algorithm .
 
 
 ###  http://objects.mainzed.org/function/ont#InvertFaceOrientation
-m3df:InvertFaceOrientation rdf:type owl:Class ;
+m3df:InvertFaceOrientation rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                            rdfs:subClassOf m3df:TransformationFunction ;
                            rdfs:label "Invert Face Orientation" .
 
 
 ###  http://objects.mainzed.org/function/ont#MeasurementAlgorithm
-m3df:MeasurementAlgorithm rdf:type owl:Class ;
+m3df:MeasurementAlgorithm rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                           rdfs:subClassOf m3df:Algorithm .
 
 
 ###  http://objects.mainzed.org/function/ont#ModificationFunction
-m3df:ModificationFunction rdf:type owl:Class ;
+m3df:ModificationFunction rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                           rdfs:subClassOf m3df:ProcessingFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#ProcessingFunction
-m3df:ProcessingFunction rdf:type owl:Class ;
+m3df:ProcessingFunction rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                         rdfs:subClassOf m3df:Algorithm ;
                         rdfs:label "Processing Function"@en .
 
 
 ###  http://objects.mainzed.org/function/ont#RemoveAllPolylines
-m3df:RemoveAllPolylines rdf:type owl:Class ;
+m3df:RemoveAllPolylines rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                         rdfs:subClassOf m3df:RemoveFunction ;
                         rdfs:label "Remove All Polylines" .
 
 
 ###  http://objects.mainzed.org/function/ont#RemoveFacesZeroArea
-m3df:RemoveFacesZeroArea rdf:type owl:Class ;
+m3df:RemoveFacesZeroArea rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                          rdfs:subClassOf m3df:RemoveFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#RemoveFilledHoles
-m3df:RemoveFilledHoles rdf:type owl:Class ;
+m3df:RemoveFilledHoles rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                        rdfs:subClassOf m3df:RemoveFunction ;
                        rdfs:label "Remove Filled Holes" .
 
 
 ###  http://objects.mainzed.org/function/ont#RemoveFunction
-m3df:RemoveFunction rdf:type owl:Class ;
+m3df:RemoveFunction rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                     rdfs:subClassOf m3df:ModificationFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#RemoveSelMFaces
-m3df:RemoveSelMFaces rdf:type owl:Class ;
+m3df:RemoveSelMFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3df:RemoveFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#RemoveSelMVerts
-m3df:RemoveSelMVerts rdf:type owl:Class ;
+m3df:RemoveSelMVerts rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3df:RemoveFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#RemoveUncleanSmall
-m3df:RemoveUncleanSmall rdf:type owl:Class ;
+m3df:RemoveUncleanSmall rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                         rdfs:subClassOf m3df:RemoveFunction ;
                         rdfs:label "Remove Unclean/Small" .
 
 
 ###  http://objects.mainzed.org/function/ont#ScreenshotExportFunction
-m3df:ScreenshotExportFunction rdf:type owl:Class ;
+m3df:ScreenshotExportFunction rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                               rdfs:subClassOf m3df:ExportFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#SplitByIsoValue
-m3df:SplitByIsoValue rdf:type owl:Class ;
+m3df:SplitByIsoValue rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3df:SplitFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#SplitByPlane
-m3df:SplitByPlane rdf:type owl:Class ;
+m3df:SplitByPlane rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                   rdfs:subClassOf m3df:SplitFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#SplitFunction
-m3df:SplitFunction rdf:type owl:Class ;
+m3df:SplitFunction rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                    rdfs:subClassOf m3df:ModificationFunction .
 
 
 ###  http://objects.mainzed.org/function/ont#TransformationFunction
-m3df:TransformationFunction rdf:type owl:Class ;
+m3df:TransformationFunction rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                             rdfs:subClassOf m3df:ModificationFunction .
 
 
 ###  http://objects.mainzed.org/metadata/ont#AffinityMeasure
-m3d:AffinityMeasure rdf:type owl:Class ;
+m3d:AffinityMeasure rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                     rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                     rdfs:label "affinity measure"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#Agisoft
-m3d:Agisoft rdf:type owl:Class ;
+m3d:Agisoft rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
             rdfs:subClassOf m3d:Measurement .
 
 
 ###  http://objects.mainzed.org/metadata/ont#Alignment
-m3d:Alignment rdf:type owl:Class ;
+m3d:Alignment rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
               rdfs:subClassOf m3d:CameraMeasures ;
               rdfs:label "Feinausrichtung"@de .
 
 
 ###  http://objects.mainzed.org/metadata/ont#AlignmentAccuracy
-m3d:AlignmentAccuracy rdf:type owl:Class ;
+m3d:AlignmentAccuracy rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                       rdfs:subClassOf m3d:Agisoft .
 
 
 ###  http://objects.mainzed.org/metadata/ont#Atos1
-m3d:Atos1 rdf:type owl:Class ;
+m3d:Atos1 rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
           rdfs:subClassOf m3dt:StructuredLight3DScanner .
 
 
 ###  http://objects.mainzed.org/metadata/ont#BlendingMode
-m3d:BlendingMode rdf:type owl:Class ;
+m3d:BlendingMode rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                  rdfs:subClassOf m3d:Agisoft .
 
 
 ###  http://objects.mainzed.org/metadata/ont#BorderFaces
-m3d:BorderFaces rdf:type owl:Class ;
+m3d:BorderFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                 rdfs:subClassOf m3d:FacesMeasures ;
                 rdfs:label "Border Faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#BorderFacesBridgeTriConnection
-m3d:BorderFacesBridgeTriConnection rdf:type owl:Class ;
+m3d:BorderFacesBridgeTriConnection rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                    rdfs:subClassOf m3d:FacesMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#BorderVertices
-m3d:BorderVertices rdf:type owl:Class ;
+m3d:BorderVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                    rdfs:subClassOf m3d:VertexMeasures ;
                    rdfs:label "Border Vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#BridgeBorderFaces
-m3d:BridgeBorderFaces rdf:type owl:Class ;
+m3d:BridgeBorderFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                       rdfs:subClassOf m3d:FacesMeasures ;
                       rdfs:label "Bridge Border Faces"@en .
 
 
+###  http://objects.mainzed.org/metadata/ont#CalibrationAlgorithm
+m3d:CalibrationAlgorithm rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                         rdfs:subClassOf m3df:Algorithm .
+
+
 ###  http://objects.mainzed.org/metadata/ont#CameraAngle
-m3d:CameraAngle rdf:type owl:Class ;
+m3d:CameraAngle rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                 rdfs:subClassOf m3d:CameraMeasures ;
                 rdfs:label "Kamerawinkel"@de ,
                            "camera angle"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CameraBrightness
-m3d:CameraBrightness rdf:type owl:Class ;
+m3d:CameraBrightness rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3d:CameraMeasures ;
                      rdfs:label "camera brightness"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CameraCRS
-m3d:CameraCRS rdf:type owl:Class ;
+m3d:CameraCRS rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
               rdfs:subClassOf m3d:CameraMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CameraCalibrationMeasures
-m3d:CameraCalibrationMeasures rdf:type owl:Class ;
+m3d:CameraCalibrationMeasures rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                               rdfs:subClassOf m3d:CameraMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CameraIdentifier
-m3d:CameraIdentifier rdf:type owl:Class ;
+m3d:CameraIdentifier rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3d:CameraMeasures ;
                      rdfs:label "Kamerakennung"@de ,
                                 "camera identifier"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CameraMeasures
-m3d:CameraMeasures rdf:type owl:Class ;
+m3d:CameraMeasures rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                    rdfs:subClassOf m3d:SensorMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CameraModel
-m3d:CameraModel rdf:type owl:Class ;
+m3d:CameraModel rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                 rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                 rdfs:label "camera model"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CameraScaleDeviation
-m3d:CameraScaleDeviation rdf:type owl:Class ;
+m3d:CameraScaleDeviation rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                          rdfs:subClassOf m3d:CameraCalibrationMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CameraTemperature
-m3d:CameraTemperature rdf:type owl:Class ;
+m3d:CameraTemperature rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                       rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                       rdfs:label "Kameratemperatur"@en ,
                                  "camera temperature"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ChunkMeasures
-m3d:ChunkMeasures rdf:type owl:Class ;
+m3d:ChunkMeasures rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                   rdfs:subClassOf m3d:Measurement .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CircleCenterVertices
-m3d:CircleCenterVertices rdf:type owl:Class ;
+m3d:CircleCenterVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                          rdfs:subClassOf m3d:VertexMeasures ;
                          rdfs:label "Circle Center Vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CornerMask
-m3d:CornerMask rdf:type owl:Class ;
+m3d:CornerMask rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                rdfs:subClassOf m3d:CameraMeasures ;
                rdfs:label "Eckmaskierung"@de ,
                           "corner mask"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CovarianceMatrix
-m3d:CovarianceMatrix rdf:type owl:Class ;
+m3d:CovarianceMatrix rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                      rdfs:label "Kovarianzmatrix"@de ,
                                 "covariance matrix"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#DanglingBorderFaces
-m3d:DanglingBorderFaces rdf:type owl:Class ;
+m3d:DanglingBorderFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                         rdfs:subClassOf m3d:FacesMeasures ;
                         rdfs:label "Dangling Border Faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#DigitalElevationModel
-m3d:DigitalElevationModel rdf:type owl:Class ;
+m3d:DigitalElevationModel rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                           rdfs:subClassOf <http://objects.mainzed.org/type/ont#2DRaster> .
 
 
 ###  http://objects.mainzed.org/metadata/ont#EllipseQuality
-m3d:EllipseQuality rdf:type owl:Class ;
+m3d:EllipseQuality rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                    rdfs:subClassOf m3d:CameraMeasures ;
                    rdfs:label "Ellipsenqualität"@de ,
                               "ellipse quality"@en .
 
 
+###  http://objects.mainzed.org/metadata/ont#Environment
+m3d:Environment rdf:type owl:Class .
+
+
 ###  http://objects.mainzed.org/metadata/ont#ExpansionCoefficient
-m3d:ExpansionCoefficient rdf:type owl:Class ;
+m3d:ExpansionCoefficient rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                          rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                          rdfs:label "Expansionskoeffizient"@de ,
                                     "expansion coefficient"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#FacesMeasures
-m3d:FacesMeasures rdf:type owl:Class ;
+m3d:FacesMeasures rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                   rdfs:subClassOf m3d:Measurement .
 
 
 ###  http://objects.mainzed.org/metadata/ont#FiniteFunctionValueVertices
-m3d:FiniteFunctionValueVertices rdf:type owl:Class ;
+m3d:FiniteFunctionValueVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                 rdfs:subClassOf m3d:VertexMeasures ;
                                 rdfs:label "Finite Function Value Vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#FocalLength
-m3d:FocalLength rdf:type owl:Class ;
+m3d:FocalLength rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                 rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                 rdfs:label "Brennweite"@de ,
                            "focal length"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#FrameCalibrationTemperature
-m3d:FrameCalibrationTemperature rdf:type owl:Class ;
+m3d:FrameCalibrationTemperature rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                 rdfs:subClassOf m3d:CameraCalibrationMeasures .
+
+
+###  http://objects.mainzed.org/metadata/ont#FusionAlgorithm
+m3d:FusionAlgorithm rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                    rdfs:subClassOf m3df:Algorithm .
 
 
 ###  http://objects.mainzed.org/metadata/ont#GridDomain
@@ -672,37 +688,42 @@ m3d:GridDomain rdf:type owl:Class .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ImageHeight
-m3d:ImageHeight rdf:type owl:Class ;
+m3d:ImageHeight rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                 rdfs:subClassOf m3d:CameraCalibrationMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ImageWidth
-m3d:ImageWidth rdf:type owl:Class ;
+m3d:ImageWidth rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                rdfs:subClassOf m3d:CameraCalibrationMeasures .
 
 
+###  http://objects.mainzed.org/metadata/ont#Indoor
+m3d:Indoor rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+           rdfs:subClassOf m3d:Environment .
+
+
 ###  http://objects.mainzed.org/metadata/ont#Interpolation
-m3d:Interpolation rdf:type owl:Class ;
+m3d:Interpolation rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                   rdfs:subClassOf m3d:Agisoft .
 
 
 ###  http://objects.mainzed.org/metadata/ont#InvertedFaces
-m3d:InvertedFaces rdf:type owl:Class ;
+m3d:InvertedFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                   rdfs:subClassOf m3d:FacesMeasures ;
                   rdfs:label "Inverted Faces"@en ,
                              "invertierte Dreiecke"@de .
 
 
 ###  http://objects.mainzed.org/metadata/ont#IsolatedVertices
-m3d:IsolatedVertices rdf:type owl:Class ;
+m3d:IsolatedVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3d:VertexMeasures ;
                      rdfs:label "Anzahl der isolierten Punkte"@en ,
                                 "Isolated Vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#LightFactorCalibrationEnvironment
-m3d:LightFactorCalibrationEnvironment rdf:type owl:Class ;
-                                      owl:equivalentClass [ rdf:type owl:Class ;
+m3d:LightFactorCalibrationEnvironment rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                                      owl:equivalentClass [ rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                             owl:oneOf ( m3d:environment_instable
                                                                         m3d:environment_stable
                                                                       )
@@ -711,37 +732,37 @@ m3d:LightFactorCalibrationEnvironment rdf:type owl:Class ;
 
 
 ###  http://objects.mainzed.org/metadata/ont#LightIntensity
-m3d:LightIntensity rdf:type owl:Class ;
+m3d:LightIntensity rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                    rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                    rdfs:label "Lichtintensität"@de ,
                               "light intensity"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#LocalFunctionMaxValueVertices
-m3d:LocalFunctionMaxValueVertices rdf:type owl:Class ;
+m3d:LocalFunctionMaxValueVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                   rdfs:subClassOf m3d:VertexMeasures ;
                                   rdfs:label "Local Function MaxValue Vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#LocalFunctionMinValueVertices
-m3d:LocalFunctionMinValueVertices rdf:type owl:Class ;
+m3d:LocalFunctionMinValueVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                   rdfs:subClassOf m3d:VertexMeasures ;
                                   rdfs:label "Local Function MinValue Vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#LocationAccuracy
-m3d:LocationAccuracy rdf:type owl:Class ;
+m3d:LocationAccuracy rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3d:CameraMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ManifoldFaces
-m3d:ManifoldFaces rdf:type owl:Class ;
+m3d:ManifoldFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                   rdfs:subClassOf m3d:FacesMeasures ;
                   rdfs:label "Manifold Faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ManuallyAddedVertices
-m3d:ManuallyAddedVertices rdf:type owl:Class ;
+m3d:ManuallyAddedVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                           rdfs:subClassOf m3d:VertexMeasures ;
                           rdfs:label "Manually Added Vertices"@en .
 
@@ -751,114 +772,119 @@ m3d:Marker rdf:type owl:Class .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MaximumCameraAngle
-m3d:MaximumCameraAngle rdf:type owl:Class ;
+m3d:MaximumCameraAngle rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                        rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                        rdfs:label "Maximaler Kamerawinkel"@de ,
                                   "maximum camera angle"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MeasureLight
-m3d:MeasureLight rdf:type owl:Class ;
+m3d:MeasureLight rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                  rdfs:subClassOf m3d:CameraMeasures ;
                  rdfs:label "Messbeleuchtung"@de ,
                             "measurement lighting"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#Measurement
-m3d:Measurement rdf:type owl:Class ;
+m3d:Measurement rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                 rdfs:label "Measurement"@en ;
                 <http://www.w3.org/2004/02/skos/core#definition> "A measurement of a property of a 3DObject"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MeasurementActivity
-m3d:MeasurementActivity rdf:type owl:Class ;
+m3d:MeasurementActivity rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                         rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MeasurementDeviation
-m3d:MeasurementDeviation rdf:type owl:Class ;
+m3d:MeasurementDeviation rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                          rdfs:subClassOf m3d:CameraMeasures ;
                          rdfs:label "Messungsabweichung"@de ,
                                     "measurement deviation"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MeasurementTemperature
-m3d:MeasurementTemperature rdf:type owl:Class ;
+m3d:MeasurementTemperature rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                            rdfs:subClassOf m3d:CameraMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MeshProcessingActivity
-m3d:MeshProcessingActivity rdf:type owl:Class ;
+m3d:MeshProcessingActivity rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                            rdfs:subClassOf <http://www.w3.org/ns/prov#Activity> .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MinimumCameraAngle
-m3d:MinimumCameraAngle rdf:type owl:Class ;
+m3d:MinimumCameraAngle rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                        rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                        rdfs:label "Minimaler Kamerawinkel"@de ,
                                   "minimum camera angle"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#NaNVertices
-m3d:NaNVertices rdf:type owl:Class ;
+m3d:NaNVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                 rdfs:subClassOf m3d:VertexMeasures ;
                 rdfs:label "NaN Vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#NonManifoldFaces
-m3d:NonManifoldFaces rdf:type owl:Class ;
+m3d:NonManifoldFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3d:FacesMeasures ;
                      rdfs:label "Non-Manifold Faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#NonManifoldVertices
-m3d:NonManifoldVertices rdf:type owl:Class ;
+m3d:NonManifoldVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                         rdfs:subClassOf m3d:VertexMeasures ;
                         rdfs:label "Non-Manifold Vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#NonOrthogonality
-m3d:NonOrthogonality rdf:type owl:Class ;
+m3d:NonOrthogonality rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3d:CameraCalibrationMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#NormalLengthVertices
-m3d:NormalLengthVertices rdf:type owl:Class ;
+m3d:NormalLengthVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                          rdfs:subClassOf m3d:VertexMeasures ;
                          rdfs:label "Normal Length Vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#NumberOfChunks
-m3d:NumberOfChunks rdf:type owl:Class ;
+m3d:NumberOfChunks rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                    rdfs:subClassOf m3d:ChunkMeasures ;
                    rdfs:label "Anzahl der Chunks"@de ,
                               "Number Of Chunks"@en .
 
 
-###  http://objects.mainzed.org/metadata/ont#PhaseScanner
-m3d:PhaseScanner rdf:type owl:Class ;
-                 rdfs:subClassOf m3dt:LaserScanner .
+###  http://objects.mainzed.org/metadata/ont#Outdoor
+m3d:Outdoor rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+            rdfs:subClassOf m3d:Environment .
 
 
 ###  http://objects.mainzed.org/metadata/ont#PointCloud
-m3d:PointCloud rdf:type owl:Class ;
+m3d:PointCloud rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
                rdfs:label "Punktwolke"@de ,
                           "point cloud"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#PrincipalPointXCoordinate
-m3d:PrincipalPointXCoordinate rdf:type owl:Class ;
+m3d:PrincipalPointXCoordinate rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                               rdfs:subClassOf m3d:CameraCalibrationMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#PrincipalPointYCoordinate
-m3d:PrincipalPointYCoordinate rdf:type owl:Class ;
+m3d:PrincipalPointYCoordinate rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                               rdfs:subClassOf m3d:CameraCalibrationMeasures .
 
 
+###  http://objects.mainzed.org/metadata/ont#PulseScanner
+m3d:PulseScanner rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                 rdfs:subClassOf <http://objects.mainzed.org/tool/ont#LaserScanner> .
+
+
 ###  http://objects.mainzed.org/metadata/ont#RadialDistortionCoefficient
-m3d:RadialDistortionCoefficient rdf:type owl:Class ;
+m3d:RadialDistortionCoefficient rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                 rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                                 rdfs:label "radial distortion coefficient"@en .
 
@@ -872,134 +898,144 @@ m3d:ReferencableGridDomain rdf:type owl:Class .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ReferencePointSize
-m3d:ReferencePointSize rdf:type owl:Class ;
+m3d:ReferencePointSize rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                        rdfs:subClassOf m3d:CameraMeasures ;
                        rdfs:label "Referenzpunktgröße"@de .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ReferenceTemperature
-m3d:ReferenceTemperature rdf:type owl:Class ;
+m3d:ReferenceTemperature rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                          rdfs:subClassOf m3dt:Camera .
 
 
 ###  http://objects.mainzed.org/metadata/ont#RemoveFacesBorderErosion
-m3d:RemoveFacesBorderErosion rdf:type owl:Class ;
+m3d:RemoveFacesBorderErosion rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                              rdfs:subClassOf m3df:RemoveFunction .
 
 
 ###  http://objects.mainzed.org/metadata/ont#RidgeDetection
-m3d:RidgeDetection rdf:type owl:Class ;
+m3d:RidgeDetection rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                    rdfs:subClassOf m3df:FeatureDetectionAlgorithm .
 
 
 ###  http://objects.mainzed.org/metadata/ont#RotationAccuracy
-m3d:RotationAccuracy rdf:type owl:Class ;
+m3d:RotationAccuracy rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3d:CameraMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SelectedFaces
-m3d:SelectedFaces rdf:type owl:Class ;
+m3d:SelectedFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                   rdfs:subClassOf m3d:FacesMeasures ;
                   rdfs:label "Selected Faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SelectedVertices
-m3d:SelectedVertices rdf:type owl:Class ;
+m3d:SelectedVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3d:VertexMeasures ;
                      rdfs:label "Ausgewählte Punkte"@de ,
                                 "Selected Vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SensorDepth
-m3d:SensorDepth rdf:type owl:Class ;
+m3d:SensorDepth rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                 rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                 rdfs:label "Sensortiefe"@de ,
                            "sensor depth"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SensorHeight
-m3d:SensorHeight rdf:type owl:Class ;
+m3d:SensorHeight rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                  rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                  rdfs:label "sensor height"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SensorMeasures
-m3d:SensorMeasures rdf:type owl:Class ;
+m3d:SensorMeasures rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                    rdfs:subClassOf m3d:Measurement .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SensorWidth
-m3d:SensorWidth rdf:type owl:Class ;
+m3d:SensorWidth rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                 rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                 rdfs:label "sensor width"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ShutterTime
-m3d:ShutterTime rdf:type owl:Class ;
+m3d:ShutterTime rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                 rdfs:subClassOf m3d:CameraMeasures ;
                 rdfs:label "Belichtungszeit"@de ,
                            "shutter time"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SingularVertices
-m3d:SingularVertices rdf:type owl:Class ;
+m3d:SingularVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3d:VertexMeasures ;
                      rdfs:label "Singular Vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SoloFaces
-m3d:SoloFaces rdf:type owl:Class ;
+m3d:SoloFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
               rdfs:subClassOf m3d:FacesMeasures ;
               rdfs:label "Solo Faces"@en .
 
 
+###  http://objects.mainzed.org/metadata/ont#SpatialCalibration
+m3d:SpatialCalibration rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                       rdfs:subClassOf m3dt:CalibrationTool .
+
+
+###  http://objects.mainzed.org/metadata/ont#SpectralCalibration
+m3d:SpectralCalibration rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                        rdfs:subClassOf m3dt:CalibrationTool .
+
+
 ###  http://objects.mainzed.org/metadata/ont#StickyFaces
-m3d:StickyFaces rdf:type owl:Class ;
+m3d:StickyFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                 rdfs:subClassOf m3d:FacesMeasures ;
                 rdfs:label "Sticky Faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SyntheticVertexFaces
-m3d:SyntheticVertexFaces rdf:type owl:Class ;
+m3d:SyntheticVertexFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                          rdfs:subClassOf m3d:FacesMeasures ;
                          rdfs:label "Synthetic Vertex Faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SyntheticVertices
-m3d:SyntheticVertices rdf:type owl:Class ;
+m3d:SyntheticVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                       rdfs:subClassOf m3d:VertexMeasures ;
                       rdfs:label "synthetic vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#TangentialDistortionCoefficient
-m3d:TangentialDistortionCoefficient rdf:type owl:Class ;
+m3d:TangentialDistortionCoefficient rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                     rdfs:subClassOf m3d:CameraCalibrationMeasures ;
                                     rdfs:label "tangential distortion coefficient"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ThreeBorderVertexFaces
-m3d:ThreeBorderVertexFaces rdf:type owl:Class ;
+m3d:ThreeBorderVertexFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                            rdfs:subClassOf m3d:FacesMeasures ;
                            rdfs:label "Three-Border Vertex Faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#TotalNumberOfFaces
-m3d:TotalNumberOfFaces rdf:type owl:Class ;
+m3d:TotalNumberOfFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                        rdfs:subClassOf m3d:FacesMeasures ;
                        rdfs:label "Anzahl der Dreiecke"@de ,
                                   "Total Number Of Faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#TotalNumberOfVertices
-m3d:TotalNumberOfVertices rdf:type owl:Class ;
+m3d:TotalNumberOfVertices rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                           rdfs:subClassOf m3d:VertexMeasures ;
                           rdfs:label "Anzahl der Punkte"@de ,
                                      "Total Number Of Vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#TransformationMode
-m3d:TransformationMode rdf:type owl:Class ;
-                       owl:equivalentClass [ rdf:type owl:Class ;
+m3d:TransformationMode rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                       owl:equivalentClass [ rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                              owl:oneOf ( m3d:transformationmode_automatic
                                                          m3d:transformationmode_manual
                                                        )
@@ -1008,25 +1044,25 @@ m3d:TransformationMode rdf:type owl:Class ;
 
 
 ###  http://objects.mainzed.org/metadata/ont#TriangulationAngle
-m3d:TriangulationAngle rdf:type owl:Class ;
+m3d:TriangulationAngle rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                        rdfs:subClassOf m3d:CameraCalibrationMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#VertexMeasures
-m3d:VertexMeasures rdf:type owl:Class ;
+m3d:VertexMeasures rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                    rdfs:subClassOf m3d:Measurement ;
                    rdfs:label "Vertex measures"@en ;
                    <http://www.w3.org/2004/02/skos/core#definition> "Measurements concerning vertices of 3DObjects"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#VerticesOnInvertedEdge
-m3d:VerticesOnInvertedEdge rdf:type owl:Class ;
+m3d:VerticesOnInvertedEdge rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                            rdfs:subClassOf m3d:VertexMeasures ;
                            rdfs:label "Vertices On Inverted Edge"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#VerticesPartOfZeroAreaFace
-m3d:VerticesPartOfZeroAreaFace rdf:type owl:Class ;
+m3d:VerticesPartOfZeroAreaFace rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                rdfs:subClassOf m3d:VertexMeasures ;
                                rdfs:label "Vertices Part Of ZeroArea Face"@en .
 
@@ -1035,77 +1071,112 @@ m3d:VerticesPartOfZeroAreaFace rdf:type owl:Class ;
 m3d:Wikidata rdf:type owl:Class .
 
 
+###  http://objects.mainzed.org/metadata/ont#XRayScanner
+m3d:XRayScanner rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                rdfs:subClassOf <http://objects.mainzed.org/tool/ont#Scanner> .
+
+
 ###  http://objects.mainzed.org/metadata/ont#ZeroAreaFaces
-m3d:ZeroAreaFaces rdf:type owl:Class ;
+m3d:ZeroAreaFaces rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                   rdfs:subClassOf m3d:FacesMeasures ;
                   rdfs:label "ZeroArea Faces"@en .
 
 
+###  http://objects.mainzed.org/tool/ont#LaserScanner
+<http://objects.mainzed.org/tool/ont#LaserScanner> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                                                   owl:equivalentClass <http://www.wikidata.org/entity/Q1361664> ;
+                                                   rdfs:subClassOf <http://objects.mainzed.org/tool/ont#Scanner> .
+
+
+###  http://objects.mainzed.org/tool/ont#PhaseScanner
+<http://objects.mainzed.org/tool/ont#PhaseScanner> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                                                   rdfs:subClassOf <http://objects.mainzed.org/tool/ont#LaserScanner> .
+
+
+###  http://objects.mainzed.org/tool/ont#Scanner
+<http://objects.mainzed.org/tool/ont#Scanner> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                                              owl:equivalentClass <http://www.wikidata.org/entity/Q82744> ;
+                                              rdfs:subClassOf m3dt:Tool .
+
+
 ###  http://objects.mainzed.org/type/ont#CalibrationTool
-m3dt:CalibrationTool rdf:type owl:Class ;
+m3dt:CalibrationTool rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                      rdfs:subClassOf m3dt:Tool .
 
 
 ###  http://objects.mainzed.org/type/ont#Camera
-m3dt:Camera rdf:type owl:Class ;
+m3dt:Camera rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
             owl:equivalentClass <http://www.wikidata.org/entity/Q15328> ;
             rdfs:subClassOf m3dt:Tool .
 
 
 ###  http://objects.mainzed.org/type/ont#DSLR
-m3dt:DSLR rdf:type owl:Class ;
+m3dt:DSLR rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
           owl:equivalentClass <http://www.wikidata.org/entity/Q196353> ;
           rdfs:subClassOf m3dt:Camera ;
           rdfs:label "digital single-lens reflex camera" .
 
 
 ###  http://objects.mainzed.org/type/ont#GeometricalRepresentation
-m3dt:GeometricalRepresentation rdf:type owl:Class ;
+m3dt:GeometricalRepresentation rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                rdfs:subClassOf m3dt:ShapeRepresentation ;
                                rdfs:label "Geometrical Representation"@en .
 
 
-###  http://objects.mainzed.org/type/ont#LaserScanner
-m3dt:LaserScanner rdf:type owl:Class ;
-                  owl:equivalentClass <http://www.wikidata.org/entity/Q1361664> ;
-                  rdfs:subClassOf m3dt:Scanner .
-
-
 ###  http://objects.mainzed.org/type/ont#Mesh
-m3dt:Mesh rdf:type owl:Class ;
+m3dt:Mesh rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
           rdfs:subClassOf m3dt:GeometricalRepresentation ;
           rdfs:label "Mesh"@de ,
-                     "Mesh"@en .
+                     "Mesh"@en ;
+sh:rule [
+			a sh:TripleRule ;
+			sh:subject sh:this ;
+			sh:predicate rdf:type ;
+			sh:object m3dt:PrintableMesh ;
+			sh:condition m3dt:Mesh ;
+			sh:condition [
+				sh:property [
+					sh:path m3d:singularVertices ;
+					sh:equals 0 ;
+				] ;
+				sh:property [
+					sh:path m3d:borderVertices ;
+					sh:equals 0 ;
+				] ;
+				sh:property [
+					sh:path m3d:nonManifoldVertices ;
+					sh:equals 0 ;
+				] ;
+			] ;
+		] . 
+
+
+
+m3dt:PrintableMesh rdf:type rdfs:Class, sh:NodeShape .
 
 
 ###  http://objects.mainzed.org/type/ont#PointSet
-m3dt:PointSet rdf:type owl:Class ;
+m3dt:PointSet rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
               rdfs:subClassOf m3dt:GeometricalRepresentation .
 
 
 ###  http://objects.mainzed.org/type/ont#Rasterdata
-m3dt:Rasterdata rdf:type owl:Class ;
+m3dt:Rasterdata rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                 rdfs:subClassOf m3dt:ShapeRepresentation ,
                                 <http://www.opengis.net/ont/geosparql#GridCoverage> ;
                 rdfs:label "Raster data"@en ,
                            "Rasterdaten"@de .
 
 
-###  http://objects.mainzed.org/type/ont#Scanner
-m3dt:Scanner rdf:type owl:Class ;
-             owl:equivalentClass <http://www.wikidata.org/entity/Q82744> ;
-             rdfs:subClassOf m3dt:Tool .
-
-
 ###  http://objects.mainzed.org/type/ont#ShapeRepresentation
-m3dt:ShapeRepresentation rdf:type owl:Class ;
+m3dt:ShapeRepresentation rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                          rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
                          rdfs:label "Shape Representation"@en .
 
 
 ###  http://objects.mainzed.org/type/ont#StructuredLight3DScanner
-m3dt:StructuredLight3DScanner rdf:type owl:Class ;
-                              rdfs:subClassOf m3dt:Scanner .
+m3dt:StructuredLight3DScanner rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                              rdfs:subClassOf <http://objects.mainzed.org/tool/ont#Scanner> .
 
 
 ###  http://objects.mainzed.org/type/ont#Tool
@@ -1113,125 +1184,125 @@ m3dt:Tool rdf:type owl:Class .
 
 
 ###  http://objects.mainzed.org/type/ont#TriangulationScanner
-m3dt:TriangulationScanner rdf:type owl:Class ;
-                          rdfs:subClassOf m3dt:Scanner .
+m3dt:TriangulationScanner rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
+                          rdfs:subClassOf <http://objects.mainzed.org/tool/ont#Scanner> .
 
 
 ###  http://objects.mainzed.org/type/ont#2DRaster
-<http://objects.mainzed.org/type/ont#2DRaster> rdf:type owl:Class ;
+<http://objects.mainzed.org/type/ont#2DRaster> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                rdfs:subClassOf m3dt:Rasterdata .
 
 
 ###  http://objects.mainzed.org/type/ont#3DRaster
-<http://objects.mainzed.org/type/ont#3DRaster> rdf:type owl:Class ;
+<http://objects.mainzed.org/type/ont#3DRaster> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                rdfs:subClassOf m3dt:Rasterdata .
 
 
 ###  http://objects.mainzed.org/type/ont#4DRaster
-<http://objects.mainzed.org/type/ont#4DRaster> rdf:type owl:Class ;
+<http://objects.mainzed.org/type/ont#4DRaster> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                rdfs:subClassOf m3dt:Rasterdata .
 
 
 ###  http://www.opengis.net/ont/geosparql#Coverage
-<http://www.opengis.net/ont/geosparql#Coverage> rdf:type owl:Class ;
+<http://www.opengis.net/ont/geosparql#Coverage> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                 rdfs:subClassOf <http://www.opengis.net/ont/geosparql#SpatialObject> .
 
 
 ###  http://www.opengis.net/ont/geosparql#GridCoverage
-<http://www.opengis.net/ont/geosparql#GridCoverage> rdf:type owl:Class ;
+<http://www.opengis.net/ont/geosparql#GridCoverage> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                     rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Coverage> .
 
 
 ###  http://www.opengis.net/ont/geosparql#MultiCurveCoverage
-<http://www.opengis.net/ont/geosparql#MultiCurveCoverage> rdf:type owl:Class ;
+<http://www.opengis.net/ont/geosparql#MultiCurveCoverage> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                           rdfs:subClassOf <http://www.opengis.net/ont/geosparql#MultiFeatureCoverage> .
 
 
 ###  http://www.opengis.net/ont/geosparql#MultiFeatureCoverage
-<http://www.opengis.net/ont/geosparql#MultiFeatureCoverage> rdf:type owl:Class ;
+<http://www.opengis.net/ont/geosparql#MultiFeatureCoverage> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                             rdfs:subClassOf <http://www.opengis.net/ont/geosparql#Coverage> .
 
 
 ###  http://www.opengis.net/ont/geosparql#MultiPointCoverage
-<http://www.opengis.net/ont/geosparql#MultiPointCoverage> rdf:type owl:Class ;
+<http://www.opengis.net/ont/geosparql#MultiPointCoverage> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                           rdfs:subClassOf <http://www.opengis.net/ont/geosparql#MultiFeatureCoverage> .
 
 
 ###  http://www.opengis.net/ont/geosparql#MultiSolidCoverage
-<http://www.opengis.net/ont/geosparql#MultiSolidCoverage> rdf:type owl:Class ;
+<http://www.opengis.net/ont/geosparql#MultiSolidCoverage> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                           rdfs:subClassOf <http://www.opengis.net/ont/geosparql#MultiFeatureCoverage> .
 
 
 ###  http://www.opengis.net/ont/geosparql#MultiSurfaceCoverage
-<http://www.opengis.net/ont/geosparql#MultiSurfaceCoverage> rdf:type owl:Class ;
+<http://www.opengis.net/ont/geosparql#MultiSurfaceCoverage> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                             rdfs:subClassOf <http://www.opengis.net/ont/geosparql#MultiFeatureCoverage> .
 
 
 ###  http://www.opengis.net/ont/geosparql#RectifiedGridCoverage
-<http://www.opengis.net/ont/geosparql#RectifiedGridCoverage> rdf:type owl:Class ;
+<http://www.opengis.net/ont/geosparql#RectifiedGridCoverage> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                              rdfs:subClassOf <http://www.opengis.net/ont/geosparql#GridCoverage> .
 
 
 ###  http://www.opengis.net/ont/geosparql#ReferencableGridCoverage
-<http://www.opengis.net/ont/geosparql#ReferencableGridCoverage> rdf:type owl:Class ;
+<http://www.opengis.net/ont/geosparql#ReferencableGridCoverage> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                                 rdfs:subClassOf <http://www.opengis.net/ont/geosparql#GridCoverage> .
 
 
 ###  http://www.opengis.net/ont/geosparql#SpatialObject
-<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class ;
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                                      rdfs:subClassOf m3dt:ShapeRepresentation .
 
 
 ###  http://www.w3.org/ns/prov#Activity
-<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class ;
+<http://www.w3.org/ns/prov#Activity> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                      rdfs:subClassOf owl:Thing ;
                                      rdfs:label "Activity" .
 
 
 ###  http://www.w3.org/ns/prov#Agent
-<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class ;
+<http://www.w3.org/ns/prov#Agent> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                   rdfs:subClassOf owl:Thing ;
                                   rdfs:label "Agent" .
 
 
 ###  http://www.w3.org/ns/prov#Entity
-<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class ;
+<http://www.w3.org/ns/prov#Entity> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                    rdfs:subClassOf owl:Thing ;
                                    rdfs:label "Entity" .
 
 
 ###  http://www.wikidata.org/entity/Q11699606
-<http://www.wikidata.org/entity/Q11699606> rdf:type owl:Class ;
+<http://www.wikidata.org/entity/Q11699606> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                            rdfs:subClassOf m3d:Wikidata .
 
 
 ###  http://www.wikidata.org/entity/Q1361664
-<http://www.wikidata.org/entity/Q1361664> rdf:type owl:Class ;
+<http://www.wikidata.org/entity/Q1361664> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                           rdfs:subClassOf m3d:Wikidata .
 
 
 ###  http://www.wikidata.org/entity/Q15328
-<http://www.wikidata.org/entity/Q15328> rdf:type owl:Class ;
+<http://www.wikidata.org/entity/Q15328> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                         rdfs:subClassOf m3d:Wikidata .
 
 
 ###  http://www.wikidata.org/entity/Q196353
-<http://www.wikidata.org/entity/Q196353> rdf:type owl:Class ;
+<http://www.wikidata.org/entity/Q196353> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                          rdfs:subClassOf m3d:Wikidata .
 
 
 ###  http://www.wikidata.org/entity/Q3621491
-<http://www.wikidata.org/entity/Q3621491> rdf:type owl:Class ;
+<http://www.wikidata.org/entity/Q3621491> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                           rdfs:subClassOf m3d:Wikidata .
 
 
 ###  http://www.wikidata.org/entity/Q82744
-<http://www.wikidata.org/entity/Q82744> rdf:type owl:Class ;
+<http://www.wikidata.org/entity/Q82744> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                         rdfs:subClassOf m3d:Wikidata .
 
 
 ###  http://xmlns.com/foaf/0.1/Person
-<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class ;
+<http://xmlns.com/foaf/0.1/Person> rdf:type owl:Class , rdfs:Class , sh:NodeShape ;
                                    rdfs:subClassOf <http://www.w3.org/ns/prov#Agent> .
 
 
