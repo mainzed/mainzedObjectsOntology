@@ -141,6 +141,20 @@
                              rdfs:range :FiniteFunctionValueVertices .
 
 
+###  http://objects.mainzed.org/metadata/ont#imageHeight
+:imageHeight rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :measurementProperties ;
+             rdfs:domain :Measurement ;
+             rdfs:range :ImageHeight .
+
+
+###  http://objects.mainzed.org/metadata/ont#imageWidth
+:imageWidth rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :measurementProperties ;
+            rdfs:domain :Measurement ;
+            rdfs:range :ImageWidth .
+
+
 ###  http://objects.mainzed.org/metadata/ont#invertedFaces
 :invertedFaces rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :facesProperties ;
@@ -196,6 +210,10 @@
 ###  http://objects.mainzed.org/metadata/ont#maximumZCoordinate
 :maximumZCoordinate rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :pointProperties .
+
+
+###  http://objects.mainzed.org/metadata/ont#measurementProperties
+:measurementProperties rdf:type owl:ObjectProperty .
 
 
 ###  http://objects.mainzed.org/metadata/ont#minimumXCoordinate
@@ -865,7 +883,7 @@
 
 ###  http://objects.mainzed.org/metadata/ont#Agisoft
 :Agisoft rdf:type owl:Class ;
-         rdfs:subClassOf :Measurement .
+         rdfs:subClassOf :Parameter .
 
 
 ###  http://objects.mainzed.org/metadata/ont#Alignment
@@ -880,7 +898,7 @@
 
 ###  http://objects.mainzed.org/metadata/ont#AlignmentMeasures
 :AlignmentMeasures rdf:type owl:Class ;
-                   rdfs:subClassOf :Measurement .
+                   rdfs:subClassOf :Parameter .
 
 
 ###  http://objects.mainzed.org/metadata/ont#AlignmentRotation
@@ -975,7 +993,7 @@
 
 ###  http://objects.mainzed.org/metadata/ont#ChunkMeasures
 :ChunkMeasures rdf:type owl:Class ;
-               rdfs:subClassOf :Measurement .
+               rdfs:subClassOf :Parameter .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CircleCenterVertices
@@ -1024,7 +1042,7 @@
 
 ###  http://objects.mainzed.org/metadata/ont#FacesMeasures
 :FacesMeasures rdf:type owl:Class ;
-               rdfs:subClassOf :Measurement .
+               rdfs:subClassOf :Parameter .
 
 
 ###  http://objects.mainzed.org/metadata/ont#FiniteFunctionValueVertices
@@ -1290,6 +1308,13 @@
          rdfs:subClassOf :Environment .
 
 
+###  http://objects.mainzed.org/metadata/ont#Parameter
+:Parameter rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+           rdfs:label "Parameter"@en ;
+           <http://www.w3.org/2004/02/skos/core#definition> "A measurement of a property of a 3DObject"@en .
+
+
 ###  http://objects.mainzed.org/metadata/ont#PointCloud
 :PointCloud rdf:type owl:Class ;
             rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
@@ -1415,7 +1440,7 @@
 
 ###  http://objects.mainzed.org/metadata/ont#SensorMeasures
 :SensorMeasures rdf:type owl:Class ;
-                rdfs:subClassOf :Measurement .
+                rdfs:subClassOf :Parameter .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SensorMovement
@@ -1510,7 +1535,7 @@
 
 ###  http://objects.mainzed.org/metadata/ont#VertexMeasures
 :VertexMeasures rdf:type owl:Class ;
-                rdfs:subClassOf :Measurement .
+                rdfs:subClassOf :Parameter .
 
 
 ###  http://objects.mainzed.org/metadata/ont#VerticesOnInvertedEdge
@@ -2900,7 +2925,7 @@
                          "measurement lighting"@en .
 
 
-:Measurement <http://www.w3.org/2004/02/skos/core#definition> "A measurement of a property of a 3DObject"@en ;
+:Measurement rdfs:comment "A measurement leading to a representation of a 3D object"@en ;
              rdfs:label "Measurement"@en .
 
 
@@ -2945,8 +2970,8 @@
                              "Ausgewählte Punkte"@de .
 
 
-:SensorDepth rdfs:label "sensor depth"@en ,
-                        "Sensortiefe"@de .
+:SensorDepth rdfs:label "Sensortiefe"@de ,
+                        "sensor depth"@en .
 
 
 :SensorHeight rdfs:label "sensor height"@en .
@@ -3014,10 +3039,10 @@
                                                                                                                                                                 <http://www.w3.org/ns/shacl#path> :singularVertices
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
-                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :borderVertices
+                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :nonManifoldVertices
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
-                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :nonManifoldVertices
+                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :borderVertices
                                                                                                                                                               ]
                                                                                                                       ] ;
                                                                                <http://www.w3.org/ns/shacl#object> <http://objects.mainzed.org/type/ont#PrintableMesh> ;
