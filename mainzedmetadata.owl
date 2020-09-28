@@ -169,6 +169,13 @@
                       rdfs:range :CameraScaleDeviation .
 
 
+###  http://objects.mainzed.org/metadata/ont#cameraTemperature
+:cameraTemperature rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf :measurementProperties ;
+                   rdfs:domain :Measurement ;
+                   rdfs:range :CameraTemperature .
+
+
 ###  http://objects.mainzed.org/metadata/ont#chunkProperties
 :chunkProperties rdf:type owl:ObjectProperty .
 
@@ -572,18 +579,21 @@
 ###  http://objects.mainzed.org/metadata/ont#acquisitionParametersValid
 :acquisitionParametersValid rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf :measurementProperty ;
+                            rdfs:domain :Measurement ;
                             rdfs:range xsd:boolean .
 
 
 ###  http://objects.mainzed.org/metadata/ont#acquisitionTime
 :acquisitionTime rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :measurementProperty ;
+                 rdfs:domain :Measurement ;
                  rdfs:range xsd:dateTime .
 
 
 ###  http://objects.mainzed.org/metadata/ont#areMeasurementsAligned
 :areMeasurementsAligned rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :measurementProperty ;
+                        rdfs:domain :Measurement ;
                         rdfs:range xsd:boolean .
 
 
@@ -643,6 +653,7 @@
 ###  http://objects.mainzed.org/metadata/ont#calibrationTime
 :calibrationTime rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :calibrationProperty ;
+                 rdfs:domain :Calibration ;
                  rdfs:range xsd:dateTime .
 
 
@@ -660,6 +671,7 @@
 ###  http://objects.mainzed.org/metadata/ont#cameraCalibrationDate
 :cameraCalibrationDate rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :calibrationProperty ;
+                       rdfs:domain :Calibration ;
                        rdfs:range xsd:dateTime .
 
 
@@ -683,7 +695,9 @@
 
 ###  http://objects.mainzed.org/metadata/ont#isQuickCalibrated
 :isQuickCalibrated rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf :calibrationProperty .
+                   rdfs:subPropertyOf :calibrationProperty ;
+                   rdfs:domain :Calibration ;
+                   rdfs:range xsd:boolean .
 
 
 ###  http://objects.mainzed.org/metadata/ont#lampWarmupValid
@@ -695,6 +709,7 @@
 ###  http://objects.mainzed.org/metadata/ont#lightControlActivated
 :lightControlActivated rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :measurementProperty ;
+                       rdfs:domain :Measurement ;
                        rdfs:range xsd:boolean .
 
 
@@ -752,12 +767,14 @@
 ###  http://objects.mainzed.org/metadata/ont#numberOfFaces
 :numberOfFaces rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :meshProperty ;
+               rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
                rdfs:range xsd:integer .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfHoles
 :numberOfHoles rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :meshProperty ;
+               rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
                rdfs:range xsd:integer .
 
 
@@ -793,6 +810,7 @@
 ###  http://objects.mainzed.org/metadata/ont#numberOfTransformationPoints
 :numberOfTransformationPoints rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf :meshProperty ;
+                              rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
                               rdfs:range xsd:integer .
 
 
@@ -806,6 +824,7 @@
 ###  http://objects.mainzed.org/metadata/ont#numberOfVertices
 :numberOfVertices rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :meshProperty ;
+                  rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
                   rdfs:range xsd:integer .
 
 
@@ -821,7 +840,8 @@
 
 ###  http://objects.mainzed.org/metadata/ont#scannerTemperatureOK
 :scannerTemperatureOK rdf:type owl:DatatypeProperty ;
-                      rdfs:subPropertyOf :calibrationProperty .
+                      rdfs:subPropertyOf :calibrationProperty ;
+                      rdfs:domain :Calibration .
 
 
 ###  http://objects.mainzed.org/metadata/ont#sensorDecalibrationCheck
@@ -839,6 +859,7 @@
 ###  http://objects.mainzed.org/metadata/ont#sensorSetupValid
 :sensorSetupValid rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :calibrationProperty ;
+                  rdfs:domain :Calibration ;
                   rdfs:range xsd:boolean .
 
 
@@ -869,6 +890,7 @@
 ###  http://objects.mainzed.org/metadata/ont#validSensorIdentifier
 :validSensorIdentifier rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :calibrationProperty ;
+                       rdfs:domain :Calibration ;
                        rdfs:range xsd:boolean .
 
 
