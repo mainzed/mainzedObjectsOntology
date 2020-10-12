@@ -4,8 +4,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.9/jstree.min.js"></script>
 <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-<script src="pages.js"></script>
-<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
 	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.2.1/themes/default/style.min.css" />
  <style>
@@ -42,8 +41,6 @@ Search Properties: <input id="search-input2" class="search-input" />
 <div class="col-sm-8" style="min-height:100%;height:100%">
 <iframe width="100%" height="100%" id="ontview" src="index-en.html">
 </iframe>
-Choose Ontology: <select id="ontologies">
-</select>
 </div></div></div>
 <!--
 <button onClick="genclassTree()">
@@ -53,15 +50,6 @@ Generate Class Tree</button>-->
 </body>
 <script src="classtree.js"></script>
 <script>
-var ontologies=""
-for key in onts:
-    ontologies="<option value=\""+onts[key]+"\">"+key+"</option>"
-$('#ontologies').html(ontologies)
-$("#ontologies").change(function(){
-    var newSrc = $('#ontologies').val()
-      document.getElementById("ontview").src=newSrc;
-  alert("The text has been changed.");
-});
 function goToId(id) {
     var iframe = document.getElementById("ontview").contentWindow.location.hash=id;
     /*var src = iframe.src;
@@ -76,8 +64,7 @@ function genclassTree(){
 	$('#jstree_demo_div2').jstree(generateClassTree("object property","has super-properties",false));
 	$('#jstree_demo_div3').jstree(generateClassTree("data property","has super-properties",false));
 	//$('#jstree_demo_div4').jstree(generateClassTree("annotation property",""));
-}
-$('#annoprop').click(function() {
+	$('#annoprop').click(function() {
         $('#jstree_demo_div2').hide();
         $('#jstree_demo_div3').hide();
         $('#jstree_demo_div4').show();
@@ -165,6 +152,7 @@ $('#annoprop').click(function() {
             //selected node object: data.node;
         }
 	);
+}
 $('#ontview').on('load', function(){genclassTree()});
  $("#search-input").keyup(function () {
       var searchString = $(this).val();
