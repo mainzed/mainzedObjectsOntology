@@ -119,6 +119,35 @@
                    rdfs:range :BridgeBorderFaces .
 
 
+###  http://objects.mainzed.org/metadata/ont#calibrationProperties
+:calibrationProperties rdf:type owl:ObjectProperty .
+
+
+###  http://objects.mainzed.org/metadata/ont#cameraCRS
+:cameraCRS rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf :calibrationProperties ;
+           rdfs:domain :Calibration ;
+           rdfs:range :CameraCRS .
+
+
+###  http://objects.mainzed.org/metadata/ont#cameraIdentifier
+:cameraIdentifier rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf :cameraProperties ;
+                  rdfs:domain <http://objects.mainzed.org/type/ont#Camera> ;
+                  rdfs:range :CameraIdentifier .
+
+
+###  http://objects.mainzed.org/metadata/ont#cameraModel
+:cameraModel rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :cameraProperties ;
+             rdfs:domain <http://objects.mainzed.org/type/ont#Camera> ;
+             rdfs:range :CameraModel .
+
+
+###  http://objects.mainzed.org/metadata/ont#cameraProperties
+:cameraProperties rdf:type owl:ObjectProperty .
+
+
 ###  http://objects.mainzed.org/metadata/ont#chunkProperties
 :chunkProperties rdf:type owl:ObjectProperty .
 
@@ -128,6 +157,20 @@
                       rdfs:subPropertyOf :vertexProperties ;
                       rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
                       rdfs:range :CircleCenterVertices .
+
+
+###  http://objects.mainzed.org/metadata/ont#cornerMask
+:cornerMask rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf :calibrationProperties ;
+            rdfs:domain :Calibration ;
+            rdfs:range :CornerMask .
+
+
+###  http://objects.mainzed.org/metadata/ont#ellipseQuality
+:ellipseQuality rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :cameraProperties ;
+                rdfs:domain :Calibration ;
+                rdfs:range :EllipseQuality .
 
 
 ###  http://objects.mainzed.org/metadata/ont#facesProperties
@@ -141,17 +184,36 @@
                              rdfs:range :FiniteFunctionValueVertices .
 
 
+<<<<<<< HEAD
 ###  http://objects.mainzed.org/metadata/ont#imageHeight
 :imageHeight rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :measurementProperties ;
              rdfs:domain :Measurement ;
+=======
+###  http://objects.mainzed.org/metadata/ont#focalLength
+:focalLength rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :cameraProperties ;
+             rdfs:domain <http://objects.mainzed.org/type/ont#Camera> ;
+             rdfs:range :FocalLength .
+
+
+###  http://objects.mainzed.org/metadata/ont#imageHeight
+:imageHeight rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :calibrationProperties ;
+             rdfs:domain :Calibration ;
+>>>>>>> e4b03e31d78f20f250c9ff671d8fa9d0c0e2973a
              rdfs:range :ImageHeight .
 
 
 ###  http://objects.mainzed.org/metadata/ont#imageWidth
 :imageWidth rdf:type owl:ObjectProperty ;
+<<<<<<< HEAD
             rdfs:subPropertyOf :measurementProperties ;
             rdfs:domain :Measurement ;
+=======
+            rdfs:subPropertyOf :calibrationProperties ;
+            rdfs:domain :Calibration ;
+>>>>>>> e4b03e31d78f20f250c9ff671d8fa9d0c0e2973a
             rdfs:range :ImageWidth .
 
 
@@ -167,6 +229,13 @@
                   rdfs:subPropertyOf :vertexProperties ;
                   rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
                   rdfs:range :IsolatedVertices .
+
+
+###  http://objects.mainzed.org/metadata/ont#lightIntensity
+:lightIntensity rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :calibrationProperties ;
+                rdfs:domain :Calibration ;
+                rdfs:range :LightIntensity .
 
 
 ###  http://objects.mainzed.org/metadata/ont#localFunctionMaxValueVertices
@@ -216,6 +285,16 @@
 :measurementProperties rdf:type owl:ObjectProperty .
 
 
+<<<<<<< HEAD
+=======
+###  http://objects.mainzed.org/metadata/ont#minimumCameraAngle
+:minimumCameraAngle rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :cameraProperties ;
+                    rdfs:domain :Calibration ;
+                    rdfs:range :MinimumCameraAngle .
+
+
+>>>>>>> e4b03e31d78f20f250c9ff671d8fa9d0c0e2973a
 ###  http://objects.mainzed.org/metadata/ont#minimumXCoordinate
 :minimumXCoordinate rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :pointProperties .
@@ -288,6 +367,27 @@
                   rdfs:subPropertyOf :vertexProperties ;
                   rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
                   rdfs:range :SelectedVertices .
+
+
+###  http://objects.mainzed.org/metadata/ont#sensorDepth
+:sensorDepth rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :cameraProperties ;
+             rdfs:domain :Calibration ;
+             rdfs:range :SensorDepth .
+
+
+###  http://objects.mainzed.org/metadata/ont#sensorHeight
+:sensorHeight rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :cameraProperties ;
+              rdfs:domain :Calibration ;
+              rdfs:range :SensorHeight .
+
+
+###  http://objects.mainzed.org/metadata/ont#sensorWidth
+:sensorWidth rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :cameraProperties ;
+             rdfs:domain :Calibration ;
+             rdfs:range :SensorWidth .
 
 
 ###  http://objects.mainzed.org/metadata/ont#singularVertices
@@ -939,6 +1039,11 @@
 ###  http://objects.mainzed.org/metadata/ont#BridgeBorderFaces
 :BridgeBorderFaces rdf:type owl:Class ;
                    rdfs:subClassOf :FacesMeasures .
+
+
+###  http://objects.mainzed.org/metadata/ont#Calibration
+:Calibration rdf:type owl:Class ;
+             rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CalibrationAlgorithm
@@ -1632,7 +1737,8 @@
 
 
 ###  http://objects.mainzed.org/type/ont#Tool
-<http://objects.mainzed.org/type/ont#Tool> rdf:type owl:Class .
+<http://objects.mainzed.org/type/ont#Tool> rdf:type owl:Class ;
+                                           rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
 
 
 ###  http://objects.mainzed.org/type/ont#TriangulationScanner
