@@ -1595,7 +1595,7 @@
 
 ###  http://objects.mainzed.org/metadata/ont#ReferenceTemperature
 :ReferenceTemperature rdf:type owl:Class ;
-                      rdfs:subClassOf <http://objects.mainzed.org/type/ont#Camera> .
+                      rdfs:subClassOf :CameraMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ReferenceVolumeDepth
@@ -3074,6 +3074,9 @@
 :CameraBrightness rdfs:label "camera brightness"@en .
 
 
+:CameraCalibrationMeasures rdfs:label "camera calibration measure" .
+
+
 :CameraIdentifier rdfs:label "Kamerakennung"@de ,
                              "camera identifier"@en .
 
@@ -3257,10 +3260,10 @@
                                            <http://www.w3.org/ns/shacl#rule> [ rdf:type <http://www.w3.org/ns/shacl#TripleRule> ;
                                                                                <http://www.w3.org/ns/shacl#condition> <http://objects.mainzed.org/type/ont#Mesh> ,
                                                                                                                       [ <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#equals> 0 ;
-                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :singularVertices
+                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :borderVertices
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
-                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :borderVertices
+                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :singularVertices
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
                                                                                                                                                                 <http://www.w3.org/ns/shacl#path> :nonManifoldVertices
