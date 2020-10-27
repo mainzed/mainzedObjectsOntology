@@ -98,6 +98,13 @@
                        rdfs:range :AlignmentTranslation .
 
 
+###  http://objects.mainzed.org/metadata/ont#ambientTemperature
+:ambientTemperature rdf:type owl:ObjectProperty ;
+                    rdfs:subPropertyOf :measurementProperties ;
+                    rdfs:domain :Measurement ;
+                    rdfs:range :AmbientTemperature .
+
+
 ###  http://objects.mainzed.org/metadata/ont#borderFaces
 :borderFaces rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :facesProperties ;
@@ -200,11 +207,25 @@
                 rdfs:domain :MeasurementSeries .
 
 
+###  http://objects.mainzed.org/metadata/ont#diameter
+:diameter rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf :pointProperties ;
+          rdfs:domain :ReferencePoint ;
+          rdfs:range :Diameter .
+
+
 ###  http://objects.mainzed.org/metadata/ont#ellipseQuality
 :ellipseQuality rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :cameraProperties ;
                 rdfs:domain :Calibration ;
                 rdfs:range :EllipseQuality .
+
+
+###  http://objects.mainzed.org/metadata/ont#ellipseQualityForPhotogrammetry
+:ellipseQualityForPhotogrammetry rdf:type owl:ObjectProperty ;
+                                 rdfs:subPropertyOf :cameraProperties ;
+                                 rdfs:domain :CameraMeasures ;
+                                 rdfs:range :EllipseQualityForPhotogrammetry .
 
 
 ###  http://objects.mainzed.org/metadata/ont#facesProperties
@@ -438,6 +459,13 @@
                 rdfs:range :NumberOfChunks .
 
 
+###  http://objects.mainzed.org/metadata/ont#operatingTemperature
+:operatingTemperature rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :cameraProperties ;
+                      rdfs:domain :CameraMeasures ;
+                      rdfs:range :OperatingTemperature .
+
+
 ###  http://objects.mainzed.org/metadata/ont#pointProperties
 :pointProperties rdf:type owl:ObjectProperty .
 
@@ -590,6 +618,17 @@
                  rdfs:range xsd:dateTime .
 
 
+###  http://objects.mainzed.org/metadata/ont#alignmentDeviation
+:alignmentDeviation rdf:type owl:DatatypeProperty ;
+                    rdfs:subPropertyOf :alignmentProperty ;
+                    rdfs:domain :MeasurementSeries ;
+                    rdfs:range xsd:float .
+
+
+###  http://objects.mainzed.org/metadata/ont#alignmentProperty
+:alignmentProperty rdf:type owl:DatatypeProperty .
+
+
 ###  http://objects.mainzed.org/metadata/ont#areMeasurementsAligned
 :areMeasurementsAligned rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :measurementProperty ;
@@ -725,6 +764,13 @@
                       rdfs:range xsd:boolean .
 
 
+###  http://objects.mainzed.org/metadata/ont#measurementId
+:measurementId rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :measurementProperty ;
+               rdfs:domain :Measurement ;
+               rdfs:range xsd:string .
+
+
 ###  http://objects.mainzed.org/metadata/ont#measurementProperty
 :measurementProperty rdf:type owl:DatatypeProperty ;
                      rdfs:range xsd:boolean .
@@ -826,6 +872,12 @@
                   rdfs:subPropertyOf :meshProperty ;
                   rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
                   rdfs:range xsd:integer .
+
+
+###  http://objects.mainzed.org/metadata/ont#refPointColor
+:refPointColor rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf :refPointProperties ;
+               rdfs:range xsd:string .
 
 
 ###  http://objects.mainzed.org/metadata/ont#refPointProperties
@@ -1133,6 +1185,11 @@
                       rdfs:subClassOf :AlignmentMeasures .
 
 
+###  http://objects.mainzed.org/metadata/ont#AmbientTemperature
+:AmbientTemperature rdf:type owl:Class ;
+                    rdfs:subClassOf :CameraMeasures .
+
+
 ###  http://objects.mainzed.org/metadata/ont#Atos1
 :Atos1 rdf:type owl:Class ;
        rdfs:subClassOf <http://objects.mainzed.org/type/ont#StructuredLight3DScanner> .
@@ -1248,6 +1305,11 @@
                      rdfs:subClassOf :FacesMeasures .
 
 
+###  http://objects.mainzed.org/metadata/ont#Diameter
+:Diameter rdf:type owl:Class ;
+          rdfs:subClassOf :VertexMeasures .
+
+
 ###  http://objects.mainzed.org/metadata/ont#DigitalElevationModel
 :DigitalElevationModel rdf:type owl:Class ;
                        rdfs:subClassOf <http://objects.mainzed.org/type/ont#2DRaster> .
@@ -1256,6 +1318,11 @@
 ###  http://objects.mainzed.org/metadata/ont#EllipseQuality
 :EllipseQuality rdf:type owl:Class ;
                 rdfs:subClassOf :CameraMeasures .
+
+
+###  http://objects.mainzed.org/metadata/ont#EllipseQualityForPhotogrammetry
+:EllipseQualityForPhotogrammetry rdf:type owl:Class ;
+                                 rdfs:subClassOf :CameraMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#Environment
@@ -1528,6 +1595,11 @@
 ###  http://objects.mainzed.org/metadata/ont#NumberOfChunks
 :NumberOfChunks rdf:type owl:Class ;
                 rdfs:subClassOf :ChunkMeasures .
+
+
+###  http://objects.mainzed.org/metadata/ont#OperatingTemperature
+:OperatingTemperature rdf:type owl:Class ;
+                      rdfs:subClassOf :SensorMeasures .
 
 
 ###  http://objects.mainzed.org/metadata/ont#Outdoor
@@ -3267,6 +3339,9 @@
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
                                                                                                                                                                 <http://www.w3.org/ns/shacl#path> :nonManifoldVertices
+                                                                                                                                                              ] ,
+                                                                                                                                                              [ <http://www.w3.org/ns/shacl#equals> 0 ;
+                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :singularVertices
                                                                                                                                                               ]
                                                                                                                       ] ;
                                                                                <http://www.w3.org/ns/shacl#object> <http://objects.mainzed.org/type/ont#PrintableMesh> ;
