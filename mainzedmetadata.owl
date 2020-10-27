@@ -53,7 +53,8 @@
 #################################################################
 
 ###  http://objects.mainzed.org/metadata/ont#alignmentProperties
-:alignmentProperties rdf:type owl:ObjectProperty .
+:alignmentProperties rdf:type owl:ObjectProperty ;
+                     rdfs:label "alignment properties" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#alignmentRotationX
@@ -127,12 +128,13 @@
 
 
 ###  http://objects.mainzed.org/metadata/ont#calibrationProperties
-:calibrationProperties rdf:type owl:ObjectProperty .
+:calibrationProperties rdf:type owl:ObjectProperty ;
+                       rdfs:label "calibration properties" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#cameraAngle
 :cameraAngle rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf :calibrationProperties ;
+             rdfs:subPropertyOf :cameraProperties ;
              rdfs:domain :Calibration ;
              rdfs:range :CameraAngle .
 
@@ -166,7 +168,8 @@
 
 
 ###  http://objects.mainzed.org/metadata/ont#cameraProperties
-:cameraProperties rdf:type owl:ObjectProperty .
+:cameraProperties rdf:type owl:ObjectProperty ;
+                  rdfs:label "camera properties" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#cameraScaleDeviation
@@ -184,7 +187,8 @@
 
 
 ###  http://objects.mainzed.org/metadata/ont#chunkProperties
-:chunkProperties rdf:type owl:ObjectProperty .
+:chunkProperties rdf:type owl:ObjectProperty ;
+                 rdfs:label "chunk properties" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#circleCenterVertices
@@ -229,7 +233,8 @@
 
 
 ###  http://objects.mainzed.org/metadata/ont#facesProperties
-:facesProperties rdf:type owl:ObjectProperty .
+:facesProperties rdf:type owl:ObjectProperty ;
+                 rdfs:label "faces properties" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#finiteFunctionValueVertices
@@ -360,11 +365,13 @@
 
 
 ###  http://objects.mainzed.org/metadata/ont#measurementProperties
-:measurementProperties rdf:type owl:ObjectProperty .
+:measurementProperties rdf:type owl:ObjectProperty ;
+                       rdfs:label "measurement properties" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#measurementSeriesProperties
-:measurementSeriesProperties rdf:type owl:ObjectProperty .
+:measurementSeriesProperties rdf:type owl:ObjectProperty ;
+                             rdfs:label "measurementSeries properties" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#measurementTemperature
@@ -467,7 +474,8 @@
 
 
 ###  http://objects.mainzed.org/metadata/ont#pointProperties
-:pointProperties rdf:type owl:ObjectProperty .
+:pointProperties rdf:type owl:ObjectProperty ;
+                 rdfs:label "point properties" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#pointThickness
@@ -481,6 +489,13 @@
                     rdfs:subPropertyOf :calibrationProperties ;
                     rdfs:domain :Calibration ;
                     rdfs:range :ProjectorDeviation .
+
+
+###  http://objects.mainzed.org/metadata/ont#referenceTemperature
+:referenceTemperature rdf:type owl:ObjectProperty ;
+                      rdfs:subPropertyOf :measurementProperties ;
+                      rdfs:domain :Measurement ;
+                      rdfs:range :ReferenceTemperature .
 
 
 ###  http://objects.mainzed.org/metadata/ont#selectedFaces
@@ -516,6 +531,13 @@
              rdfs:subPropertyOf :cameraProperties ;
              rdfs:domain :Calibration ;
              rdfs:range :SensorWidth .
+
+
+###  http://objects.mainzed.org/metadata/ont#shutterTime
+:shutterTime rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf :cameraProperties ;
+             rdfs:domain :CameraMeasures ;
+             rdfs:range :ShutterTime .
 
 
 ###  http://objects.mainzed.org/metadata/ont#singularVertices
@@ -576,7 +598,8 @@
 
 
 ###  http://objects.mainzed.org/metadata/ont#vertexProperties
-:vertexProperties rdf:type owl:ObjectProperty .
+:vertexProperties rdf:type owl:ObjectProperty ;
+                  rdfs:label "vertex properties" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#verticesOnInvertedEdge
@@ -626,7 +649,8 @@
 
 
 ###  http://objects.mainzed.org/metadata/ont#alignmentProperty
-:alignmentProperty rdf:type owl:DatatypeProperty .
+:alignmentProperty rdf:type owl:DatatypeProperty ;
+                   rdfs:comment "alignment property" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#areMeasurementsAligned
@@ -686,7 +710,8 @@
 
 
 ###  http://objects.mainzed.org/metadata/ont#calibrationProperty
-:calibrationProperty rdf:type owl:DatatypeProperty .
+:calibrationProperty rdf:type owl:DatatypeProperty ;
+                     rdfs:comment "calibration property" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#calibrationTime
@@ -773,7 +798,8 @@
 
 ###  http://objects.mainzed.org/metadata/ont#measurementProperty
 :measurementProperty rdf:type owl:DatatypeProperty ;
-                     rdfs:range xsd:boolean .
+                     rdfs:range xsd:boolean ;
+                     rdfs:comment "measurement property" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#measuringVolumeWidth
@@ -783,7 +809,8 @@
 
 
 ###  http://objects.mainzed.org/metadata/ont#meshProperty
-:meshProperty rdf:type owl:DatatypeProperty .
+:meshProperty rdf:type owl:DatatypeProperty ;
+              rdfs:comment "mesh property" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#missingReferencePointCheck
@@ -3332,13 +3359,13 @@
                                            <http://www.w3.org/ns/shacl#rule> [ rdf:type <http://www.w3.org/ns/shacl#TripleRule> ;
                                                                                <http://www.w3.org/ns/shacl#condition> <http://objects.mainzed.org/type/ont#Mesh> ,
                                                                                                                       [ <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#equals> 0 ;
-                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :borderVertices
+                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :nonManifoldVertices
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
                                                                                                                                                                 <http://www.w3.org/ns/shacl#path> :singularVertices
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
-                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :nonManifoldVertices
+                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :borderVertices
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
                                                                                                                                                                 <http://www.w3.org/ns/shacl#path> :singularVertices
