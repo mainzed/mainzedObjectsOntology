@@ -132,11 +132,34 @@
                        rdfs:label "calibration properties" .
 
 
+###  http://objects.mainzed.org/metadata/ont#calibrationVolumeDepth
+:calibrationVolumeDepth rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :calibrationProperties ;
+                        rdfs:label "calibration volume depth"@en ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "The calibrated measurement volume is the real range in which the measurements can be recorded. The measurement volume length is an external dimension of this cuboid."@en .
+
+
+###  http://objects.mainzed.org/metadata/ont#calibrationVolumeLength
+:calibrationVolumeLength rdf:type owl:ObjectProperty ;
+                         rdfs:subPropertyOf :calibrationProperties ;
+                         rdfs:label "calibration volume length"@en ;
+                         <http://www.w3.org/2004/02/skos/core#definition> "The calibrated measurement volume is the real range in which the measurements can be recorded. The measurement volume length is an external dimension of this cuboid."@en .
+
+
+###  http://objects.mainzed.org/metadata/ont#calibrationVolumeWidth
+:calibrationVolumeWidth rdf:type owl:ObjectProperty ;
+                        rdfs:subPropertyOf :calibrationProperties ;
+                        rdfs:label "calibration volume width"@en ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "The calibrated measurement volume is the  real range in which the measurements can be recorded. The measurement volume width is an external dimension of this cuboid."@en .
+
+
 ###  http://objects.mainzed.org/metadata/ont#cameraAngle
 :cameraAngle rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :cameraProperties ;
              rdfs:domain :Calibration ;
-             rdfs:range :CameraAngle .
+             rdfs:range :CameraAngle ;
+             rdfs:label "camera angle"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The camera angle is the intersection of the optical axes of the two cameras"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#cameraBrightness
@@ -170,13 +193,6 @@
 ###  http://objects.mainzed.org/metadata/ont#cameraProperties
 :cameraProperties rdf:type owl:ObjectProperty ;
                   rdfs:label "camera properties" .
-
-
-###  http://objects.mainzed.org/metadata/ont#cameraScaleDeviation
-:cameraScaleDeviation rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf :calibrationProperties ;
-                      rdfs:domain :Calibration ;
-                      rdfs:range :CameraScaleDeviation .
 
 
 ###  http://objects.mainzed.org/metadata/ont#cameraTemperature
@@ -248,7 +264,9 @@
 :focalLength rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :calibrationProperties ;
              rdfs:domain :Calibration ;
-             rdfs:range :FocalLength .
+             rdfs:range :FocalLength ;
+             rdfs:label "focal length"@en ;
+             <http://www.w3.org/2004/02/skos/core#definition> "The focal length of a lense"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#heightVariance
@@ -378,21 +396,27 @@
 :measurementTemperature rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf :calibrationProperties ;
                         rdfs:domain :Calibration ;
-                        rdfs:range :MeasurementTemperature .
+                        rdfs:range :MeasurementTemperature ;
+                        rdfs:label "Calibration temperature"@en ;
+                        <http://www.w3.org/2004/02/skos/core#definition> "The calibration temperature is measured on the calibration object before calibration, after it has been acclimatized. So this temperature corresponds to the environmental temperature."@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#measuringVolumeDepth
 :measuringVolumeDepth rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :calibrationProperties ;
                       rdfs:domain :Calibration ;
-                      rdfs:range :MeasuringVolumeDepth .
+                      rdfs:range :MeasuringVolumeDepth ;
+                      rdfs:label "measuring volume depth"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "The measuring volume is the theoretical recording range. The measurement volume depth is an external dimension of this cuboid."@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#measuringVolumeLength
 :measuringVolumeLength rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :calibrationProperties ;
                        rdfs:domain :Calibration ;
-                       rdfs:range :MeasuringVolumeLength .
+                       rdfs:range :MeasuringVolumeLength ;
+                       rdfs:label "measuring volume length"@en ;
+                       <http://www.w3.org/2004/02/skos/core#definition> "The measuring volume is the theoretical recording range. The measurement volume length is an external dimension of this cuboid."@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#measuringVolumeWidth
@@ -495,7 +519,25 @@
 :referenceTemperature rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :measurementProperties ;
                       rdfs:domain :Measurement ;
-                      rdfs:range :ReferenceTemperature .
+                      rdfs:range :ReferenceTemperature ;
+                      rdfs:label "certification temperature"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "The temperature at certification of the calibration object to be calibrated. Supplied by the manufacturer."@en .
+
+
+###  http://objects.mainzed.org/metadata/ont#remainingSensorWarmupTime
+:remainingSensorWarmupTime rdf:type owl:ObjectProperty ;
+                           rdfs:subPropertyOf :calibrationProperties ;
+                           rdfs:label "remaining sensor warmup time"@en ;
+                           <http://www.w3.org/2004/02/skos/core#definition> "The remaining sensor warm up time is the time the scanner needs to warm up"@en .
+
+
+###  http://objects.mainzed.org/metadata/ont#scaleDeviation
+:scaleDeviation rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf :calibrationProperties ;
+                rdfs:domain :Calibration ;
+                rdfs:range :CameraScaleDeviation ;
+                rdfs:label "scale deviation"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "The scale deviation is the difference between the nominal lenght of the scale and the measured length"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#selectedFaces
@@ -709,16 +751,18 @@
                     rdfs:range xsd:boolean .
 
 
+###  http://objects.mainzed.org/metadata/ont#calibrationDate
+:calibrationDate rdf:type owl:DatatypeProperty ;
+                 rdfs:subPropertyOf :calibrationProperty ;
+                 rdfs:domain :Calibration ;
+                 rdfs:range xsd:dateTime ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Date and time of sensor calibration"@en ,
+                                                                  "calibrationDate"@en .
+
+
 ###  http://objects.mainzed.org/metadata/ont#calibrationProperty
 :calibrationProperty rdf:type owl:DatatypeProperty ;
                      rdfs:comment "calibration property" .
-
-
-###  http://objects.mainzed.org/metadata/ont#calibrationTime
-:calibrationTime rdf:type owl:DatatypeProperty ;
-                 rdfs:subPropertyOf :calibrationProperty ;
-                 rdfs:domain :Calibration ;
-                 rdfs:range xsd:dateTime .
 
 
 ###  http://objects.mainzed.org/metadata/ont#calibrationValueWidth
@@ -827,7 +871,9 @@
 ###  http://objects.mainzed.org/metadata/ont#numberOfCameras
 :numberOfCameras rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :measurementProperty ;
-                 rdfs:range xsd:integer .
+                 rdfs:range xsd:integer ;
+                 rdfs:label "number of cameras"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "The number of cameras that are calibrated in the sensor."@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfCommonReferencePoints
@@ -870,7 +916,10 @@
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfScales
 :numberOfScales rdf:type owl:DatatypeProperty ;
-                rdfs:range xsd:integer .
+                rdfs:subPropertyOf :measurementProperty ;
+                rdfs:range xsd:integer ;
+                rdfs:label "number of scales"@en ;
+                <http://www.w3.org/2004/02/skos/core#definition> "Number of scales defined on the calibration object. Relevant for calibration crosses."@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfShutterTimes
@@ -1249,7 +1298,11 @@
 
 ###  http://objects.mainzed.org/metadata/ont#Calibration
 :Calibration rdf:type owl:Class ;
-             rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+             rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+             rdfs:label "Calibration"@en ,
+                        "Kalibrierung"@de ;
+             <http://www.w3.org/2004/02/skos/core#definition> "Calibration of the capturing device"@en ,
+                                                              "Kalibrierung des Aufnahmegerätes"@de .
 
 
 ###  http://objects.mainzed.org/metadata/ont#CalibrationAlgorithm
@@ -1300,6 +1353,13 @@
 ###  http://objects.mainzed.org/metadata/ont#CameraTemperature
 :CameraTemperature rdf:type owl:Class ;
                    rdfs:subClassOf :CameraCalibrationMeasures .
+
+
+###  http://objects.mainzed.org/metadata/ont#CapturingDevice
+:CapturingDevice rdf:type owl:Class ;
+                 rdfs:subClassOf <http://objects.mainzed.org/type/ont#Tool> ;
+                 rdfs:label "Aufnahmegerät"@de ,
+                            "capturing device"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ChunkMeasures
@@ -1789,12 +1849,12 @@
 
 ###  http://objects.mainzed.org/metadata/ont#SpatialCalibration
 :SpatialCalibration rdf:type owl:Class ;
-                    rdfs:subClassOf <http://objects.mainzed.org/type/ont#CalibrationTool> .
+                    rdfs:subClassOf <http://objects.mainzed.org/type/ont#CalibrationObject> .
 
 
 ###  http://objects.mainzed.org/metadata/ont#SpectralCalibration
 :SpectralCalibration rdf:type owl:Class ;
-                     rdfs:subClassOf <http://objects.mainzed.org/type/ont#CalibrationTool> .
+                     rdfs:subClassOf <http://objects.mainzed.org/type/ont#CalibrationObject> .
 
 
 ###  http://objects.mainzed.org/metadata/ont#StickyFaces
@@ -1895,18 +1955,20 @@
 ###  http://objects.mainzed.org/tool/ont#Scanner
 <http://objects.mainzed.org/tool/ont#Scanner> rdf:type owl:Class ;
                                               owl:equivalentClass <http://www.wikidata.org/entity/Q82744> ;
-                                              rdfs:subClassOf <http://objects.mainzed.org/type/ont#Tool> .
+                                              rdfs:subClassOf :CapturingDevice .
 
 
-###  http://objects.mainzed.org/type/ont#CalibrationTool
-<http://objects.mainzed.org/type/ont#CalibrationTool> rdf:type owl:Class ;
-                                                      rdfs:subClassOf <http://objects.mainzed.org/type/ont#Tool> .
+###  http://objects.mainzed.org/type/ont#CalibrationObject
+<http://objects.mainzed.org/type/ont#CalibrationObject> rdf:type owl:Class ;
+                                                        rdfs:subClassOf <http://objects.mainzed.org/type/ont#Tool> ;
+                                                        rdfs:label "Calibration object to calibrate a capturing device"@en ,
+                                                                   "calibration object"@en .
 
 
 ###  http://objects.mainzed.org/type/ont#Camera
 <http://objects.mainzed.org/type/ont#Camera> rdf:type owl:Class ;
                                              owl:equivalentClass <http://www.wikidata.org/entity/Q15328> ;
-                                             rdfs:subClassOf <http://objects.mainzed.org/type/ont#Tool> .
+                                             rdfs:subClassOf :CapturingDevice .
 
 
 ###  http://objects.mainzed.org/type/ont#DSLR
@@ -3293,8 +3355,8 @@
                              "Ausgewählte Punkte"@de .
 
 
-:SensorDepth rdfs:label "sensor depth"@en ,
-                        "Sensortiefe"@de .
+:SensorDepth rdfs:label "Sensortiefe"@de ,
+                        "sensor depth"@en .
 
 
 :SensorHeight rdfs:label "sensor height"@en .
@@ -3349,6 +3411,10 @@
 :ZeroAreaFaces rdfs:label "ZeroArea Faces"@en .
 
 
+:measuringVolumeWidth rdfs:label "measuring volume width"@en ;
+                      <http://www.w3.org/2004/02/skos/core#definition> "The measuring volume is the theoretical recording range. The measurement volume width is an external dimension of this cuboid."@en .
+
+
 <http://objects.mainzed.org/type/ont#DSLR> rdfs:label "digital single-lens reflex camera" .
 
 
@@ -3359,7 +3425,7 @@
                                            <http://www.w3.org/ns/shacl#rule> [ rdf:type <http://www.w3.org/ns/shacl#TripleRule> ;
                                                                                <http://www.w3.org/ns/shacl#condition> <http://objects.mainzed.org/type/ont#Mesh> ,
                                                                                                                       [ <http://www.w3.org/ns/shacl#property> [ <http://www.w3.org/ns/shacl#equals> 0 ;
-                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :nonManifoldVertices
+                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :singularVertices
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
                                                                                                                                                                 <http://www.w3.org/ns/shacl#path> :singularVertices
@@ -3368,7 +3434,7 @@
                                                                                                                                                                 <http://www.w3.org/ns/shacl#path> :borderVertices
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
-                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :singularVertices
+                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :nonManifoldVertices
                                                                                                                                                               ]
                                                                                                                       ] ;
                                                                                <http://www.w3.org/ns/shacl#object> <http://objects.mainzed.org/type/ont#PrintableMesh> ;
