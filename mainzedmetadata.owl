@@ -61,70 +61,80 @@
 :alignmentRotationX rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :alignmentProperties ;
                     rdfs:domain <http://objects.mainzed.org/type/ont#GeometricalRepresentation> ;
-                    rdfs:range :AlignmentRotation .
+                    rdfs:range :AlignmentRotation ;
+                    rdfs:label "alignment rotation x"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#alignmentRotationY
 :alignmentRotationY rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :alignmentProperties ;
                     rdfs:domain <http://objects.mainzed.org/type/ont#GeometricalRepresentation> ;
-                    rdfs:range :AlignmentRotation .
+                    rdfs:range :AlignmentRotation ;
+                    rdfs:label "alignment rotation y"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#alignmentRotationZ
 :alignmentRotationZ rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :alignmentProperties ;
                     rdfs:domain <http://objects.mainzed.org/type/ont#GeometricalRepresentation> ;
-                    rdfs:range :AlignmentRotation .
+                    rdfs:range :AlignmentRotation ;
+                    rdfs:label "alignment rotation z"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#alignmentTranslationX
 :alignmentTranslationX rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :alignmentProperties ;
                        rdfs:domain <http://objects.mainzed.org/type/ont#GeometricalRepresentation> ;
-                       rdfs:range :AlignmentTranslation .
+                       rdfs:range :AlignmentTranslation ;
+                       rdfs:label "alignment translation x"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#alignmentTranslationY
 :alignmentTranslationY rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :alignmentProperties ;
                        rdfs:domain <http://objects.mainzed.org/type/ont#GeometricalRepresentation> ;
-                       rdfs:range :AlignmentTranslation .
+                       rdfs:range :AlignmentTranslation ;
+                       rdfs:label "alignment translation y"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#alignmentTranslationZ
 :alignmentTranslationZ rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :alignmentProperties ;
                        rdfs:domain <http://objects.mainzed.org/type/ont#GeometricalRepresentation> ;
-                       rdfs:range :AlignmentTranslation .
+                       rdfs:range :AlignmentTranslation ;
+                       rdfs:label "alignment translation z"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ambientTemperature
 :ambientTemperature rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :measurementProperties ;
                     rdfs:domain :Measurement ;
-                    rdfs:range :AmbientTemperature .
+                    rdfs:range :AmbientTemperature ;
+                    rdfs:label "ambient temperature"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#borderFaces
 :borderFaces rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :facesProperties ;
              rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-             rdfs:range :BorderFaces .
+             rdfs:range :BorderFaces ;
+             rdfs:label "border faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#borderVertices
 :borderVertices rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :vertexProperties ;
                 rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                rdfs:range :BorderVertices .
+                rdfs:range :BorderVertices ;
+                rdfs:label "border vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#bridgeBorderFaces
 :bridgeBorderFaces rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :facesProperties ;
                    rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                   rdfs:range :BridgeBorderFaces .
+                   rdfs:range :BridgeBorderFaces ;
+                   rdfs:label "bridge border faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#calibrationProperties
@@ -173,28 +183,32 @@
 :cameraBrightness rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :cameraProperties ;
                   rdfs:domain :Calibration ;
-                  rdfs:range :CameraBrightness .
+                  rdfs:range :CameraBrightness ;
+                  rdfs:label "camera brightness"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#cameraCRS
 :cameraCRS rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :calibrationProperties ;
            rdfs:domain :Calibration ;
-           rdfs:range :CameraCRS .
+           rdfs:range :CameraCRS ;
+           rdfs:label "camera CRS"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#cameraIdentifier
 :cameraIdentifier rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :cameraProperties ;
                   rdfs:domain <http://objects.mainzed.org/type/ont#Camera> ;
-                  rdfs:range :CameraIdentifier .
+                  rdfs:range :CameraIdentifier ;
+                  rdfs:label "camera identifier"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#cameraModel
 :cameraModel rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :cameraProperties ;
              rdfs:domain <http://objects.mainzed.org/type/ont#Camera> ;
-             rdfs:range :CameraModel .
+             rdfs:range :CameraModel ;
+             rdfs:label "camera model"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#cameraProperties
@@ -206,7 +220,8 @@
 :cameraTemperature rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :measurementProperties ;
                    rdfs:domain :Measurement ;
-                   rdfs:range :CameraTemperature .
+                   rdfs:range :CameraTemperature ;
+                   rdfs:label "camera temperature"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#chunkProperties
@@ -218,41 +233,47 @@
 :circleCenterVertices rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :vertexProperties ;
                       rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                      rdfs:range :CircleCenterVertices .
+                      rdfs:range :CircleCenterVertices ;
+                      rdfs:label "circle center vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#cornerMask
 :cornerMask rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf :calibrationProperties ;
             rdfs:domain :Calibration ;
-            rdfs:range :CornerMask .
+            rdfs:range :CornerMask ;
+            rdfs:label "corner mask"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#cornerMaskSize
 :cornerMaskSize rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :measurementSeriesProperties ;
-                rdfs:domain :MeasurementSeries .
+                rdfs:domain :MeasurementSeries ;
+                rdfs:label "corner mask size"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#diameter
 :diameter rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf :pointProperties ;
           rdfs:domain :ReferencePoint ;
-          rdfs:range :Diameter .
+          rdfs:range :Diameter ;
+          rdfs:label "diameter"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ellipseQuality
 :ellipseQuality rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :cameraProperties ;
                 rdfs:domain :Calibration ;
-                rdfs:range :EllipseQuality .
+                rdfs:range :EllipseQuality ;
+                rdfs:label "ellipse quality"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ellipseQualityForPhotogrammetry
 :ellipseQualityForPhotogrammetry rdf:type owl:ObjectProperty ;
                                  rdfs:subPropertyOf :cameraProperties ;
                                  rdfs:domain :CameraMeasures ;
-                                 rdfs:range :EllipseQualityForPhotogrammetry .
+                                 rdfs:range :EllipseQualityForPhotogrammetry ;
+                                 rdfs:label "ellipse quality for photogrammetry"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#facesProperties
@@ -264,7 +285,8 @@
 :finiteFunctionValueVertices rdf:type owl:ObjectProperty ;
                              rdfs:subPropertyOf :vertexProperties ;
                              rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                             rdfs:range :FiniteFunctionValueVertices .
+                             rdfs:range :FiniteFunctionValueVertices ;
+                             rdfs:label "finite function value vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#focalLength
@@ -305,14 +327,16 @@
 :invertedFaces rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :facesProperties ;
                rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-               rdfs:range :InvertedFaces .
+               rdfs:range :InvertedFaces ;
+               rdfs:label "inverted faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#isolatedVertices
 :isolatedVertices rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :vertexProperties ;
                   rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                  rdfs:range :IsolatedVertices .
+                  rdfs:range :IsolatedVertices ;
+                  rdfs:label "isolated vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#lightIntensity
@@ -341,14 +365,16 @@
 :manifoldFaces rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :facesProperties ;
                rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-               rdfs:range :ManifoldFaces .
+               rdfs:range :ManifoldFaces ;
+               rdfs:label "manifold faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#manuallyAddedVertices
 :manuallyAddedVertices rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :vertexProperties ;
                        rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                       rdfs:range :ManuallyAddedVertices .
+                       rdfs:range :ManuallyAddedVertices ;
+                       rdfs:label "manually added vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#maxIntersectionDeviation
@@ -377,17 +403,20 @@
 
 ###  http://objects.mainzed.org/metadata/ont#maximumXCoordinate
 :maximumXCoordinate rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :pointProperties .
+                    rdfs:subPropertyOf :pointProperties ;
+                    rdfs:label "maximum x coordinate"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#maximumYCoordinate
 :maximumYCoordinate rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :pointProperties .
+                    rdfs:subPropertyOf :pointProperties ;
+                    rdfs:label "maximum y coordinate"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#maximumZCoordinate
 :maximumZCoordinate rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :pointProperties .
+                    rdfs:subPropertyOf :pointProperties ;
+                    rdfs:label "maximum z coordinate"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#meanIntersectionDeviation
@@ -447,29 +476,34 @@
 :minimumCameraAngle rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :cameraProperties ;
                     rdfs:domain :Calibration ;
-                    rdfs:range :MinimumCameraAngle .
+                    rdfs:range :MinimumCameraAngle ;
+                    rdfs:label "minimum camera angle"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#minimumFringeContrast
 :minimumFringeContrast rdf:type owl:ObjectProperty ;
                        rdfs:subPropertyOf :cameraProperties ;
                        rdfs:domain :Calibration ;
-                       rdfs:range :MinimumFringeContrast .
+                       rdfs:range :MinimumFringeContrast ;
+                       rdfs:label "minimum fringe contrast"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#minimumXCoordinate
 :minimumXCoordinate rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :pointProperties .
+                    rdfs:subPropertyOf :pointProperties ;
+                    rdfs:label "minimum x coordinate"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#minimumYCoordinate
 :minimumYCoordinate rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :pointProperties .
+                    rdfs:subPropertyOf :pointProperties ;
+                    rdfs:label "minimum y coordinate"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#minimumZCoordinate
 :minimumZCoordinate rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf :pointProperties .
+                    rdfs:subPropertyOf :pointProperties ;
+                    rdfs:label "maximum z coordinate"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#nanVertices
@@ -483,21 +517,24 @@
 :nonManifoldFaces rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :facesProperties ;
                   rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                  rdfs:range :NonManifoldFaces .
+                  rdfs:range :NonManifoldFaces ;
+                  rdfs:label "non manifold faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#nonManifoldVertices
 :nonManifoldVertices rdf:type owl:ObjectProperty ;
                      rdfs:subPropertyOf :vertexProperties ;
                      rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                     rdfs:range :NonManifoldVertices .
+                     rdfs:range :NonManifoldVertices ;
+                     rdfs:label "non manifold vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#normalLengthVertices
 :normalLengthVertices rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :vertexProperties ;
                       rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                      rdfs:range :NormalLengthVertices .
+                      rdfs:range :NormalLengthVertices ;
+                      rdfs:label "normal length vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfChunks
@@ -511,7 +548,8 @@
 :operatingTemperature rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :cameraProperties ;
                       rdfs:domain :CameraMeasures ;
-                      rdfs:range :OperatingTemperature .
+                      rdfs:range :OperatingTemperature ;
+                      rdfs:label "operating temperature"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#pointProperties
@@ -522,14 +560,16 @@
 ###  http://objects.mainzed.org/metadata/ont#pointThickness
 :pointThickness rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf :pointProperties ;
-                rdfs:range :PointThickness .
+                rdfs:range :PointThickness ;
+                rdfs:label "point thickness"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#projectorDeviation
 :projectorDeviation rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :calibrationProperties ;
                     rdfs:domain :Calibration ;
-                    rdfs:range :CalibrationDeviation .
+                    rdfs:range :CalibrationDeviation ;
+                    rdfs:label "projector deviation"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#referenceTemperature
@@ -563,7 +603,8 @@
 :selectedFaces rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :facesProperties ;
                rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-               rdfs:range :SelectedFaces .
+               rdfs:range :SelectedFaces ;
+               rdfs:label "selected faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#selectedVertices
@@ -577,77 +618,88 @@
 :sensorDepth rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :measurementProperties ;
              rdfs:domain :Measurement ;
-             rdfs:range :CalibrationVolumeWidth .
+             rdfs:range :CalibrationVolumeWidth ;
+             rdfs:label "sensor depth"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#sensorHeight
 :sensorHeight rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf :cameraProperties ;
               rdfs:domain :Calibration ;
-              rdfs:range :CalibrationVolumeLength .
+              rdfs:range :CalibrationVolumeLength ;
+              rdfs:label "sensor height"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#sensorWidth
 :sensorWidth rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :cameraProperties ;
              rdfs:domain :Calibration ;
-             rdfs:range :CalibrationVolumeDepth .
+             rdfs:range :CalibrationVolumeDepth ;
+             rdfs:label "sensor width"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#shutterTime
 :shutterTime rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :cameraProperties ;
              rdfs:domain :CameraMeasures ;
-             rdfs:range :ShutterTime .
+             rdfs:range :ShutterTime ;
+             rdfs:label "shutter time"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#singularVertices
 :singularVertices rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf :vertexProperties ;
                   rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                  rdfs:range :SingularVertices .
+                  rdfs:range :SingularVertices ;
+                  rdfs:label "singular vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#soloFaces
 :soloFaces rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf :facesProperties ;
            rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-           rdfs:range :SoloFaces .
+           rdfs:range :SoloFaces ;
+           rdfs:label "solo faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#stickyFaces
 :stickyFaces rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf :facesProperties ;
              rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-             rdfs:range :StickyFaces .
+             rdfs:range :StickyFaces ;
+             rdfs:label "sticky faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#syntheticVertexFaces
 :syntheticVertexFaces rdf:type owl:ObjectProperty ;
                       rdfs:subPropertyOf :facesProperties ;
                       rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                      rdfs:range :SyntheticVertexFaces .
+                      rdfs:range :SyntheticVertexFaces ;
+                      rdfs:label "synthetic vertex faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#syntheticVertices
 :syntheticVertices rdf:type owl:ObjectProperty ;
                    rdfs:subPropertyOf :vertexProperties ;
                    rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                   rdfs:range :SyntheticVertices .
+                   rdfs:range :SyntheticVertices ;
+                   rdfs:label "synthetic vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#threeBorderVertexFaces
 :threeBorderVertexFaces rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf :facesProperties ;
                         rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                        rdfs:range :ThreeBorderVertexFaces .
+                        rdfs:range :ThreeBorderVertexFaces ;
+                        rdfs:label "three border vertex faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#totalNumberOfFaces
 :totalNumberOfFaces rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf :facesProperties ;
                     rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                    rdfs:range :TotalNumberOfFaces .
+                    rdfs:range :TotalNumberOfFaces ;
+                    rdfs:label "total number of faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#totalNumberOfVertices
@@ -655,6 +707,7 @@
                        rdfs:subPropertyOf :vertexProperties ;
                        rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
                        rdfs:range :TotalNumberOfVertices ;
+                       rdfs:label "total number of vertices"@en ;
                        <http://www.w3.org/2004/02/skos/core#definition> "total number of vertices of the 3d object" .
 
 
@@ -667,7 +720,8 @@
 :verticesOnInvertedEdge rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf :vertexProperties ;
                         rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                        rdfs:range :VerticesOnInvertedEdge .
+                        rdfs:range :VerticesOnInvertedEdge ;
+                        rdfs:label "vertices on inverted edge"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#verticesPartOfZeroAreaFace
@@ -681,7 +735,8 @@
 :zeroAreaFaces rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf :facesProperties ;
                rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-               rdfs:range :ZeroAreaFaces .
+               rdfs:range :ZeroAreaFaces ;
+               rdfs:label "zero area faces"@en .
 
 
 #################################################################
@@ -692,14 +747,16 @@
 :acquisitionParametersValid rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf :measurementProperty ;
                             rdfs:domain :Measurement ;
-                            rdfs:range xsd:boolean .
+                            rdfs:range xsd:boolean ;
+                            rdfs:label "acquisition parameters valid"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#acquisitionTime
 :acquisitionTime rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :measurementProperty ;
                  rdfs:domain :Measurement ;
-                 rdfs:range xsd:dateTime .
+                 rdfs:range xsd:dateTime ;
+                 rdfs:label "acquisition time"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#alignmentDeviation
@@ -711,70 +768,79 @@
 
 ###  http://objects.mainzed.org/metadata/ont#alignmentProperty
 :alignmentProperty rdf:type owl:DatatypeProperty ;
-                   rdfs:comment "alignment property" .
+                   rdfs:label "alignment property" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#areMeasurementsAligned
 :areMeasurementsAligned rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :measurementProperty ;
                         rdfs:domain :Measurement ;
-                        rdfs:range xsd:boolean .
+                        rdfs:range xsd:boolean ;
+                        rdfs:label "are measurements aligned"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#avoidGrooveEdgePoints
 :avoidGrooveEdgePoints rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :measurementProperty ;
                        rdfs:domain :Measurement ;
-                       rdfs:range xsd:boolean .
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "avoid groove edge points"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#avoidScanningAreaBorderPoints
 :avoidScanningAreaBorderPoints rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf :measurementProperty ;
                                rdfs:domain :Measurement ;
-                               rdfs:range xsd:boolean .
+                               rdfs:range xsd:boolean ;
+                               rdfs:label "avoid scanning area border points"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#avoidShadowAreaPoints
 :avoidShadowAreaPoints rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :measurementProperty ;
                        rdfs:domain :Measurement ;
-                       rdfs:range xsd:boolean .
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "avoid shadow area points"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#avoidShinyEdgePoints
 :avoidShinyEdgePoints rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :measurementProperty ;
                       rdfs:domain :Measurement ;
-                      rdfs:range xsd:boolean .
+                      rdfs:range xsd:boolean ;
+                      rdfs:label "avoid shiny edge points"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#avoidStrongBrightnessDifferencePoints
 :avoidStrongBrightnessDifferencePoints rdf:type owl:DatatypeProperty ;
                                        rdfs:subPropertyOf :measurementProperty ;
                                        rdfs:domain :Measurement ;
-                                       rdfs:range xsd:boolean .
+                                       rdfs:range xsd:boolean ;
+                                       rdfs:label "avoid strong brightness difference points"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#avoidTripleScanPoints
 :avoidTripleScanPoints rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :measurementProperty ;
                        rdfs:domain :Measurement ;
-                       rdfs:range xsd:boolean .
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "avoid triple scan points"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#avoidTripleScanPointsWithBrightnessDifference
 :avoidTripleScanPointsWithBrightnessDifference rdf:type owl:DatatypeProperty ;
                                                rdfs:subPropertyOf :measurementProperty ;
                                                rdfs:domain :Measurement ;
-                                               rdfs:range xsd:boolean .
+                                               rdfs:range xsd:boolean ;
+                                               rdfs:label "avoid triple scan points with brightness difference"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#calculateAlignment
 :calculateAlignment rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :measurementProperty ;
                     rdfs:domain :Measurement ;
-                    rdfs:range xsd:boolean .
+                    rdfs:range xsd:boolean ;
+                    rdfs:label "calculate alignment"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#calibrationDate
@@ -782,14 +848,14 @@
                  rdfs:subPropertyOf :calibrationProperty ;
                  rdfs:domain :Calibration ;
                  rdfs:range xsd:dateTime ;
-                 <http://www.w3.org/2004/02/skos/core#definition> "Date and time of sensor calibration"@en ,
-                                                                  "calibrationDate"@en .
+                 rdfs:label "calibration date"@en ;
+                 <http://www.w3.org/2004/02/skos/core#definition> "Date and time of sensor calibration"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#calibrationProperty
 :calibrationProperty rdf:type owl:DatatypeProperty ;
                      rdfs:domain :Calibration ;
-                     rdfs:comment "calibration property" .
+                     rdfs:label "calibration property" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#calibrationValueWidth
@@ -801,7 +867,8 @@
 
 ###  http://objects.mainzed.org/metadata/ont#cameraCalibration
 :cameraCalibration rdf:type owl:DatatypeProperty ;
-                   rdfs:subPropertyOf owl:topDataProperty .
+                   rdfs:subPropertyOf owl:topDataProperty ;
+                   rdfs:label "camera calibration"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#cameraCalibrationDate
@@ -815,26 +882,30 @@
 :cameraTemperatureOk rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :measurementProperty ;
                      rdfs:domain :Measurement ;
-                     rdfs:range xsd:boolean .
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "camera temperature ok"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#cameraTemperatureValid
 :cameraTemperatureValid rdf:type owl:DatatypeProperty ;
                         rdfs:subPropertyOf :measurementProperty ;
                         rdfs:domain :Measurement ;
-                        rdfs:range xsd:boolean .
+                        rdfs:range xsd:boolean ;
+                        rdfs:label "camera temperature valid"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#capturingDeviceProperty
 :capturingDeviceProperty rdf:type owl:DatatypeProperty ;
-                         rdfs:subPropertyOf owl:topDataProperty .
+                         rdfs:subPropertyOf owl:topDataProperty ;
+                         rdfs:label "capturing device property"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#doubleSnapEnabled
 :doubleSnapEnabled rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :measurementProperty ;
                    rdfs:domain :Measurement ;
-                   rdfs:range xsd:boolean .
+                   rdfs:range xsd:boolean ;
+                   rdfs:label "double snap enabled"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#isCommonReferencePoint
@@ -848,63 +919,76 @@
 :isQuickCalibrated rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :calibrationProperty ;
                    rdfs:domain :Calibration ;
-                   rdfs:range xsd:boolean .
+                   rdfs:range xsd:boolean ;
+                   rdfs:label "is quick calibrated"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#lampWarmupValid
 :lampWarmupValid rdf:type owl:DatatypeProperty ;
                  rdfs:subPropertyOf :measurementProperty ;
                  rdfs:domain :Measurement ;
-                 rdfs:range xsd:boolean .
+                 rdfs:range xsd:boolean ;
+                 rdfs:label "lamp warmup valid"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#lightControlActivated
 :lightControlActivated rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :measurementProperty ;
                        rdfs:domain :Measurement ;
-                       rdfs:range xsd:boolean .
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "light control activated"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#lightFactorCalibrated
 :lightFactorCalibrated rdf:type owl:DatatypeProperty ;
                        rdfs:subPropertyOf :measurementProperty ;
                        rdfs:domain :Measurement ;
-                       rdfs:range xsd:boolean .
+                       rdfs:range xsd:boolean ;
+                       rdfs:label "light factor calibrated"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#lightningChangeCheck
 :lightningChangeCheck rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :measurementProperty ;
                       rdfs:domain :Measurement ;
-                      rdfs:range xsd:boolean .
+                      rdfs:range xsd:boolean ;
+                      rdfs:label "lightning change check"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#measurementDeviation
 :measurementDeviation rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :refPointProperty ;
                       rdfs:domain :ReferencePoint ;
-                      rdfs:range xsd:float .
+                      rdfs:range xsd:float ;
+                      rdfs:label "measurement deviation"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#measurementId
 :measurementId rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :measurementProperty ;
                rdfs:domain :Measurement ;
-               rdfs:range xsd:string .
+               rdfs:range xsd:string ;
+               rdfs:label "measurement ID"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#measurementProperty
 :measurementProperty rdf:type owl:DatatypeProperty ;
                      rdfs:domain :Measurement ;
                      rdfs:range xsd:boolean ;
-                     rdfs:comment "measurement property" .
+                     rdfs:label "measurement property" .
+
+
+###  http://objects.mainzed.org/metadata/ont#measurementSetupProperty
+:measurementSetupProperty rdf:type owl:DatatypeProperty ;
+                          rdfs:subPropertyOf :measurementProperty .
 
 
 ###  http://objects.mainzed.org/metadata/ont#measurementState
 :measurementState rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :refPointProperty ;
                   rdfs:domain :ReferencePoint ;
-                  rdfs:range xsd:string .
+                  rdfs:range xsd:string ;
+                  rdfs:label "measurement state"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#measuringVolumeWidth
@@ -915,20 +999,22 @@
 
 ###  http://objects.mainzed.org/metadata/ont#meshProperty
 :meshProperty rdf:type owl:DatatypeProperty ;
-              rdfs:comment "mesh property" .
+              rdfs:label "mesh property" .
 
 
 ###  http://objects.mainzed.org/metadata/ont#missingReferencePointCheck
 :missingReferencePointCheck rdf:type owl:DatatypeProperty ;
                             rdfs:subPropertyOf :measurementProperty ;
                             rdfs:domain :Measurement ;
-                            rdfs:range xsd:boolean .
+                            rdfs:range xsd:boolean ;
+                            rdfs:label "missing reference point check"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#movementControlActivated
 :movementControlActivated rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :measurementProperty ;
-                          rdfs:domain :Measurement .
+                          rdfs:domain :Measurement ;
+                          rdfs:label "movement control activated"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfCameras
@@ -944,40 +1030,46 @@
 :numberOfCommonReferencePoints rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf :measurementProperty ;
                                rdfs:domain :Measurement ;
-                               rdfs:range xsd:integer .
+                               rdfs:range xsd:integer ;
+                               rdfs:label "number of common reference points"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfFaces
 :numberOfFaces rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :meshProperty ;
                rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-               rdfs:range xsd:integer .
+               rdfs:range xsd:integer ;
+               rdfs:label "number of faces"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfHoles
 :numberOfHoles rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :meshProperty ;
                rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-               rdfs:range xsd:integer .
+               rdfs:range xsd:integer ;
+               rdfs:label "number of holes"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfPhaseSteps
 :numberOfPhaseSteps rdf:type owl:DatatypeProperty ;
-                    rdfs:range xsd:integer .
+                    rdfs:range xsd:integer ;
+                    rdfs:label "number of phase steps"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfReferenceCameras
 :numberOfReferenceCameras rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :measurementProperty ;
                           rdfs:domain :Measurement ;
-                          rdfs:range xsd:integer .
+                          rdfs:range xsd:integer ;
+                          rdfs:label "number of reference cameras"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfReferencePoints
 :numberOfReferencePoints rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :measurementProperty ;
                          rdfs:domain :Measurement ;
-                         rdfs:range xsd:integer .
+                         rdfs:range xsd:integer ;
+                         rdfs:label "number of reference points"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfScales
@@ -1003,116 +1095,133 @@
 :numberOfTransformationPoints rdf:type owl:DatatypeProperty ;
                               rdfs:subPropertyOf :meshProperty ;
                               rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                              rdfs:range xsd:integer .
+                              rdfs:range xsd:integer ;
+                              rdfs:label "number of transformation points"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfUsedCommonReferencePoints
 :numberOfUsedCommonReferencePoints rdf:type owl:DatatypeProperty ;
                                    rdfs:subPropertyOf :measurementProperty ;
                                    rdfs:domain :Measurement ;
-                                   rdfs:range xsd:integer .
+                                   rdfs:range xsd:integer ;
+                                   rdfs:label "number of used common reference points"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#numberOfVertices
 :numberOfVertices rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :meshProperty ;
                   rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
-                  rdfs:range xsd:integer .
+                  rdfs:range xsd:integer ;
+                  rdfs:label "number of vertices"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#pointID
 :pointID rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf :refPointProperty ;
          rdfs:domain :ReferencePoint ;
-         rdfs:range xsd:integer .
+         rdfs:range xsd:integer ;
+         rdfs:label "point ID"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#refPointColor
 :refPointColor rdf:type owl:DatatypeProperty ;
                rdfs:subPropertyOf :refPointProperty ;
                rdfs:domain :ReferencePoint ;
-               rdfs:range xsd:string .
+               rdfs:range xsd:string ;
+               rdfs:label "reference point color"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#refPointProperty
 :refPointProperty rdf:type owl:DatatypeProperty ;
-                  rdfs:domain :ReferencePoint .
+                  rdfs:domain :ReferencePoint ;
+                  rdfs:label "reference point property"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#refelectionDetectionActivated
 :refelectionDetectionActivated rdf:type owl:DatatypeProperty ;
                                rdfs:subPropertyOf :measurementProperty ;
                                rdfs:domain :Measurement ;
-                               rdfs:range xsd:boolean .
+                               rdfs:range xsd:boolean ;
+                               rdfs:label "reflection detection activated"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#scannerTemperatureOK
 :scannerTemperatureOK rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :calibrationProperty ;
-                      rdfs:domain :Calibration .
+                      rdfs:domain :Calibration ;
+                      rdfs:label "scanner temperature ok"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#sensorDecalibrationCheck
 :sensorDecalibrationCheck rdf:type owl:DatatypeProperty ;
                           rdfs:subPropertyOf :measurementProperty ;
                           rdfs:domain :Measurement ;
-                          rdfs:range xsd:boolean .
+                          rdfs:range xsd:boolean ;
+                          rdfs:label "sensor decalibration check"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#sensorMovementCheck
 :sensorMovementCheck rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :measurementProperty ;
                      rdfs:domain :Measurement ;
-                     rdfs:range xsd:boolean .
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "sensor movement check"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#sensorSetupValid
 :sensorSetupValid rdf:type owl:DatatypeProperty ;
                   rdfs:subPropertyOf :calibrationProperty ;
                   rdfs:domain :Calibration ;
-                  rdfs:range xsd:boolean .
+                  rdfs:range xsd:boolean ;
+                  rdfs:label "sensor setup valid"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#sensorType
 :sensorType rdf:type owl:DatatypeProperty ;
             rdfs:subPropertyOf :capturingDeviceProperty ;
             rdfs:domain :CapturingDevice ;
-            rdfs:range xsd:string .
+            rdfs:range xsd:string ;
+            rdfs:label "sensor type"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#serialNumber
 :serialNumber rdf:type owl:DatatypeProperty ;
               rdfs:subPropertyOf :capturingDeviceProperty ;
               rdfs:domain :CapturingDevice ;
-              rdfs:range xsd:string .
+              rdfs:range xsd:string ;
+              rdfs:label "serial number"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#shinyPointConsideration
 :shinyPointConsideration rdf:type owl:DatatypeProperty ;
                          rdfs:subPropertyOf :measurementProperty ;
                          rdfs:domain :Measurement ;
-                         rdfs:range xsd:boolean .
+                         rdfs:range xsd:boolean ;
+                         rdfs:label "shiny point consideration"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#strongAmbientLight
 :strongAmbientLight rdf:type owl:DatatypeProperty ;
                     rdfs:subPropertyOf :measurementProperty ;
                     rdfs:domain :Measurement ;
-                    rdfs:range xsd:boolean .
+                    rdfs:range xsd:boolean ;
+                    rdfs:label "strong ambient light"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#transformationCheck
 :transformationCheck rdf:type owl:DatatypeProperty ;
                      rdfs:subPropertyOf :measurementProperty ;
                      rdfs:domain :Measurement ;
-                     rdfs:range xsd:boolean .
+                     rdfs:range xsd:boolean ;
+                     rdfs:label "transformation check"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#usedLongTriangles
 :usedLongTriangles rdf:type owl:DatatypeProperty ;
                    rdfs:subPropertyOf :measurementProperty ;
                    rdfs:domain :Measurement ;
-                   rdfs:range xsd:boolean .
+                   rdfs:range xsd:boolean ;
+                   rdfs:label "used long triangles"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#validSensorIdentifier
@@ -1161,42 +1270,48 @@
 :xCoordinate rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :refPointProperty ;
              rdfs:domain :ReferencePoint ;
-             rdfs:range xsd:double .
+             rdfs:range xsd:double ;
+             rdfs:label "x coordinate"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#xNormal
 :xNormal rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf :refPointProperty ;
          rdfs:domain :ReferencePoint ;
-         rdfs:range xsd:float .
+         rdfs:range xsd:float ;
+         rdfs:label "x normal"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#yCoordinate
 :yCoordinate rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :refPointProperty ;
              rdfs:domain :ReferencePoint ;
-             rdfs:range xsd:double .
+             rdfs:range xsd:double ;
+             rdfs:label "y coordinate"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#yNormal
 :yNormal rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf :refPointProperty ;
          rdfs:domain :ReferencePoint ;
-         rdfs:range xsd:float .
+         rdfs:range xsd:float ;
+         rdfs:label "y normal"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#zCoordinate
 :zCoordinate rdf:type owl:DatatypeProperty ;
              rdfs:subPropertyOf :refPointProperty ;
              rdfs:domain :ReferencePoint ;
-             rdfs:range xsd:double .
+             rdfs:range xsd:double ;
+             rdfs:label "z coordinate"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#zNormal
 :zNormal rdf:type owl:DatatypeProperty ;
          rdfs:subPropertyOf :refPointProperty ;
          rdfs:domain :ReferencePoint ;
-         rdfs:range xsd:float .
+         rdfs:range xsd:float ;
+         rdfs:label "z normal"@en .
 
 
 #################################################################
@@ -1372,7 +1487,8 @@
 
 ###  http://objects.mainzed.org/metadata/ont#AlignmentMeasures
 :AlignmentMeasures rdf:type owl:Class ;
-                   rdfs:subClassOf :Measurement .
+                   rdfs:subClassOf :Measurement ;
+                   rdfs:label "alignment measures"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#AlignmentRotation
@@ -1760,7 +1876,9 @@
 
 ###  http://objects.mainzed.org/metadata/ont#MeasurementProject
 :MeasurementProject rdf:type owl:Class ;
-                    rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+                    rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                    rdfs:label "Messprojekt"@en ,
+                               "measurement project"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MeasurementResolution
@@ -1771,7 +1889,9 @@
 
 ###  http://objects.mainzed.org/metadata/ont#MeasurementSeries
 :MeasurementSeries rdf:type owl:Class ;
-                   rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+                   rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                   rdfs:label "Messreihe"@de ,
+                              "measurement series"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MeasurementTemperature
@@ -2101,6 +2221,12 @@
                rdfs:subClassOf :FacesMeasures .
 
 
+###  http://objects.mainzed.org/metadata/ont#measurementcheck
+:measurementcheck rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                  rdfs:label "measurement check"@en .
+
+
 ###  http://objects.mainzed.org/tool/ont#LaserScanner
 <http://objects.mainzed.org/tool/ont#LaserScanner> rdf:type owl:Class ;
                                                    owl:equivalentClass <http://www.wikidata.org/entity/Q1361664> ;
@@ -2174,7 +2300,9 @@
 
 ###  http://objects.mainzed.org/type/ont#Tool
 <http://objects.mainzed.org/type/ont#Tool> rdf:type owl:Class ;
-                                           rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> .
+                                           rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                                           rdfs:label "Werkzeug"@de ,
+                                                      "tool"@en .
 
 
 ###  http://objects.mainzed.org/type/ont#TriangulationScanner
@@ -3414,6 +3542,9 @@
                               "Kameratemperatur"@en .
 
 
+:ChunkMeasures rdfs:label "chunk measures"@en .
+
+
 :CircleCenterVertices rdfs:label "Circle Center Vertices"@en .
 
 
@@ -3452,6 +3583,9 @@
 :ImageWidth rdfs:label "image width"@en .
 
 
+:Indoor rdfs:label "indoor"@en .
+
+
 :InvertedFaces rdfs:label "Inverted Faces"@en ,
                           "invertierte Dreiecke"@de .
 
@@ -3485,7 +3619,7 @@
 
 
 :Measurement <http://www.w3.org/2004/02/skos/core#definition> "A measurement of a property of a 3DObject"@en ;
-             rdfs:label "Measurement"@en .
+             rdfs:label "measurement"@en .
 
 
 :MeasurementDeviation rdfs:label "measurement deviation"@en ,
@@ -3513,6 +3647,9 @@
 
 :NumberOfChunks rdfs:label "Anzahl der Chunks"@de ,
                            "Number Of Chunks"@en .
+
+
+:Outdoor rdfs:label "outdoor"@en .
 
 
 :PointCloud rdfs:label "Punktwolke"@de ,
