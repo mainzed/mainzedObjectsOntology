@@ -1734,6 +1734,12 @@
                  rdfs:subClassOf <http://objects.mainzed.org/function/ont#Algorithm> .
 
 
+###  http://objects.mainzed.org/metadata/ont#GlobalReferencePoint
+:GlobalReferencePoint rdf:type owl:Class ;
+                      rdfs:subClassOf :ReferencePoint ;
+                      rdfs:label "global reference point"@en .
+
+
 ###  http://objects.mainzed.org/metadata/ont#GridDomain
 :GridDomain rdf:type owl:Class .
 
@@ -2049,7 +2055,8 @@
 
 ###  http://objects.mainzed.org/metadata/ont#ReferencePoint
 :ReferencePoint rdf:type owl:Class ;
-                rdfs:subClassOf <http://objects.mainzed.org/type/ont#GeometricalRepresentation> .
+                rdfs:subClassOf <http://objects.mainzed.org/type/ont#GeometricalRepresentation> ;
+                rdfs:label "reference point"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ReferencePointSize
@@ -3581,6 +3588,9 @@
 :AlignmentAccuracy rdfs:label "alignment accuracy"@en .
 
 
+:Atos1 rdfs:label "atos1 scanner"@en .
+
+
 :BlendingMode rdfs:label "blending mode"@en .
 
 
@@ -3640,6 +3650,9 @@
 
 
 :DanglingBorderFaces rdfs:label "Dangling Border Faces"@en .
+
+
+:DigitalElevationModel rdfs:label "digital elevation model"@en .
 
 
 :EllipseQuality rdfs:label "ellipse quality"@en ,
@@ -3796,6 +3809,12 @@
 :SoloFaces rdfs:label "Solo Faces"@en .
 
 
+:SpatialCalibration rdfs:label "spatial calibration"@en .
+
+
+:SpectralCalibration rdfs:label "spectral calibration"@en .
+
+
 :StickyFaces rdfs:label "Sticky Faces"@en .
 
 
@@ -3832,6 +3851,9 @@
 :VerticesPartOfZeroAreaFace rdfs:label "Vertices Part Of ZeroArea Face"@en .
 
 
+:XRayScanner rdfs:label "xray scanner"@en .
+
+
 :ZeroAreaFaces rdfs:label "ZeroArea Faces"@en .
 
 
@@ -3843,6 +3865,9 @@
 
 
 <http://objects.mainzed.org/tool/ont#PhaseScanner> rdfs:label "phase scanner"@en .
+
+
+<http://objects.mainzed.org/tool/ont#Scanner> rdfs:label "scanner"@en .
 
 
 <http://objects.mainzed.org/type/ont#Camera> rdfs:label "camera"@en .
@@ -3877,6 +3902,9 @@
                                            rdfs:label "Mesh"@en .
 
 
+<http://objects.mainzed.org/type/ont#PointSet> rdfs:label "point set"@en .
+
+
 <http://objects.mainzed.org/type/ont#PrintableMesh> rdfs:label "printable mesh"@en .
 
 
@@ -3885,6 +3913,51 @@
 
 
 <http://objects.mainzed.org/type/ont#ShapeRepresentation> rdfs:label "Shape Representation"@en .
+
+
+<http://objects.mainzed.org/type/ont#StructuredLight3DScanner> rdfs:label "structured light 3D scanner"@en .
+
+
+<http://objects.mainzed.org/type/ont#TriangulationScanner> rdfs:label "triangulation scanner"@en .
+
+
+<http://objects.mainzed.org/type/ont#2DRaster> rdfs:label "2D raster"@en .
+
+
+<http://objects.mainzed.org/type/ont#3DRaster> rdfs:label "3D raster"@en .
+
+
+<http://objects.mainzed.org/type/ont#4DRaster> rdfs:label "4D raster"@en .
+
+
+<http://www.opengis.net/ont/geosparql#Coverage> rdfs:label "coverage"@en .
+
+
+<http://www.opengis.net/ont/geosparql#GridCoverage> rdfs:label "grid coverage"@en .
+
+
+<http://www.opengis.net/ont/geosparql#MultiCurveCoverage> rdfs:label "multi curve coverage"@en .
+
+
+<http://www.opengis.net/ont/geosparql#MultiFeatureCoverage> rdfs:label "multi feature coverage"@en .
+
+
+<http://www.opengis.net/ont/geosparql#MultiPointCoverage> rdfs:label "multi point coverage"@en .
+
+
+<http://www.opengis.net/ont/geosparql#MultiSolidCoverage> rdfs:label "multi solid coverage"@en .
+
+
+<http://www.opengis.net/ont/geosparql#MultiSurfaceCoverage> rdfs:label "multi surface coverage"@en .
+
+
+<http://www.opengis.net/ont/geosparql#RectifiedGridCoverage> rdfs:label "rectified grid coverage"@en .
+
+
+<http://www.opengis.net/ont/geosparql#ReferencableGridCoverage> rdfs:label "referencable grid coverage"@en .
+
+
+<http://www.opengis.net/ont/geosparql#SpatialObject> rdfs:label "spatial object"@en .
 
 
 <http://www.w3.org/ns/prov#Activity> rdfs:label "Activity" .
