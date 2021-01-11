@@ -1106,6 +1106,14 @@
                               rdfs:label "number of transformation points"@en .
 
 
+###  http://objects.mainzed.org/metadata/ont#numberOfTriangles
+:numberOfTriangles rdf:type owl:DatatypeProperty ;
+                   rdfs:subPropertyOf :meshProperty ;
+                   rdfs:domain <http://objects.mainzed.org/type/ont#Mesh> ;
+                   rdfs:range xsd:integer ;
+                   rdfs:label "number of triangles"@en .
+
+
 ###  http://objects.mainzed.org/metadata/ont#numberOfUsedCommonReferencePoints
 :numberOfUsedCommonReferencePoints rdf:type owl:DatatypeProperty ;
                                    rdfs:subPropertyOf :measurementProperty ;
@@ -1827,7 +1835,8 @@
 
 ###  http://objects.mainzed.org/metadata/ont#MaxIntersectionDeviation
 :MaxIntersectionDeviation rdf:type owl:Class ;
-                          rdfs:subClassOf :CameraCalibrationMeasures .
+                          rdfs:subClassOf :CameraCalibrationMeasures ;
+                          rdfs:label "maximum intersection deviation"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MaximumCameraAngle
@@ -1849,7 +1858,8 @@
 
 ###  http://objects.mainzed.org/metadata/ont#MeanIntersectionDeviation
 :MeanIntersectionDeviation rdf:type owl:Class ;
-                           rdfs:subClassOf :CameraCalibrationMeasures .
+                           rdfs:subClassOf :CameraCalibrationMeasures ;
+                           rdfs:label "mean intersection deviation"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MeasureLight
@@ -1955,7 +1965,8 @@
 
 ###  http://objects.mainzed.org/metadata/ont#MinIntersectionDeviation
 :MinIntersectionDeviation rdf:type owl:Class ;
-                          rdfs:subClassOf :CameraCalibrationMeasures .
+                          rdfs:subClassOf :CameraCalibrationMeasures ;
+                          rdfs:label "minimum intersection deviation"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MinimumCameraAngle
@@ -2089,7 +2100,8 @@
 
 ###  http://objects.mainzed.org/metadata/ont#RemainingLampWarmupTime
 :RemainingLampWarmupTime rdf:type owl:Class ;
-                         rdfs:subClassOf :CameraMeasures .
+                         rdfs:subClassOf :CameraMeasures ;
+                         rdfs:label "remaining lamp warmup time"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#RemainingSensorWarmupTime
@@ -3265,12 +3277,14 @@
 
 ###  http://objects.mainzed.org/metadata/ont#transformationmode_automatic
 :transformationmode_automatic rdf:type owl:NamedIndividual ,
-                                       :TransformationMode .
+                                       :TransformationMode ;
+                              rdfs:label "automatic transformation mode"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#transformationmode_manual
 :transformationmode_manual rdf:type owl:NamedIndividual ,
-                                    :TransformationMode .
+                                    :TransformationMode ;
+                           rdfs:label "manual transformation mode"@en .
 
 
 ###  http://objects.mainzed.org/tool/ont#LaserScanner
@@ -3756,6 +3770,9 @@
 :NonManifoldVertices rdfs:label "Non-Manifold Vertices"@en .
 
 
+:NonOrthogonality rdfs:label "non orthogonality"@en .
+
+
 :NormalLengthVertices rdfs:label "Normal Length Vertices"@en .
 
 
@@ -3768,6 +3785,12 @@
 
 :PointCloud rdfs:label "Punktwolke"@de ,
                        "point cloud"@en .
+
+
+:PrincipalPointXCoordinate rdfs:label "principal point x coordinate"@en .
+
+
+:PrincipalPointYCoordinate rdfs:label "principal point y coordinate"@en .
 
 
 :PulseScanner rdfs:label "pulse scanner"@en .
@@ -3836,6 +3859,9 @@
 
 :TotalNumberOfVertices rdfs:label "Total Number Of Vertices"@en ,
                                   "Anzahl der Punkte"@de .
+
+
+:TransformationMode rdfs:label "transformation mode"@en .
 
 
 :TriangulationAngle rdfs:label "triangulation angle"@en .
