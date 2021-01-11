@@ -2499,7 +2499,8 @@
 ###  http://objects.mainzed.org/function/ont#AffineShapeAdaptation
 <http://objects.mainzed.org/function/ont#AffineShapeAdaptation> rdf:type owl:NamedIndividual ,
                                                                          <http://objects.mainzed.org/function/ont#AffineInvariantDetection> ;
-                                                                owl:sameAs <http://www.wikidata.org/entity/Q4688950> .
+                                                                owl:sameAs <http://www.wikidata.org/entity/Q4688950> ;
+                                                                rdfs:label "affine shape adaptation"@en .
 
 
 ###  http://objects.mainzed.org/function/ont#Algorithm
@@ -2531,17 +2532,20 @@
 ###  http://objects.mainzed.org/function/ont#DericheEdgeDetection
 <http://objects.mainzed.org/function/ont#DericheEdgeDetection> rdf:type owl:NamedIndividual ,
                                                                         <http://objects.mainzed.org/function/ont#EdgeDetection> ;
-                                                               owl:sameAs <http://www.wikidata.org/entity/Q5262565> .
+                                                               owl:sameAs <http://www.wikidata.org/entity/Q5262565> ;
+                                                               rdfs:label "deriche edge detection"@en .
 
 
 ###  http://objects.mainzed.org/function/ont#DifferenceOfGaussianBlobDetection
 <http://objects.mainzed.org/function/ont#DifferenceOfGaussianBlobDetection> rdf:type owl:NamedIndividual ,
-                                                                                     <http://objects.mainzed.org/function/ont#BlobDetection> .
+                                                                                     <http://objects.mainzed.org/function/ont#BlobDetection> ;
+                                                                            rdfs:label "difference of gaussian blob detection"@en .
 
 
 ###  http://objects.mainzed.org/function/ont#DifferentialEdgeDetection
 <http://objects.mainzed.org/function/ont#DifferentialEdgeDetection> rdf:type owl:NamedIndividual ,
-                                                                             <http://objects.mainzed.org/function/ont#EdgeDetection> .
+                                                                             <http://objects.mainzed.org/function/ont#EdgeDetection> ;
+                                                                    rdfs:label "differential edge detection"@en .
 
 
 ###  http://objects.mainzed.org/function/ont#DistanceToLine
@@ -2683,12 +2687,14 @@
 
 ###  http://objects.mainzed.org/metadata/function/ont#DeterminantOfHessianBlobDetection
 <http://objects.mainzed.org/metadata/function/ont#DeterminantOfHessianBlobDetection> rdf:type owl:NamedIndividual ,
-                                                                                              <http://objects.mainzed.org/function/ont#BlobDetection> .
+                                                                                              <http://objects.mainzed.org/function/ont#BlobDetection> ;
+                                                                                     rdfs:label "determinant of hessian blob detection"@en .
 
 
 ###  http://objects.mainzed.org/metadata/function/ont#LaPlacianOfGaussianBlobDetection
 <http://objects.mainzed.org/metadata/function/ont#LaPlacianOfGaussianBlobDetection> rdf:type owl:NamedIndividual ,
-                                                                                             <http://objects.mainzed.org/function/ont#BlobDetection> .
+                                                                                             <http://objects.mainzed.org/function/ont#BlobDetection> ;
+                                                                                    rdfs:label "la placian of gaussian blob detection"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#AffinityMeasure
@@ -2895,12 +2901,14 @@
 
 ###  http://objects.mainzed.org/metadata/ont#HighAccuracy
 :HighAccuracy rdf:type owl:NamedIndividual ,
-                       :AlignmentAccuracy .
+                       :AlignmentAccuracy ;
+              rdfs:label "high accuracy"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#HighestAccuracy
 :HighestAccuracy rdf:type owl:NamedIndividual ,
-                          :AlignmentAccuracy .
+                          :AlignmentAccuracy ;
+                 rdfs:label "highest accuracy"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ImageHeight
@@ -2965,12 +2973,14 @@
 
 ###  http://objects.mainzed.org/metadata/ont#LowAccuracy
 :LowAccuracy rdf:type owl:NamedIndividual ,
-                      :AlignmentAccuracy .
+                      :AlignmentAccuracy ;
+             rdfs:label "low accuracy"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#LowestAccuracy
 :LowestAccuracy rdf:type owl:NamedIndividual ,
-                         :AlignmentAccuracy .
+                         :AlignmentAccuracy ;
+                rdfs:label "lowest accuracy"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ManifoldFaces
@@ -3020,7 +3030,8 @@
 
 ###  http://objects.mainzed.org/metadata/ont#MediumAccuracy
 :MediumAccuracy rdf:type owl:NamedIndividual ,
-                         :AlignmentAccuracy .
+                         :AlignmentAccuracy ;
+                rdfs:label "medium accuracy"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#MeshProcessingActivity
@@ -3304,7 +3315,8 @@
 
 ###  http://objects.mainzed.org/type/ont#CalibrationTool
 <http://objects.mainzed.org/type/ont#CalibrationTool> rdf:type owl:NamedIndividual ,
-                                                               <http://www.w3.org/ns/shacl#NodeShape> .
+                                                               <http://www.w3.org/ns/shacl#NodeShape> ;
+                                                      rdfs:label "calibration tool"@en .
 
 
 ###  http://objects.mainzed.org/type/ont#Camera
