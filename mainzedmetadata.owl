@@ -276,6 +276,12 @@
                                  rdfs:label "ellipse quality for photogrammetry"@en .
 
 
+###  http://objects.mainzed.org/metadata/ont#exposureTime
+:exposureTime rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf :measurementProperties ;
+              rdfs:label "exposure time"@en .
+
+
 ###  http://objects.mainzed.org/metadata/ont#facesProperties
 :facesProperties rdf:type owl:ObjectProperty ;
                  rdfs:label "faces properties" .
@@ -1084,7 +1090,8 @@
 ###  http://objects.mainzed.org/metadata/ont#numberOfShutterTimes
 :numberOfShutterTimes rdf:type owl:DatatypeProperty ;
                       rdfs:subPropertyOf :measurementProperty ;
-                      rdfs:domain :Measurement ;
+                      rdfs:domain :Measurement ,
+                                  :MeasurementSetup ;
                       rdfs:range xsd:integer ;
                       rdfs:label "Anzahl der Belichtungszeiten"@de ,
                                  "number of shutter times"@en ;
@@ -1493,17 +1500,20 @@
 
 ###  http://objects.mainzed.org/metadata/ont#AlignmentRotation
 :AlignmentRotation rdf:type owl:Class ;
-                   rdfs:subClassOf :AlignmentMeasures .
+                   rdfs:subClassOf :AlignmentMeasures ;
+                   rdfs:label "alignment rotation"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#AlignmentTranslation
 :AlignmentTranslation rdf:type owl:Class ;
-                      rdfs:subClassOf :AlignmentMeasures .
+                      rdfs:subClassOf :AlignmentMeasures ;
+                      rdfs:label "alignment translation"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#AmbientTemperature
 :AmbientTemperature rdf:type owl:Class ;
-                    rdfs:subClassOf :CameraMeasures .
+                    rdfs:subClassOf :CameraMeasures ;
+                    rdfs:label "ambient temperature"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#Atos1
@@ -1894,6 +1904,12 @@
                               "measurement series"@en .
 
 
+###  http://objects.mainzed.org/metadata/ont#MeasurementSetup
+:MeasurementSetup rdf:type owl:Class ;
+                  rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+                  rdfs:label "measurement setup"@en .
+
+
 ###  http://objects.mainzed.org/metadata/ont#MeasurementTemperature
 :MeasurementTemperature rdf:type owl:Class ;
                         rdfs:subClassOf :CameraMeasures .
@@ -2174,7 +2190,8 @@
 
 ###  http://objects.mainzed.org/metadata/ont#TransformationDeviation
 :TransformationDeviation rdf:type owl:Class ;
-                         rdfs:subClassOf :CameraCalibrationMeasures .
+                         rdfs:subClassOf :CameraCalibrationMeasures ;
+                         rdfs:label "transformation deviation"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#TransformationMode
@@ -2279,7 +2296,8 @@
 
 
 ###  http://objects.mainzed.org/type/ont#PrintableMesh
-<http://objects.mainzed.org/type/ont#PrintableMesh> rdf:type owl:Class .
+<http://objects.mainzed.org/type/ont#PrintableMesh> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <http://objects.mainzed.org/type/ont#Mesh> .
 
 
 ###  http://objects.mainzed.org/type/ont#Rasterdata
@@ -2391,11 +2409,13 @@
 
 
 ###  http://www.w3.org/ns/shacl#NodeShape
-<http://www.w3.org/ns/shacl#NodeShape> rdf:type owl:Class .
+<http://www.w3.org/ns/shacl#NodeShape> rdf:type owl:Class ;
+                                       rdfs:label "node shape"@en .
 
 
 ###  http://www.w3.org/ns/shacl#TripleRule
-<http://www.w3.org/ns/shacl#TripleRule> rdf:type owl:Class .
+<http://www.w3.org/ns/shacl#TripleRule> rdf:type owl:Class ;
+                                        rdfs:label "triple rule"@en .
 
 
 ###  http://www.wikidata.org/entity/Q11699606
@@ -3477,7 +3497,28 @@
 #    Annotations
 #################################################################
 
+<http://objects.mainzed.org/agent/ont#Archeologist> rdfs:label "archaeologist"@en .
+
+
+<http://objects.mainzed.org/agent/ont#Engineer> rdfs:label "engineer"@en .
+
+
+<http://objects.mainzed.org/agent/ont#Geodesist> rdfs:label "geodesist"@en .
+
+
+<http://objects.mainzed.org/function/ont#AffineInvariantDetection> rdfs:label "affine invariant detection algorithm"@en .
+
+
+<http://objects.mainzed.org/function/ont#Algorithm> rdfs:label "algorithm"@en .
+
+
+<http://objects.mainzed.org/function/ont#BlobDetection> rdfs:label "blob detection algorithm"@en .
+
+
 <http://objects.mainzed.org/function/ont#Clean> rdfs:label "Clean"@en .
+
+
+<http://objects.mainzed.org/function/ont#CornerDetection> rdfs:label "corner detection algorithm"@en .
 
 
 <http://objects.mainzed.org/function/ont#DistanceToLine> rdfs:label "Distance To Line" .
@@ -3486,7 +3527,22 @@
 <http://objects.mainzed.org/function/ont#DistanceToPlane> rdfs:label "Distance To Plane" .
 
 
+<http://objects.mainzed.org/function/ont#EdgeDetection> rdfs:label "edge detection algorithm"@en .
+
+
+<http://objects.mainzed.org/function/ont#ExportFunction> rdfs:label "export function"@en .
+
+
+<http://objects.mainzed.org/function/ont#FeatureDetectionAlgorithm> rdfs:label "feature detection algorithm"@en .
+
+
 <http://objects.mainzed.org/function/ont#InvertFaceOrientation> rdfs:label "Invert Face Orientation" .
+
+
+<http://objects.mainzed.org/function/ont#MeasurementAlgorithm> rdfs:label "measurement algorithm"@en .
+
+
+<http://objects.mainzed.org/function/ont#ModificationFunction> rdfs:label "modification function"@en .
 
 
 <http://objects.mainzed.org/function/ont#ProcessingFunction> rdfs:label "Processing Function"@en .
@@ -3501,10 +3557,31 @@
 <http://objects.mainzed.org/function/ont#RemoveUncleanSmall> rdfs:label "Remove Unclean/Small" .
 
 
+<http://objects.mainzed.org/function/ont#ScreenshotExportFunction> rdfs:label "screenshot export function"@en .
+
+
+<http://objects.mainzed.org/function/ont#SplitByIsoValue> rdfs:label "split by iso value"@en .
+
+
+<http://objects.mainzed.org/function/ont#SplitByPlane> rdfs:label "split by plane"@en .
+
+
+<http://objects.mainzed.org/function/ont#SplitFunction> rdfs:label "split function"@en .
+
+
+<http://objects.mainzed.org/function/ont#TransformationFunction> rdfs:label "transformation function"@en .
+
+
 :AffinityMeasure rdfs:label "affinity measure"@en .
 
 
 :Alignment rdfs:label "Feinausrichtung"@de .
+
+
+:AlignmentAccuracy rdfs:label "alignment accuracy"@en .
+
+
+:BlendingMode rdfs:label "blending mode"@en .
 
 
 :BorderFaces rdfs:label "Border Faces"@en .
@@ -3514,6 +3591,9 @@
 
 
 :BridgeBorderFaces rdfs:label "Bridge Border Faces"@en .
+
+
+:CalibrationAlgorithm rdfs:label "calibration algorithm"@en .
 
 
 :CameraAngle <http://www.w3.org/2004/02/skos/core#definition> "The camera angle is the intersection of the optical axes of the two cameras"@en ;
@@ -3529,6 +3609,9 @@
 
 :CameraIdentifier rdfs:label "Kamerakennung"@de ,
                              "camera identifier"@en .
+
+
+:CameraMeasures rdfs:label "camera measures"@en .
 
 
 :CameraModel rdfs:label "camera model"@en .
@@ -3567,6 +3650,9 @@
                                  "Expansionskoeffizient"@de .
 
 
+:FacesMeasures rdfs:label "faces measures"@en .
+
+
 :FiniteFunctionValueVertices rdfs:label "Finite Function Value Vertices"@en .
 
 
@@ -3575,6 +3661,9 @@
 
 
 :FrameCalibrationTemperature rdfs:label "frame calibration temperature"@en .
+
+
+:FusionAlgorithm rdfs:label "fusion algorithm"@en .
 
 
 :ImageHeight rdfs:label "image height"@en .
@@ -3586,12 +3675,18 @@
 :Indoor rdfs:label "indoor"@en .
 
 
+:Interpolation rdfs:label "interpolation"@en .
+
+
 :InvertedFaces rdfs:label "Inverted Faces"@en ,
                           "invertierte Dreiecke"@de .
 
 
 :IsolatedVertices rdfs:label "Anzahl der isolierten Punkte"@en ,
                              "Isolated Vertices"@en .
+
+
+:LightFactorCalibrationEnvironment rdfs:label "light factor calibration environment"@en .
 
 
 :LightIntensity rdfs:label "light intensity"@en ,
@@ -3622,11 +3717,17 @@
              rdfs:label "measurement"@en .
 
 
+:MeasurementActivity rdfs:label "measurement activity"@en .
+
+
 :MeasurementDeviation rdfs:label "measurement deviation"@en ,
                                  "Messungsabweichung"@de .
 
 
 :MeasurementTemperature rdfs:label "measurement temperature"@en .
+
+
+:MeshProcessingActivity rdfs:label "mesh processing activity"@en .
 
 
 :MinimumCameraAngle rdfs:label "Minimaler Kamerawinkel"@de ,
@@ -3656,6 +3757,9 @@
                        "point cloud"@en .
 
 
+:PulseScanner rdfs:label "pulse scanner"@en .
+
+
 :RadialDistortionCoefficient rdfs:label "radial distortion coefficient"@en .
 
 
@@ -3666,6 +3770,9 @@
                       <http://www.w3.org/2004/02/skos/core#definition> "The temperature at certification of the calibration object to be calibrated. Supplied by the manufacturer."@en .
 
 
+:RidgeDetection rdfs:label "ridge detection algorithm"@en .
+
+
 :RotationAccuracy rdfs:label "rotation accuracy"@en .
 
 
@@ -3674,6 +3781,9 @@
 
 :SelectedVertices rdfs:label "Selected Vertices"@en ,
                              "Ausgewählte Punkte"@de .
+
+
+:SensorMeasures rdfs:label "sensor measures"@en .
 
 
 :ShutterTime rdfs:label "shutter time"@en ,
@@ -3729,6 +3839,15 @@
                       <http://www.w3.org/2004/02/skos/core#definition> "The measuring volume is the theoretical recording range. The measurement volume width is an external dimension of this cuboid."@en .
 
 
+<http://objects.mainzed.org/tool/ont#LaserScanner> rdfs:label "laser scanner"@en .
+
+
+<http://objects.mainzed.org/tool/ont#PhaseScanner> rdfs:label "phase scanner"@en .
+
+
+<http://objects.mainzed.org/type/ont#Camera> rdfs:label "camera"@en .
+
+
 <http://objects.mainzed.org/type/ont#DSLR> rdfs:label "digital single-lens reflex camera" .
 
 
@@ -3756,6 +3875,9 @@
                                                                                <http://www.w3.org/ns/shacl#subject> <http://www.w3.org/ns/shacl#this>
                                                                              ] ;
                                            rdfs:label "Mesh"@en .
+
+
+<http://objects.mainzed.org/type/ont#PrintableMesh> rdfs:label "printable mesh"@en .
 
 
 <http://objects.mainzed.org/type/ont#Rasterdata> rdfs:label "Raster data"@en ,
