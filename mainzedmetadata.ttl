@@ -6,7 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://objects.mainzed.org/metadata/ont#> .
 
-<http://objects.mainzed.org/metadata/ont#> rdf:type owl:Ontology .
+<http://objects.mainzed.org/metadata/ont#mainzedObjects> rdf:type owl:Ontology .
 
 #################################################################
 #    Annotation properties
