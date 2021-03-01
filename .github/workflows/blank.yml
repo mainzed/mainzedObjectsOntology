@@ -22,7 +22,7 @@ jobs:
          sudo pip3 install wheel pylode
          mkdir docss
          cd docss
-         pylode -i ../mainzedmetadata.owl -o index.html
+         pylode -i ../mainzedmetadata.ttl -o index.html
     - name: Deploy 🚀
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
