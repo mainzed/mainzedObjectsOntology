@@ -6,7 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @base <http://objects.mainzed.org/metadata/ont#> .
 
-<http://objects.mainzed.org/metadata/ont#mainzedObjects> rdf:type owl:Ontology .
+<http://objects.mainzed.org/metadata/ont#> rdf:type owl:Ontology .
 
 #################################################################
 #    Annotation properties
@@ -1480,6 +1480,12 @@
                                                                  rdfs:subClassOf <http://objects.mainzed.org/function/ont#ModificationFunction> .
 
 
+###  http://objects.mainzed.org/metadata/ont#AcquisitionTechnology
+:AcquisitionTechnology rdf:type owl:Class ;
+                       rdfs:subClassOf :Technology ;
+                       rdfs:label "acquisition technology"@en .
+
+
 ###  http://objects.mainzed.org/metadata/ont#AffinityMeasure
 :AffinityMeasure rdf:type owl:Class ;
                  rdfs:subClassOf :CameraCalibrationMeasures .
@@ -1735,6 +1741,12 @@
 ###  http://objects.mainzed.org/metadata/ont#FrameCalibrationTemperature
 :FrameCalibrationTemperature rdf:type owl:Class ;
                              rdfs:subClassOf :CameraCalibrationMeasures .
+
+
+###  http://objects.mainzed.org/metadata/ont#FringeProjection
+:FringeProjection rdf:type owl:Class ;
+                  rdfs:subClassOf :AcquisitionTechnology ;
+                  rdfs:label "fringe projection"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#FusionAlgorithm
@@ -2177,6 +2189,12 @@
              rdfs:subClassOf :FacesMeasures .
 
 
+###  http://objects.mainzed.org/metadata/ont#StrucureFromMotion
+:StrucureFromMotion rdf:type owl:Class ;
+                    rdfs:subClassOf :AcquisitionTechnology ;
+                    rdfs:label "Strucure From Motion"@en .
+
+
 ###  http://objects.mainzed.org/metadata/ont#SyntheticVertexFaces
 :SyntheticVertexFaces rdf:type owl:Class ;
                       rdfs:subClassOf :FacesMeasures .
@@ -2190,6 +2208,12 @@
 ###  http://objects.mainzed.org/metadata/ont#TangentialDistortionCoefficient
 :TangentialDistortionCoefficient rdf:type owl:Class ;
                                  rdfs:subClassOf :CameraCalibrationMeasures .
+
+
+###  http://objects.mainzed.org/metadata/ont#Technology
+:Technology rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.w3.org/ns/prov#Entity> ;
+            rdfs:label "Technology"@en .
 
 
 ###  http://objects.mainzed.org/metadata/ont#ThreeBorderVertexFaces
@@ -3924,10 +3948,10 @@
                                                                                                                                                                 <http://www.w3.org/ns/shacl#path> :nonManifoldVertices
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
-                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :borderVertices
+                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :singularVertices
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
-                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :singularVertices
+                                                                                                                                                                <http://www.w3.org/ns/shacl#path> :borderVertices
                                                                                                                                                               ] ,
                                                                                                                                                               [ <http://www.w3.org/ns/shacl#equals> 0 ;
                                                                                                                                                                 <http://www.w3.org/ns/shacl#path> :singularVertices
